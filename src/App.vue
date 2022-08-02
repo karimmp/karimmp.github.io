@@ -1,8 +1,7 @@
 <template>
   <v-app id="app">
     <v-card id="nav">
-      <v-app-bar flex color="white" height="80rem">
-        <!-- elevate-on-scroll app -->
+      <v-app-bar flex color="white" height="80rem" elevate-on-scroll app>
         <v-app-bar-nav-icon
           class="hidden-md-and-up"
           @click="drawer = true"
@@ -18,11 +17,36 @@
           <v-btn v-for="item in menu" :key="item.key" :to="item.link" plain tile
             >{{ item.title }}
           </v-btn>
-          <v-btn rounded color="#ea5076" dark>
+
+          <v-menu open-on-hover offset-y>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn plain tile v-bind="attrs" v-on="on">
+                Soluciones
+              </v-btn>
+            </template>
+
+            <v-list class="lista-menu">
+              <v-list-item  v-for="(item, index) in menua" :key="index" link :to="item.link">
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+          <v-btn
+            v-for="item in menub"
+            :key="item.key"
+            :to="item.link"
+            plain
+            tile
+            >{{ item.title }}
+          </v-btn>
+
+          <v-btn rounded color="#ea5076" dark to="contactanos">
             Contáctanos <v-icon right dark small> mdi-arrow-right </v-icon>
           </v-btn>
         </div>
       </v-app-bar>
+
       <v-navigation-drawer v-model="drawer" fixed temporary>
         <v-list nav dense>
           <v-list-item-group v-model="group" active-class=" text--accent-4">
@@ -33,13 +57,12 @@
         </v-list>
       </v-navigation-drawer>
 
-      <router-view />
+      <router-view class="pt-16" />
     </v-card>
 
     <v-footer height="auto" class="pie-pagina" color="#e5e7eb" dark>
       <v-container fluid class="py-12">
         <v-row class="fila-datos" no-gutters>
-
           <v-col cols="12" md="4" sm="6" align-self="center">
             <img width="133" alt="Addition logo" src="./assets/logo.png" />
           </v-col>
@@ -77,7 +100,6 @@
               </v-card-text>
             </v-card>
           </v-col>
-
         </v-row>
       </v-container>
 
@@ -112,6 +134,7 @@
       color: #ea5076;
     }
   }
+ 
 }
 .pie-pagina {
   padding: 0;
@@ -160,20 +183,35 @@ export default {
       menu: [
         { key: "inicio", icon: "", title: "Inicio", link: "/" },
         { key: "nosotros", icon: "", title: "Nosotros", link: "/Nosotros" },
-        {
-          key: "servicios",
-          icon: "mdi-menu-down-outline",
-          title: "Servicios",
-          link: "/Servicios",
-        },
-        { key: "blog", icon: "", title: "Blog", link: "/Blog " },
       ],
+      menua: [
+        { title: 'Diversidad e inclusion' , link:"/diversidad"},
+        { title: 'Gestión de recursos humanos',link:"/rh" },
+        { title: 'Coaching Laboral', link:"/coaching" },
+      ],
+      menub: [{ key: "blog", icon: "", title: "Blog", link: "/Blog " }],
+
       menu2: [
         { key: "inicio", title: "Inicio", link: "/" },
         { key: "nosotros", title: "Nosotros", link: "/Nosotros" },
         { key: "servicios", title: "Servicios", link: "/Servicios" },
         { key: "blog", icon: "", title: "Blog", link: "/Blog " },
-        { key: "contactanos", icon: "", title: "Contáctanos", link: "/Contáctanos" },
+        {
+          key: "contactanos",
+          icon: "",
+          title: "Contáctanos",
+          link: "/Contáctanos",
+        },
+      ],
+      admins: [
+        ["Management", "mdi-account-multiple-outline"],
+        ["Settings", "mdi-cog-outline"],
+      ],
+      cruds: [
+        ["Create", "mdi-plus-outline"],
+        ["Read", "mdi-file-outline"],
+        ["Update", "mdi-update"],
+        ["Delete", "mdi-delete"],
       ],
       drawer: false,
       group: null,

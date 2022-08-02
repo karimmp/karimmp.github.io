@@ -1,0 +1,442 @@
+<template>
+  <v-container fluid class="main-pag">
+    <v-img
+      max-height="200"
+      alt="fondo-nosotros"
+      src="../assets/nosotros/portada-nosotros.png"
+    ></v-img>
+    <v-card class="mx-auto my-12 landing" max-width="800" elevation="0">
+      <v-card-title class="text-big">¿Quiénes Somos?</v-card-title>
+      <v-card-text class="text-justify text-med">
+        En Addition Human Resources sabemos que el recurso más valioso de su
+        empresa es tu gente.
+        <br />
+        <br />
+        Somos una empresa mexicana de consultoría en
+        <strong>Recursos Humanos</strong> con más de 20 años de experiencia en
+        proporcionar asesoría para la
+        <strong
+          >motivación, retención y desarrollo del recurso humano de las
+          empresas.</strong
+        >
+        <br />
+        <br />
+        Contamos con programas de gestión interna para
+        <strong> ingreso, permanencia y desarrollo del personal;</strong> basado
+        en un <strong> cultura de respeto </strong> que contribuye a tener una
+        sociedad más incluyente con
+        <strong>igualdad de oportunidades, sin discriminación </strong> o
+        cualquier dimensión que prive los derechos de la persona.
+        <br />
+        <br />
+        Estamos constituidos por personal de amplia experiencia y trayectoria en
+        Sistemas de
+        <strong>Gestión, Recursos Humanos, Igualdad Laboral y Género.</strong>
+      </v-card-text>
+    </v-card>
+    <v-container fluid class="pa-0">
+      <v-row no-gutters>
+        <v-col cols="auto" md="4" sm="12">
+          <v-img
+            height="613"
+            src="../assets/nosotros/lihuba-nosotros.png"
+          ></v-img>
+        </v-col>
+        <v-col cols="auto" md="8" sm="12" class="soluciones">
+          <v-card class="mx-12 my-12" color="#ea5076" dark elevation="0">
+            <h2 class="text-left mb-n3">Acerca de Lihuba Vences</h2>
+            <v-card-subtitle class="text-left"
+              >CEO de Addition Human Resources.</v-card-subtitle
+            >
+            <v-card-text class="text-justify"
+              >Psicóloga egresada de la Universidad Nacional Autónoma de México
+              especializada en el área laboral y desarrollo organizacional, con
+              certificaciones para asesorar y auditar programas de género para
+              erradicar la discriminación y contribuir a la igualdad de
+              oportunidades.
+              <br />
+              Cuenta con capacitación en el desarrollo de competencias de
+              Ombudsperson Organizacional, Coach e instructora de diversos
+              temas; recursos humanos, sistemas de gestión, derechos humanos,
+              hostigamiento y acoso, igualdad laboral, violencia laboral y no
+              discriminación.
+              <br />
+              Fundó Addition Human Resources con el propósito de optimizar el
+              cumplimiento de los objetivos estratégicos de las empresas, a
+              través, del establecimiento de planes y estrategias de motivación,
+              retención y desarrollo de Capital Humano, enfocados a atender la
+              diversidad e inclusión de las personas.<br />
+              <br />
+              Ha apoyado de manera parcial o integral a más de 2000 empresas en
+              sus procesos de gestión de Recursos Humanos, cuenta con
+              experiencia en formación, procesos de auditoría y asesoría para la
+              acreditación, certificación y re - certificación de Distintivos de
+              Género, Discriminación, <br />
+              <br />
+              Diversidad & Inclusión; incluyendo la Norma Mexicana
+              NMX-R-025-SCFI-2015 en Igualdad Laboral y no Discriminación, y
+              Norma Oficial Mexicana NOM-035-STPS- Factores de riesgo
+              psicosocial Identificación, análisis, prevención y distintivos de
+              la Secretaria de Trabajo y Previsión Social.<br />
+            </v-card-text>
+            <div class="text-left">
+              <v-btn
+                color="white"
+                style="color: #ea5076; text-transform: none"
+                rounded
+                to="contactanos"
+                >Ponte en contacto conmigo</v-btn
+              >
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid>
+      <v-row class="">
+        <v-col cols="auto" md="6" sm="12">
+          <v-card
+            elevation="10"
+            class="mx-auto my-12"
+            max-width="600"
+            min-height="460"
+          >
+            <v-parallax
+              height="200"
+              src="../assets/nosotros/portada-nosotros2.png"
+            >
+            </v-parallax>
+            <div class="glass2">
+              <v-card-title>Nuestra Misión</v-card-title>
+              <v-card-text class="text-justify texto-ex">
+                Proporcionar soluciones funcionales, prácticas y eficaces a
+                nuestros clientes en el área de
+                <strong> Recursos Humanos</strong>, utilizando como herramienta
+                de trabajo la calidad y una comunicación estrecha y
+                personalizada; además de brindar satisfacción total para cada
+                uno de los involucrados a nivel individual, grupal y/o
+                organizacional.
+              </v-card-text>
+            </div>
+          </v-card>
+        </v-col>
+        <v-col cols="auto" md="6" sm="12">
+          <v-card
+            elevation="10"
+            class="mx-auto my-12"
+            max-width="600"
+            min-height="460"
+          >
+            <v-parallax
+              height="200"
+              src="../assets/nosotros/footer-nosotros.png"
+            >
+            </v-parallax>
+            <div class="glass2">
+              <v-card-title>Nuestra Visión</v-card-title>
+              <v-card-text class="text-justify texto-ex"
+                >Ser reconocidos como una de las principales empresas de
+                <strong> Recursos Humanos</strong> dentro del país en donde la
+                confianza sea nuestra primera recomendación.</v-card-text
+              >
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid class="purple-color">
+      <v-row class="my-5">
+        <v-col cols="auto" md="6" sm="12">
+          <span
+            >Esta es la formula <br />
+            <strong>Addition</strong></span
+          >
+          <div class="py-5">
+            <v-carousel
+              cycle
+              min-height="410"
+              hide-delimiter-background
+              :show-arrows="false"
+            >
+              <v-carousel-item>
+                <v-card
+                  max-width="650"
+                  min-height="350"
+                  class="mx-auto text-justify glass2"
+                >
+                  <v-card-title class="pb-0"
+                    >Diversidad e inclusión
+                  </v-card-title>
+                  <div class="texto-ex mt-0">
+                    <v-card-subtitle>
+                      Implementamos programas de diversidad e inclusión para
+                      mejorar la productividad de las organizaciones y
+                      cumplimiento de la normatividad vigente.
+                    </v-card-subtitle>
+                    <v-card-text>
+                      <strong>
+                        <ul>
+                          <li>
+                            Norma Mexicana NMX-R-025-SCFI-2015 en Igualdad
+                            Laboral y No Discriminación.
+                          </li>
+                          <li>
+                            Norma Oficial Mexicana NOM-035-STPS-2018 de factores
+                            de riesgo psicosocial.
+                          </li>
+                          <li>Distintivo Empresa Socialmente Responsable.</li>
+                        </ul>
+                      </strong>
+                    </v-card-text>
+                  </div>
+                </v-card>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-card
+                  max-width="650"
+                  min-height="350"
+                  class="mx-auto text-justify glass2"
+                >
+                  <v-card-title class="pb-0" style="word-break: break-word"
+                    >Gestión de recursos humanos</v-card-title
+                  >
+                  <div class="texto-ex mt-0">
+                    <v-card-subtitle>
+                      Brindamos soluciones de gestión total o parcial en los
+                      procesos de Recursos Humanos
+                    </v-card-subtitle>
+                    <v-card-text>
+                      <strong>
+                        <ul>
+                          <li>Atracción y Selección de Talento Humano</li>
+                          <li>Evaluación de Talento Humano y Organizacional</li>
+                          <li>Servicios Especializados</li>
+                          <li>Entrenamiento, Capacitación y Desarrollo</li>
+                        </ul>
+                      </strong>
+                    </v-card-text>
+                  </div>
+                </v-card>
+              </v-carousel-item>
+              <v-carousel-item>
+                <v-card
+                  max-width="650"
+                  min-height="350"
+                  class="mx-auto text-justify glass2"
+                >
+                  <v-card-title class="pb-0">Coaching laboral </v-card-title>
+                  <div class="texto-ex mt-0">
+                    <v-card-subtitle>
+                      Acompañamos a las personas en la búsqueda de empleo para
+                      crecimiento personal, familiar y profesional.
+                    </v-card-subtitle>
+                    <v-card-text>
+                      <strong>
+                        <ul>
+                          <li>Findy JOB</li>
+                          <li>Job first (Orientación vocacional)</li>
+                          <li>Outplacement</li>
+                        </ul>
+                      </strong>
+                    </v-card-text>
+                  </div>
+                </v-card>
+              </v-carousel-item>
+            </v-carousel>
+          </div>
+        </v-col>
+        <v-col cols="auto" md="6" sm="12" class="solo-desk">
+          <v-img
+            src="../assets/nosotros/footer-nosotros.png"
+            aspect-ratio="1.4"
+          ></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-row no-gutters class="contadores">
+      <v-col cols="4" class="pa-10" style="border-right: 2px #fff solid">
+        <span class="numero"><strong>+12</strong></span>
+        <br />
+        <span class="texto">años de experiencia</span>
+      </v-col>
+      <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
+        <span class="numero"><strong>+100</strong></span>
+        <br />
+        <span class="texto">personas por año impactadas</span>
+      </v-col>
+      <v-col cols="4" class="pa-10">
+        <span class="numero"><strong>+80</strong></span>
+        <br />
+        <span class="texto">empresas impactadas</span>
+      </v-col>
+    </v-row>
+
+    <v-container class="casos-ex" fluid>
+      <v-row no-gutters>
+        <v-col md="6" sm="12" class="contenedor texto">
+          <v-row>
+            <v-col>
+              <v-hover
+                ><v-card class="mx-auto my-12 glass2" height="180" max-width="180">
+                <v-icon>mdi-arrow-right</v-icon>
+                </v-card>
+              </v-hover>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col> </v-col>
+          </v-row>
+        </v-col>
+
+        <v-col md="6" sm="12" class="contenedor">
+          <v-card elevation="0">
+            <v-card-title style="color: #69c6fa">
+              <span class="text-h4 texto-tit">Nuestros valores</span>
+            </v-card-title>
+            <v-card-text class="text-justify texto-ex">
+              Para Addition, los valores son la base de toda organización
+              contribuyendo con el crecimiento y desarrollo de sus
+              colaboradores.
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-parallax src="../assets/nosotros/footer-nosotros.png"></v-parallax>
+  </v-container>
+</template>
+
+<style lang="scss">
+.main-pag {
+  padding: 0;
+  font-family: Commissioner;
+
+  .contenedor {
+    align-self: center;
+  }
+
+  .glass {
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 1.5rem;
+    border-width: 1px;
+    min-height: 450px;
+    padding: 5%;
+  }
+
+  .texto-land {
+    font-size: large;
+    color: #374751 !important;
+    text-align: justify;
+  }
+  .texto-body {
+    font-size: medium;
+    color: #374751 !important;
+    text-align: justify;
+  }
+  .pink-color {
+    color: #ea5076;
+    font-size: 30px;
+  }
+
+  .formato-video {
+    padding: 40px !important;
+  }
+
+  .soluciones {
+    background-color: #ea5076;
+
+    .txt-white {
+      color: #fff;
+      font-size: 30px;
+      padding-top: 20px;
+    }
+    .sol-card {
+      border-radius: 2.5rem;
+      border-width: 1px;
+    }
+  }
+  .contadores {
+    background-color: #e5e7eb;
+    padding: 0px !important;
+
+    .numero {
+      font-size: 60px;
+    }
+    .texto {
+      text-transform: uppercase;
+    }
+  }
+  .glass2 {
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    border-radius: 1.5rem;
+    border-width: 1px;
+    padding: 5%;
+  }
+  .casos-ex {
+    /* background-color: #69c6fa; */
+    background: linear-gradient(
+      90deg,
+      rgba(105, 198, 250, 1) 0%,
+      rgba(255, 255, 255, 1) 20%
+    );
+  }
+  .texto-ex {
+    font-size: medium;
+    color: #000 !important;
+  }
+  .purple-color {
+    background-color: #9825a6;
+    color: #fff;
+    h2 {
+      font-size: xx-large;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .contenedor {
+      padding: 20px !important;
+    }
+
+    .texto-land {
+      font-size: medium;
+    }
+    .texto-body {
+      font-size: small;
+    }
+    .texto-titulo {
+      font-size: medium;
+    }
+    .formato-video {
+      padding: 0px !important;
+    }
+    .contadores {
+      padding: 0px !important;
+      .numero {
+        font-size: medium;
+      }
+      .texto {
+        font-size: x-small;
+      }
+    }
+    .casos-ex {
+      .texto-tit {
+        font-size: x-large !important;
+      }
+    }
+    .solo-desk {
+      visibility: hidden;
+    }
+  }
+}
+.landing {
+  .text-big {
+    color: #000 !important;
+    font-size: xx-large;
+  }
+  .text-med {
+    color: #000 !important;
+    font-size: medium;
+  }
+}
+</style>
