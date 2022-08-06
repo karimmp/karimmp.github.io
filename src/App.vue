@@ -123,6 +123,13 @@
   color: #2c3e50;
 }
 
+.v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
+}
+
 #nav {
   font-family: Montserrat;
   align-items: center;

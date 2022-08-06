@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="main-pag">
+  <v-container fluid class="noso-pag">
     <v-img
       max-height="200"
       alt="fondo-nosotros"
@@ -271,14 +271,209 @@
       </v-col>
     </v-row>
 
+    
+
     <v-container class="casos-ex" fluid>
+      <v-row class="solo-mob" 
+        ><v-col md="6" sm="12" class="contenedor" >
+          <v-card elevation="0" style="background-color:rgba(0, 0, 0, 0)">
+            <v-card-title style="color: #1D588E">
+              <span class="texto-tit">Nuestros valores</span>
+            </v-card-title>
+            <v-card-text class="text-justify texto-ex">
+              Para Addition, los valores son la base de toda organización
+              contribuyendo con el crecimiento y desarrollo de sus
+              colaboradores.
+            </v-card-text>
+          </v-card>
+        </v-col></v-row
+      >
       <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor texto">
           <v-row>
             <v-col>
-              <v-hover
-                ><v-card class="mx-auto my-12 glass2" height="180" max-width="180">
-                <v-icon>mdi-arrow-right</v-icon>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/equidad.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Equidad</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/compromiso.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Compromiso</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/trabajo.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Trabajo en equipo</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/orientacion.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Orientación al cliente</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/congruencia.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Congruencia</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/flexibilidad.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Flexibilidad</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/trato.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Trato personal</v-card-text
+                  >
+                </v-card>
+              </v-hover>
+            </v-col>
+            <v-col>
+              <v-hover>
+                <v-card
+                  slot-scope="{ hover }"
+                  :class="`elevation-${hover ? 12 : 2}`"
+                  class="glass2"
+                  :style="{ color: hover ? '#69c6fa' : '#fff' }"
+                  min-height="170"
+                >
+                  <v-img
+                    contain
+                    max-height="100"
+                    src="../assets/nosotros/valores/profesionalismo.png"
+                  ></v-img>
+
+                  <v-card-text
+                    class="pt-0 text-val text-no-wrap"
+                    :style="{ color: hover ? '#69c6fa' : '' }"
+                    >Profesionalismo</v-card-text
+                  >
                 </v-card>
               </v-hover>
             </v-col>
@@ -288,7 +483,7 @@
           </v-row>
         </v-col>
 
-        <v-col md="6" sm="12" class="contenedor">
+        <v-col md="6" sm="12" class="contenedor solo-desk">
           <v-card elevation="0">
             <v-card-title style="color: #69c6fa">
               <span class="text-h4 texto-tit">Nuestros valores</span>
@@ -307,11 +502,12 @@
 </template>
 
 <style lang="scss">
-.main-pag {
+.noso-pag {
   padding: 0;
   font-family: Commissioner;
 
   .contenedor {
+    padding: 60px !important;
     align-self: center;
   }
 
@@ -374,11 +570,11 @@
     padding: 5%;
   }
   .casos-ex {
-    /* background-color: #69c6fa; */
+   background-color: #69c6fa;
     background: linear-gradient(
-      90deg,
-      rgba(105, 198, 250, 1) 0%,
-      rgba(255, 255, 255, 1) 20%
+      129deg,
+      rgba(105, 198, 250, 1) 10%,
+      rgba(255, 255, 255, 1) 47%
     );
   }
   .texto-ex {
@@ -387,10 +583,17 @@
   }
   .purple-color {
     background-color: #9825a6;
+    font-size: 30px;
     color: #fff;
     h2 {
       font-size: xx-large;
     }
+  }
+  .text-val {
+    font-size: small;
+  }
+  .solo-mob{
+    display: none;
   }
 
   @media only screen and (max-width: 600px) {
@@ -425,8 +628,11 @@
       }
     }
     .solo-desk {
-      visibility: hidden;
+      display: none;
     }
+     .solo-mob{
+    display: inline;
+  }
   }
 }
 .landing {

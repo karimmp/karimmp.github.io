@@ -117,7 +117,7 @@
               </v-list>
               <div class="pa-5 text-left">
                 <v-btn
-                  to="/servicios#diversidad"
+                  to="/servicios"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
@@ -163,7 +163,7 @@
               </v-list>
               <div class="pa-5 text-left">
                 <v-btn
-                  to="/servicios#gestion"
+                  to="/servicios"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
@@ -193,7 +193,7 @@
               </v-list>
               <div class="pa-5 text-left" style="justify-content: center">
                 <v-btn
-                  to="/servicios#coaching"
+                  to="/servicios"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
@@ -433,7 +433,7 @@
           md="4"
           sm="12"
           style="align-self: center"
-          ><p class="text-h4">Somos una empresa de calidad comprobada</p></v-col
+          >\<strong><p class="text-h4">Somos una empresa de calidad comprobada</p></strong></v-col
         >
         <v-col cols="auto" md="4" sm="12" class="pa-10">
           <v-card width="100%" elevation="0">
