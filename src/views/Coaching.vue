@@ -33,7 +33,7 @@
       <section id="serviciosd">
         <h1 class="txt-white mt-5">Gestión de recuesos humanos</h1>
         <v-row class="pa-15 contenedor">
-          
+
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
               <v-img src="../assets/gestion/juntas.png"></v-img>
@@ -49,14 +49,13 @@
                     Acompañamiento integral con nuestros equipo expertos en la
                     búsqueda de empleo; haciendo frente a los procesos de
                     selección actuales.
-                    <br />
-                    <br />
+             
                   </div>
                 </v-card-text>
                 <v-card-actions>
                   <v-btn
                     outlined
-                    color="#12b0f4"
+                    color="#fe6472"
                     @click="reveal = true"
                     style="text-transform: none"
                     class="ma-5"
@@ -88,13 +87,12 @@
                           Implementación de la Búsqueda (Redes Sociales -
                           LinkedIn – Algoritmos - Red de apoyo).
                         </li>
-                        <p class="texto-body text-left mt-1">Y más..</p>
                       </ul>
                     </v-card-text>
                     <v-card-actions class="pt-0">
                       <v-btn
                         outlined
-                        color="#12b0f4"
+                        color="#fe6472"
                         @click="reveal = false"
                         class="ml-5"
                         style="text-transform: none"
@@ -123,17 +121,19 @@
                   >
                     Creemos que la juventud es el legado más valioso por eso los
                     apoyamos en la busqueda de su primer trabajo.
+                    <br/>
+                    <br/>
                   </div>
                 </v-card-text>
                 <v-card-actions>
                   <v-btn
                     outlined
-                    color="#12b0f4"
-                    @click="reveal2 = true"
+                    color="#fe6472"
+                    to="contactanos"
                     style="text-transform: none"
                     class="ma-5"
                   >
-                    Conoce más
+                    Contáctanos
                   </v-btn>
                 </v-card-actions>
 
@@ -160,7 +160,7 @@
                     <v-card-actions class="pt-0">
                       <v-btn
                         outlined
-                        color="#12b0f4"
+                        color="#fe6472"
                         @click="reveal2 = false"
                         class="ma-5"
                         style="text-transform: none"
@@ -194,7 +194,7 @@
                 <v-card-actions>
                   <v-btn
                     outlined
-                    color="#12b0f4"
+                    color="#fe6472"
                     @click="reveal3 = true"
                     style="text-transform: none"
                     class="ma-5"
@@ -225,7 +225,7 @@
                     <v-card-actions class="pt-0">
                       <v-btn
                         outlined
-                        color="#12b0f4"
+                        color="#fe6472"
                         @click="reveal3 = false"
                         class="ma-5"
                         style="text-transform: none"
@@ -331,12 +331,8 @@
   }
 
   .soluciones {
-    background: rgb(0, 219, 255);
-    background: linear-gradient(
-      129deg,
-      rgba(0, 219, 255, 1) 22%,
-      rgba(89, 2, 201, 1) 84%
-    );
+    background: rgb(255,254,51);
+    background: linear-gradient(129deg, rgba(255,254,51,1) 22%, rgba(253,23,146,1) 84%);
 
     .txt-white {
       color: #fff;
