@@ -9,8 +9,8 @@
         ></v-app-bar-nav-icon>
 
         <v-app-bar-title
-          ><img alt="Addition logo" src="./assets/logo.png"
-        /></v-app-bar-title>
+          ><a href="/"> <img alt="Addition logo" src="./assets/logo.png"
+        /></a></v-app-bar-title>
         <v-spacer></v-spacer>
 
         <div class="nav-links hidden-sm-and-down">
@@ -196,13 +196,15 @@ export default {
         { title: 'Gestión de recursos humanos',link:"/rh" },
         { title: 'Coaching Laboral', link:"/coaching" },
       ],
-      menub: [{ key: "blog", icon: "", title: "Blog", link: "/Blog " }],
+      menub: [{ key: "blog", icon: "", title: "Blog", link: "/blog" },],
+
+
 
       menu2: [
         { key: "inicio", title: "Inicio", link: "/" },
         { key: "nosotros", title: "Nosotros", link: "/Nosotros" },
         { key: "servicios", title: "Servicios", link: "/Servicios" },
-        { key: "blog", icon: "", title: "Blog", link: "/Blog " },
+        { key: "blog", icon: "", title: "Blog", link: "/blog" },
         {
           key: "contactanos",
           icon: "",

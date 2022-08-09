@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid class="rh-pag">
-    <v-img alt="fondo" src="../assets/gestion/junta.png"
+  <v-container fluid class="coach-pag">
+    <v-img alt="fondo" src="../assets/especializados/portada-especializados.png"
       ><v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -13,11 +13,15 @@
             <v-card-text class="pt-8 texto-land">
               Acompañamos a las personas en la búsqueda de empleo para
               crecimiento personal, familiar y profesional.
-              <ul>
-                <li>Findy JOB</li>
-                <li>Job first (Orientación vocacional</li>
-                <li>Outplacement</li>
-              </ul>
+              <br/>
+              <br/>
+              <strong>
+                <ul>
+                  <li>Findy JOB</li>
+                  <li>Job first (Orientación vocacional)</li>
+                  <li>Outplacement</li>
+                </ul>
+              </strong>
             </v-card-text>
             <div class="pt-5 text-left">
               <v-btn color="#12b0f4" rounded class="pa-7" dark>
@@ -33,7 +37,6 @@
       <section id="serviciosd">
         <h1 class="txt-white mt-5">Gestión de recuesos humanos</h1>
         <v-row class="pa-15 contenedor">
-
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
               <v-img src="../assets/gestion/juntas.png"></v-img>
@@ -49,7 +52,6 @@
                     Acompañamiento integral con nuestros equipo expertos en la
                     búsqueda de empleo; haciendo frente a los procesos de
                     selección actuales.
-             
                   </div>
                 </v-card-text>
                 <v-card-actions>
@@ -85,7 +87,7 @@
                         </li>
                         <li>
                           Implementación de la Búsqueda (Redes Sociales -
-                          LinkedIn – Algoritmos - Red de apoyo).
+                          LinkedIn-Algoritmos - Red de apoyo).
                         </li>
                       </ul>
                     </v-card-text>
@@ -121,8 +123,8 @@
                   >
                     Creemos que la juventud es el legado más valioso por eso los
                     apoyamos en la busqueda de su primer trabajo.
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                   </div>
                 </v-card-text>
                 <v-card-actions>
@@ -238,8 +240,6 @@
               </v-card>
             </v-card>
           </v-col>
-
-
         </v-row>
       </section>
     </v-container>
@@ -265,7 +265,7 @@
 </template>
 
 <style lang="scss">
-.rh-pag {
+.coach-pag {
   padding: 0;
   font-family: Commissioner !important;
 
@@ -331,8 +331,12 @@
   }
 
   .soluciones {
-    background: rgb(255,254,51);
-    background: linear-gradient(129deg, rgba(255,254,51,1) 22%, rgba(253,23,146,1) 84%);
+    background: rgb(255, 254, 51);
+    background: linear-gradient(
+      129deg,
+      rgba(255, 254, 51, 1) 22%,
+      rgba(253, 23, 146, 1) 84%
+    );
 
     .txt-white {
       color: #fff;

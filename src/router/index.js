@@ -36,6 +36,11 @@ const routes = [
     component: () => import( '../views/Blog.vue')
   },
   {
+    path: '/2021/diciembre',
+    name: 'Diciembre',
+    component: () => import( '../views/2021/Diciembre.vue')
+  },
+  {
     path: '/contactanos',
     name: 'Contactanos',
     component: () => import( '../views/Contactanos.vue')
