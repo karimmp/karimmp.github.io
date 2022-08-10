@@ -117,7 +117,7 @@
               </v-list>
               <div class="pa-5 text-left">
                 <v-btn
-                  to="/servicios"
+                  to="/diversidad"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
@@ -163,7 +163,7 @@
               </v-list>
               <div class="pa-5 text-left">
                 <v-btn
-                  to="/servicios"
+                  to="/rh"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
@@ -193,7 +193,7 @@
               </v-list>
               <div class="pa-5 text-left" style="justify-content: center">
                 <v-btn
-                  to="/servicios"
+                  to="/coaching"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined

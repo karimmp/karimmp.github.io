@@ -9,8 +9,8 @@
         ></v-app-bar-nav-icon>
 
         <v-app-bar-title
-          ><a href="/"> <img alt="Addition logo" src="./assets/logo.png"
-        /></a></v-app-bar-title>
+          ><a href="/"> <img alt="Addition logo" src="./assets/logo.png" /></a
+        ></v-app-bar-title>
         <v-spacer></v-spacer>
 
         <div class="nav-links hidden-sm-and-down">
@@ -20,13 +20,16 @@
 
           <v-menu open-on-hover offset-y>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn plain tile v-bind="attrs" v-on="on">
-                Soluciones
-              </v-btn>
+              <v-btn plain tile v-bind="attrs" v-on="on"> Soluciones </v-btn>
             </template>
 
             <v-list class="lista-menu">
-              <v-list-item  v-for="(item, index) in menua" :key="index" link :to="item.link">
+              <v-list-item
+                v-for="(item, index) in menua"
+                :key="index"
+                link
+                :to="item.link"
+              >
                 <v-list-item-title>{{ item.title }}</v-list-item-title>
               </v-list-item>
             </v-list>
@@ -50,7 +53,7 @@
       <v-navigation-drawer v-model="drawer" fixed temporary>
         <v-list nav dense>
           <v-list-item-group v-model="group" active-class=" text--accent-4">
-            <v-list-item v-for="(item, i) in menu" :key="i">
+            <v-list-item v-for="(item, i) in menu2" :key="i" :to="item.link">
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list-item-group>
@@ -141,7 +144,6 @@
       color: #ea5076;
     }
   }
- 
 }
 .pie-pagina {
   padding: 0;
@@ -203,15 +205,16 @@ export default {
       menu2: [
         { key: "inicio", title: "Inicio", link: "/" },
         { key: "nosotros", title: "Nosotros", link: "/Nosotros" },
-        { key: "servicios", title: "Servicios", link: "/Servicios" },
+        { key: "servicios", title: "Servicios", link: "/diversidad" },
         { key: "blog", icon: "", title: "Blog", link: "/blog" },
         {
           key: "contactanos",
           icon: "",
           title: "Contáctanos",
-          link: "/Contáctanos",
+          link: "/Contactanos",
         },
       ],
+
       admins: [
         ["Management", "mdi-account-multiple-outline"],
         ["Settings", "mdi-cog-outline"],
