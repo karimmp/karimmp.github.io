@@ -169,8 +169,8 @@
                   </v-card-title>
                   <div class="texto-ex mt-0">
                     <v-card-subtitle>
-                      Implementamos programas de diversidad e inclusión para
-                      mejorar la productividad de las organizaciones y
+                      Implementamos programas de <strong>diversidad e inclusión</strong> para
+                      mejorar la productividad de las organizaciones en
                       cumplimiento de la normatividad vigente.
                     </v-card-subtitle>
                     <v-card-text>
@@ -181,8 +181,8 @@
                             Laboral y No Discriminación.
                           </li>
                           <li>
-                            Norma Oficial Mexicana NOM-035-STPS-2018 de factores
-                            de riesgo psicosocial.
+                            Norma Oficial Mexicana NOM-035-STPS-2018 de <strong>Factores
+                            de Riesgo Psicosocial</strong>
                           </li>
                           <li>Distintivo Empresa Socialmente Responsable.</li>
                         </ul>
@@ -233,7 +233,7 @@
                     <v-card-text>
                       <strong>
                         <ul>
-                          <li>Findy JOB</li>
+                          <li>Job Hunter</li>
                           <li>Job first (Orientación vocacional)</li>
                           <li>Outplacement</li>
                         </ul>
@@ -271,13 +271,11 @@
       </v-col>
     </v-row>
 
-    
-
     <v-container class="casos-ex" fluid>
-      <v-row class="solo-mob" 
-        ><v-col md="6" sm="12" class="contenedor" >
-          <v-card elevation="0" style="background-color:rgba(0, 0, 0, 0)">
-            <v-card-title style="color: #1D588E">
+      <v-row class="solo-mob"
+        ><v-col md="6" sm="12" class="contenedor">
+          <v-card elevation="0" style="background-color: rgba(0, 0, 0, 0)">
+            <v-card-title style="color: #1d588e">
               <span class="texto-tit">Nuestros valores</span>
             </v-card-title>
             <v-card-text class="text-justify texto-ex">
@@ -570,7 +568,7 @@
     padding: 5%;
   }
   .casos-ex {
-   background-color: #69c6fa;
+    background-color: #69c6fa;
     background: linear-gradient(
       129deg,
       rgba(105, 198, 250, 1) 10%,
@@ -592,7 +590,7 @@
   .text-val {
     font-size: small;
   }
-  .solo-mob{
+  .solo-mob {
     display: none;
   }
 
@@ -630,9 +628,9 @@
     .solo-desk {
       display: none;
     }
-     .solo-mob{
-    display: inline;
-  }
+    .solo-mob {
+      display: inline;
+    }
   }
 }
 .landing {

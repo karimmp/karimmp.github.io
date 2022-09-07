@@ -44,7 +44,7 @@
       <v-btn color="#ea5076" style="text-transform: none" dark>Enviar</v-btn>
     </div>
 
-    <p class="texto-rosa">contacto@addition.com</p>
+    <p class="texto-rosa">contacto@additionrh.com</p>
   </v-container>
 </template>
 <style lang="scss">

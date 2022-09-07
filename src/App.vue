@@ -198,7 +198,8 @@ export default {
         { title: 'Gestión de recursos humanos',link:"/rh" },
         { title: 'Coaching Laboral', link:"/coaching" },
       ],
-      menub: [{ key: "blog", icon: "", title: "Blog", link: "/blog" },],
+      menub: [{ key: "alianzas", icon: "", title: "Alianzas Comerciales", link: "/alianzas" },
+        { key: "blog", icon: "", title: "Blog", link: "/blog" },],
 
 
 
@@ -206,6 +207,7 @@ export default {
         { key: "inicio", title: "Inicio", link: "/" },
         { key: "nosotros", title: "Nosotros", link: "/Nosotros" },
         { key: "servicios", title: "Servicios", link: "/diversidad" },
+        { key: "alianzas", icon: "", title: "Alianzas Comerciales", link: "/alianzas" },
         { key: "blog", icon: "", title: "Blog", link: "/blog" },
         {
           key: "contactanos",

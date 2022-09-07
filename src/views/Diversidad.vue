@@ -34,7 +34,13 @@
               >
             </v-card-text>
             <div class="pt-5 text-left">
-              <v-btn color="#9825a6" rounded class="pa-7" dark>
+              <v-btn
+                color="#9825a6"
+                rounded
+                class="pa-7"
+                dark
+                @click="$vuetify.goTo('#servicios')"
+              >
                 Conoce más
               </v-btn>
             </div>
@@ -44,7 +50,8 @@
     </v-img>
 
     <v-container fluid class="soluciones">
-      <section id="serviciosd">
+      <about id="servicios" />
+      <section ref="serviciosd">
         <h1 class="txt-white mt-5">Servicios en diversidad e inclusión</h1>
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="4" sm="12">
@@ -70,7 +77,7 @@
                     color="#9825a6"
                     @click="reveal = true"
                     style="text-transform: none"
-                    class="ma-5"
+                    class="ma-9"
                   >
                     Conoce más
                   </v-btn>
@@ -117,7 +124,7 @@
           </v-col>
 
           <v-col cols="auto" md="4" sm="12">
-            <v-card elevation="10" color="white" class="tarjeta-serv">
+            <v-card elevation="10" color="white" class="tarjeta-serv" >
               <v-img src="../assets/home/servicios-especializados.jpg"></v-img>
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
@@ -129,7 +136,7 @@
                     class="texto-body cuerpo"
                     style="text-align: center !important"
                   >
-                    Logra la certificación de tu empresa
+                    Logra su implentación de forma correcta
                   </div>
                 </v-card-text>
                 <v-card-actions>
@@ -204,7 +211,7 @@
                     color="#9825a6"
                     @click="reveal3 = true"
                     style="text-transform: none"
-                    class="ma-5"
+                    class="ma-10"
                   >
                     Conoce más
                   </v-btn>
@@ -260,7 +267,7 @@
         <v-col cols="auto" md="6" sm="12" class="">
           <v-card class="mx-12 my-12" elevation="0">
             <h2 class="text-left mb-n3 purple-color">
-              ¿Tu organización asume las normas sobre diversidad e inclusión?
+              ¿Tu organización asume los temas sobre diversidad e inclusión?
             </h2>
             <v-card-text class="text-justify texto-body"
               >Con nuestra fórmula hemos participado en la asesoría, formación,
@@ -337,10 +344,11 @@
         </v-col>
 
         <v-col cols="auto" md="6" sm="12">
-          <div class="solo-mob pa-10" style="color:#fff">
-            <span class=" text-h4"
+          <div class="solo-mob pa-10" style="color: #fff">
+            <span class="text-h4"
               >¿Por qué pensar en <br />
-              <strong>diversidad e inclusión?</strong></span>
+              <strong>diversidad e inclusión?</strong></span
+            >
           </div>
           <div>
             <v-carousel
@@ -560,7 +568,7 @@
     }
 
     .tarjeta-serv {
-      height: 102%;
+      height: 105%;
     }
     .vertical-center {
       margin: 0;
@@ -600,7 +608,7 @@
         font-size: medium;
       }
       .texto {
-        font-size: x-small;        
+        font-size: x-small;
       }
     }
     .casos-ex {

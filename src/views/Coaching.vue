@@ -13,18 +13,24 @@
             <v-card-text class="pt-8 texto-land">
               Acompañamos a las personas en la búsqueda de empleo para
               crecimiento personal, familiar y profesional.
-              <br/>
-              <br/>
+              <br />
+              <br />
               <strong>
                 <ul>
-                  <li>Findy JOB</li>
+                  <li>Job Hunter</li>
                   <li>Job first (Orientación vocacional)</li>
                   <li>Outplacement</li>
                 </ul>
               </strong>
             </v-card-text>
             <div class="pt-5 text-left">
-              <v-btn color="#12b0f4" rounded class="pa-7" dark>
+              <v-btn
+                color="#12b0f4"
+                rounded
+                class="pa-7"
+                dark
+                @click="$vuetify.goTo('#soluciones')"
+              >
                 Conoce más
               </v-btn>
             </div>
@@ -34,8 +40,8 @@
     </v-img>
 
     <v-container fluid class="soluciones">
-      <section id="serviciosd">
-        <h1 class="txt-white mt-5">Gestión de recuesos humanos</h1>
+      <section id="soluciones">
+        <h1 class="txt-white mt-5">Gestión de Recuesos Humanos</h1>
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
@@ -43,7 +49,7 @@
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
-                  <p class="titulos text--primary">Findy JOB</p>
+                  <p class="titulos text--primary">Job Hunter</p>
 
                   <div
                     class="texto-body cuerpo"
@@ -55,15 +61,30 @@
                   </div>
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#fe6472"
-                    @click="reveal = true"
-                    style="text-transform: none"
-                    class="ma-5"
-                  >
-                    Conoce más
-                  </v-btn>
+                  <v-row>
+                    <v-col cols="6">
+                      <v-btn
+                        outlined
+                        color="#fe6472"
+                        to="contactanos"
+                        style="text-transform: none"
+                        class="mx-0 my-5"
+                      >
+                        Contáctanos
+                      </v-btn>
+                    </v-col>
+                    <v-col cols="6">
+                      <v-btn
+                        outlined
+                        color="#fe6472"
+                        @click="reveal = true"
+                        style="text-transform: none"
+                        class="mx-0 my-5"
+                      >
+                        Conoce más
+                      </v-btn>
+                    </v-col>
+                  </v-row>
                 </v-card-actions>
 
                 <v-expand-transition>
@@ -194,18 +215,33 @@
                   </div>
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#fe6472"
-                    @click="reveal3 = true"
-                    style="text-transform: none"
-                    class="ma-5"
-                  >
-                    Conoce más
-                  </v-btn>
+                  <v-row>
+                    <v-col  sm="12" md="6">
+                      <v-btn
+                        outlined
+                        color="#fe6472"
+                        to="contactanos"
+                        style="text-transform: none"
+                        class="mx-0 my-5"
+                      >
+                        Contáctanos
+                      </v-btn>
+                    </v-col>
+                    <!-- <v-col cols="6">
+                      <v-btn
+                        outlined
+                        color="#fe6472"
+                        @click="reveal3 = true"
+                        style="text-transform: none"
+                        class="mx-0 my-5"
+                      >
+                        Conoce más
+                      </v-btn>
+                    </v-col> -->
+                  </v-row>
                 </v-card-actions>
 
-                <v-expand-transition>
+                <!-- <v-expand-transition>
                   <v-card
                     v-if="reveal3"
                     class="transition-fast-in-fast-out v-card--reveal"
@@ -236,7 +272,7 @@
                       </v-btn>
                     </v-card-actions>
                   </v-card>
-                </v-expand-transition>
+                </v-expand-transition> -->
               </v-card>
             </v-card>
           </v-col>
@@ -331,10 +367,10 @@
   }
 
   .soluciones {
-    background: rgb(255, 254, 51);
+    background: rgb(255, 221, 51);
     background: linear-gradient(
       129deg,
-      rgba(255, 254, 51, 1) 22%,
+      rgba(255, 221, 51, 1) 22%,
       rgba(253, 23, 146, 1) 84%
     );
 

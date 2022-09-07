@@ -32,6 +32,7 @@
             </v-card-text>
             <div class="pt-5 text-left">
               <v-btn color="#ea5076" rounded class="pa-7" dark
+              @click="$vuetify.goTo('#soluciones')"
                 >Conoce más
               </v-btn>
             </div>
@@ -105,8 +106,8 @@
                 >
                 <v-list-item
                   ><strong
-                    >Norma Oficial Mexicana NOM-035-STPS-2018 de factores de
-                    riesgo psicosocial.</strong
+                    >Norma Oficial Mexicana NOM-035-STPS-2018 de Factores de
+                    Riesgo Psicosocial.</strong
                   ></v-list-item
                 >
                 <v-list-item
@@ -183,7 +184,7 @@
                 crecimiento personal, familiar y profesional.
               </v-card-text>
               <v-list style="text-align: justify; font-size: 15px; padding: 2%">
-                <v-list-item><strong>Findy JOB</strong></v-list-item>
+                <v-list-item><strong>Job Hunter</strong></v-list-item>
                 <v-list-item
                   ><strong
                     >Job first (Orientación vocacional)</strong
@@ -330,7 +331,7 @@
         <v-col md="6" sm="12" class="contenedor">
           <v-card elevation="0">
             <v-card-title style="color: #69c6fa">
-              <span class="text-h4 texto-tit">Casos de éxito</span>
+              <span class="text-h4 texto-tit">Casos de éxito por Alianzas</span>
             </v-card-title>
             <v-card-text class="text-justify texto-ex">
               Para Addition, la unión hace la fuerza.
@@ -433,7 +434,7 @@
           md="4"
           sm="12"
           style="align-self: center"
-          >\<strong><p class="text-h4">Somos una empresa de calidad comprobada</p></strong></v-col
+          ><strong><p class="text-h4">Somos una empresa de calidad comprobada</p></strong></v-col
         >
         <v-col cols="auto" md="4" sm="12" class="pa-10">
           <v-card width="100%" elevation="0">
@@ -636,14 +637,14 @@ export default {
           img: "johnsonLogo.png",
           persona: "Ricardo Bussey",
           puesto: "Director Public Affairs LATAM",
-          text: "“Somos una empresa transnacional con representación en México. Addition nos ha brindado asesoría integral en la gestión de nuestro personal, Addition es reconocido internamente en nuestra organización por otros países, como parte del éxito de los resultados en el crecimiento de la operación en México”. ",
+          text: "“Somos clientes de Addition desde hace más de una década para nuestras operaciones en México, han contribuido con su asesoría para fortalecer nuestra cultura organizacional y reforzar en cada una de nuestras acciones la Integridad y el trabajo en equipo como valores principales”. ",
         },
         {
           key: "marken",
           icon: "",
           title: "marken",
           img: "markenLogo.png",
-          persona: "David",
+          persona: "David Zendejas",
           puesto: "Manager, Billing Services",
           text: "“Somos una empresa transnacional con representación en México. Addition nos ha brindado asesoría integral en la gestión de nuestro personal, Addition es reconocido internamente en nuestra organización por otros países, como parte del éxito de los resultados en el crecimiento de la operación en México”. ",
         },
