@@ -41,7 +41,7 @@
 
     <v-container fluid class="soluciones">
       <section id="soluciones">
-        <h1 class="txt-white mt-5">Gestión de Recuesos Humanos</h1>
+        <h1 class="txt-white mt-5">Gestión de Recursos Humanos</h1>
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
@@ -282,19 +282,19 @@
 
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pt-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40.000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
       <v-col cols="4" class="pt-10">
-        <span class="numero"><strong>+80</strong></span>
+        <span class="numero"><strong>+2000</strong></span>
         <br />
-        <span class="texto">empresas impactadas</span>
+        <span class="texto">empresas satisfechas</span>
       </v-col>
     </v-row>
   </v-container>

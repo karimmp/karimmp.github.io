@@ -194,7 +194,7 @@ export default {
         { key: "nosotros", icon: "", title: "Nosotros", link: "/Nosotros" },
       ],
       menua: [
-        { title: 'Diversidad e inclusion' , link:"/diversidad"},
+        { title: 'Diversidad e inclusión' , link:"/diversidad"},
         { title: 'Gestión de recursos humanos',link:"/rh" },
         { title: 'Coaching Laboral', link:"/coaching" },
       ],

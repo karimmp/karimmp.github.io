@@ -91,7 +91,7 @@
               <v-card-title class="px-5">Diversidad e inclusión</v-card-title>
               <v-card-text class="texto-body px-5">
                 Implementamos programas de diversidad e inclusión para mejorar
-                la productividad de las organizaciones y cumplimiento de la
+                la productividad de las organizaciones en cumplimiento de la
                 normatividad vigente.
               </v-card-text>
               <v-list
@@ -331,7 +331,7 @@
         <v-col md="6" sm="12" class="contenedor">
           <v-card elevation="0">
             <v-card-title style="color: #69c6fa">
-              <span class="text-h4 texto-tit">Casos de éxito por Alianzas</span>
+              <span class="text-h4 texto-tit">Casos de éxito por alianzas</span>
             </v-card-title>
             <v-card-text class="text-justify texto-ex">
               Para Addition, la unión hace la fuerza.
