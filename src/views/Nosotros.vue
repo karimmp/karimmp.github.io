@@ -148,7 +148,7 @@
       <v-row class="my-5">
         <v-col cols="auto" md="6" sm="12">
           <span
-            >Esta es la formula <br />
+            >Esta es la fórmula <br />
             <strong>Addition</strong></span
           >
           <div class="py-5">
@@ -320,6 +320,7 @@
                   class="glass2"
                   :style="{ color: hover ? '#69c6fa' : '#fff' }"
                   min-height="170"
+                  min-width="170"
                 >
                   <v-img
                     contain

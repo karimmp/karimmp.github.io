@@ -83,7 +83,7 @@
 
     <v-container fluid class="soluciones">
       <section id="soluciones">
-        <h1 class="txt-white mt-5">Nuestas Soluciones</h1>
+        <h1 class="txt-white mt-5">Nuestras Soluciones</h1>
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" height="100%">
@@ -229,7 +229,7 @@
               clientes.
               <br />
               <br />
-              Con nuestra formula hemos participado en asesoría, formación, y/o
+              Con nuestra fórmula hemos participado en asesoría, formación, y/o
               certificación de más de 2,879 empresas del sector público y
               privado.
               <br />
