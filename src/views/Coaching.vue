@@ -389,7 +389,7 @@
     padding: 0px !important;
 
     .numero {
-      font-size: 60px;
+      font-size: xx-large;
     }
     .texto {
       text-transform: uppercase;

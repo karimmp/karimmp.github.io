@@ -320,7 +320,7 @@
                   class="glass2"
                   :style="{ color: hover ? '#69c6fa' : '#fff' }"
                   min-height="170"
-                  min-width="170"
+                  min-width="137"
                 >
                   <v-img
                     contain
@@ -344,6 +344,7 @@
                   class="glass2"
                   :style="{ color: hover ? '#69c6fa' : '#fff' }"
                   min-height="170"
+                  min-width="137"
                 >
                   <v-img
                     contain
@@ -556,7 +557,7 @@
     padding: 0px !important;
 
     .numero {
-      font-size: 60px;
+      font-size: xx-large;
     }
     .texto {
       text-transform: uppercase;
