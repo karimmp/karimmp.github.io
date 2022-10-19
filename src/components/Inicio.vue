@@ -44,7 +44,7 @@
       <v-row no-gutters>
         <v-col cols="auto" md="6" sm="12" class="formato-video">
           <video width="100%" height="auto" controls autoplay muted>
-            <source src="/videoAdd.mp4" type="video/mp4" />
+            <source src="https://d1z76heyx58zfh.cloudfront.net/" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </v-col>
