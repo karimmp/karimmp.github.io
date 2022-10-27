@@ -65,108 +65,112 @@
  -->
 
 <template>
-  <div class="container">
-    <form>
-      <label>Name</label>
-      <input type="text" v-model="name" name="name" placeholder="Your Name" />
-      <label>Email</label>
-      <input
-        type="email"
-        v-model="email"
-        name="email"
-        placeholder="Your Email"
-      />
-      <label>Message</label>
-      <textarea
-        name="message"
-        v-model="message"
-        cols="30"
-        rows="5"
-        placeholder="Message"
-      >
-      </textarea>
+  <v-container fluid class="pa-0">
+    <p class="text-title texto-rosa">Contáctanos</p>
+    <p class="mt-n8">
+      Estamos a su disposición para resolver cualquier tipo de duda
+    </p>
+    <form id="form">
+      <div class="field">
+        <label for="nombre">nombre</label>
+        <input type="text" name="nombre" id="nombre" />
+      </div>
+      <div class="field">
+        <label for="message">mensaje</label>
+        <input type="text" name="message" id="message" />
+      </div>
+      <div class="field">
+        <label for="email">email</label>
+        <input type="text" name="email" id="email" />
+      </div>
 
-      <input type="submit" value="Send" />
+      <input type="submit" id="button" value="Send Email" />
     </form>
-  </div>
+  </v-container>
 </template>
 
-<style scoped>
-* {
-  box-sizing: border-box;
+<style lang="scss">
+.texto-rosa {
+  color: #ea5076;
 }
-
-.container {
-  display: block;
-  margin: auto;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 50%;
-}
-
-label {
-  float: left;
-}
-
-input[type="text"],
-[type="email"],
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #45a049;
+.text-title {
+  padding: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 </style>
 
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+
+<script type="text/javascript">
+emailjs.init("cqG37n5OJJU7ta-J5");
+</script>
+
 <script>
-import emailjs from 'emailjs-com';
+const btn = document.getElementById("button");
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  btn.value = "Sending...";
+
+  const serviceID = "default_service";
+  const templateID = "template_t3rdqq9";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Send Email";
+      alert("Sent!");
+    },
+    (err) => {
+      btn.value = "Send Email";
+      alert(JSON.stringify(err));
+    }
+  );
+});
+</script>
+
+<!-- <script>
+import emailjs from "emailjs-com";
 export default {
-  name: 'ContactUs',
+  name: "ContactUs",
   data() {
     return {
-      name: '',
-      email: '',
-      message: ''
-    }
+      name: "",
+      email: "",
+      message: "",
+    };
   },
   methods: {
     sendEmail(e) {
       try {
-        emailjs.sendForm('service_e1qd3r9', 'template_t3rdqq9', e.target, 'cqG37n5OJJU7ta-J5', {
-          name: this.name,
-          email: this.email,
-          message: this.meessage
-        })
+        emailjs.sendForm(
+          "service_e1qd3r9",
+          "template_t3rdqq9",
+          e.target,
+          "cqG37n5OJJU7ta-J5",
+          {
+            name: this.name,
+            email: this.email,
+            message: this.meessage,
+          }
+        );
       } catch (error) {
-          console.log({error})
+        console.log({ error });
       }
       // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
+      this.name = "";
+      this.email = "";
+      this.message = "";
     },
-  }
-}
-</script>
+  },
+};
+</script> -->
 
 <!-- <script>
 import emailjs from "emailjs-com";
