@@ -467,7 +467,7 @@
               "
               contain
               max-width="200"
-              src="../assets/home/certificado-rh.png"
+              src="../assets/home/certificado-rh2022.jpg"
             ></v-img>
             <v-card-text class="text-justify"
               >Ocupamos el lugar número 15 a nivel Nacional dentro de las 50
