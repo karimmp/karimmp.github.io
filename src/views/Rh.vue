@@ -1,13 +1,10 @@
 <template>
   <v-container fluid class="rh-pag">
-    <v-img alt="fondo" src="../assets/gestion/junta.png"
-      ><v-row no-gutters>
+    <v-img alt="fondo" src="../assets/gestion/junta.png">
+      <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
-            <v-card-title
-              class="pt-8 texto-titulo"
-              style="word-break: break-word"
-            >
+            <v-card-title class="pt-8 texto-titulo" style="word-break: break-word">
               <h2>Gestión de Recursos Humanos</h2>
             </v-card-title>
             <v-card-text class="pt-8 texto-land">
@@ -27,7 +24,7 @@
               <br />
             </v-card-text>
             <div class="pt-5 text-left">
-              <v-btn color="#12b0f4" rounded class="pa-7" dark>
+              <v-btn color="#12b0f4" rounded class="pa-7" dark @click="$vuetify.goTo('#serviciosd')">
                 Conoce más
               </v-btn>
             </div>
@@ -38,7 +35,7 @@
 
     <v-container fluid class="soluciones">
       <section id="serviciosd">
-        <h1 class="txt-white mt-5">Gestión de recuesos humanos</h1>
+        <h1 class="txt-white mt-5">Gestión de recursos humanos</h1>
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="3" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
@@ -50,10 +47,7 @@
                     Atracción y selección de talento humano.
                   </p>
 
-                  <div
-                    class="texto-body cuerpo"
-                    style="text-align: center !important"
-                  >
+                  <div class="texto-body cuerpo" style="text-align: center !important">
                     Contrata al personal adecuado para el crecimiento de tu
                     organización.
                     <br />
@@ -61,24 +55,14 @@
                   </div>
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#12b0f4"
-                    @click="reveal = true"
-                    style="text-transform: none"
-                    class="ma-5"
-                  >
+                  <v-btn outlined color="#12b0f4" @click="reveal = true" style="text-transform: none" class="ma-5">
                     Conoce más
                   </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                  <v-card
-                    v-if="reveal"
-                    class="transition-fast-in-fast-out v-card--reveal"
-                    style="height: 100%"
-                    elevation="0"
-                  >
+                  <v-card v-if="reveal" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%"
+                    elevation="0">
                     <v-card-text class="pb-0 my-5">
                       <p class="texto-body">Contamos con servicios de:</p>
                       <ul class="texto-body text-left">
@@ -89,13 +73,7 @@
                       </ul>
                     </v-card-text>
                     <v-card-actions class="pt-0">
-                      <v-btn
-                        outlined
-                        color="#12b0f4"
-                        @click="reveal = false"
-                        class="ml-5"
-                        style="text-transform: none"
-                      >
+                      <v-btn outlined color="#12b0f4" @click="reveal = false" class="ml-5" style="text-transform: none">
                         Cerrar
                       </v-btn>
                     </v-card-actions>
@@ -114,33 +92,20 @@
                     Evaluación de talento humano y organizacional.
                   </p>
 
-                  <div
-                    class="texto-body cuerpo"
-                    style="text-align: center !important"
-                  >
+                  <div class="texto-body cuerpo" style="text-align: center !important">
                     Fortalece los procesos internos de tu organización con
                     nuestras evaluaciones y diagnóstico.
                   </div>
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#12b0f4"
-                    @click="reveal2 = true"
-                    style="text-transform: none"
-                    class="ma-5"
-                  >
+                  <v-btn outlined color="#12b0f4" @click="reveal2 = true" style="text-transform: none" class="ma-5">
                     Conoce más
                   </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                  <v-card
-                    v-if="reveal2"
-                    class="transition-fast-in-fast-out v-card--reveal"
-                    style="height: 100%"
-                    elevation="0"
-                  >
+                  <v-card v-if="reveal2" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%"
+                    elevation="0">
                     <v-card-text class="pb-0">
                       <p class="texto-body">
                         Nuestras evaluaciones y diagnósticos:
@@ -155,13 +120,8 @@
                       </ul>
                     </v-card-text>
                     <v-card-actions class="pt-0">
-                      <v-btn
-                        outlined
-                        color="#12b0f4"
-                        @click="reveal2 = false"
-                        class="ma-5"
-                        style="text-transform: none"
-                      >
+                      <v-btn outlined color="#12b0f4" @click="reveal2 = false" class="ma-5"
+                        style="text-transform: none">
                         Cerrar
                       </v-btn>
                     </v-card-actions>
@@ -181,33 +141,20 @@
                     Entrenamiento, capacitación y desarrollo.
                   </p>
                   <p>Virtual y Presencial</p>
-                  <div
-                    class="texto-body cuerpo mt-n2 mb-n5"
-                    style="text-align: center !important"
-                  >
+                  <div class="texto-body cuerpo mt-n2 mb-n5" style="text-align: center !important">
                     La capacitación y desarrollo del personal de tu empresa es
                     básico para el crecimiento de esta.
                   </div>
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#12b0f4"
-                    @click="reveal3 = true"
-                    style="text-transform: none"
-                    class="ma-5"
-                  >
+                  <v-btn outlined color="#12b0f4" @click="reveal3 = true" style="text-transform: none" class="ma-5">
                     Conoce más
                   </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                  <v-card
-                    v-if="reveal3"
-                    class="transition-fast-in-fast-out v-card--reveal"
-                    style="height: 100%"
-                    elevation="0"
-                  >
+                  <v-card v-if="reveal3" class="transition-fast-in-fast-out v-card--reveal" style="height: 100%"
+                    elevation="0">
                     <v-card-text class="pb-0">
                       <p class="texto-body">
                         En Addition, contamos con diferentes metodologías de
@@ -221,13 +168,8 @@
                       </ul>
                     </v-card-text>
                     <v-card-actions class="pt-0">
-                      <v-btn
-                        outlined
-                        color="#12b0f4"
-                        @click="reveal3 = false"
-                        class="ma-5"
-                        style="text-transform: none"
-                      >
+                      <v-btn outlined color="#12b0f4" @click="reveal3 = false" class="ma-5"
+                        style="text-transform: none">
                         Cerrar
                       </v-btn>
                     </v-card-actions>
@@ -246,10 +188,7 @@
                     Servicios especializados.
                   </p>
 
-                  <div
-                    class="texto-body cuerpo pt-5"
-                    style="text-align: center !important"
-                  >
+                  <div class="texto-body cuerpo pt-5" style="text-align: center !important">
                     ¡En Addition evolucionamos a un modelo de servicios
                     especializados!
                     <br />
@@ -258,29 +197,19 @@
                 </v-card-text>
                 <v-card-actions class="ma-5">
                   <div>
-                    <v-btn
-                      outlined
-                      color="#12b0f4"
-                      @click="reveal4 = true"
-                      style="text-transform: none"
-                    >
+                    <v-btn outlined color="#12b0f4" @click="reveal4 = true" style="text-transform: none">
                       Conoce más
                     </v-btn>
                   </div>
                 </v-card-actions>
 
                 <v-expand-transition>
-                  <v-card
-                    v-if="reveal4"
-                    class="
+                  <v-card v-if="reveal4" class="
                       transition-fast-in-fast-out
                       v-card--reveal
                       d-flex
                       flex-column
-                    "
-                    style="height: 100%"
-                    elevation="0"
-                  >
+                    " style="height: 100%" elevation="0">
                     <v-card-text class="pb-0">
                       <p class="text-left" style="line-height: 1.3rem">
                         Estamos autorizados y cumplimos con todos los requisitos
@@ -291,17 +220,8 @@
                         innovación.
                       </p>
                       <v-row align-items="center">
-                        <v-item-group
-                          v-model="window"
-                          class="shrink mr-6"
-                          mandatory
-                          tag="v-flex"
-                        >
-                          <v-item
-                            v-for="n in length"
-                            :key="n"
-                            v-slot="{ active, toggle }"
-                          >
+                        <v-item-group v-model="window" class="shrink mr-6" mandatory tag="v-flex">
+                          <v-item v-for="n in length" :key="n" v-slot="{ active, toggle }">
                             <div>
                               <v-btn :input-value="active" icon @click="toggle">
                                 <v-icon>mdi-record</v-icon>
@@ -311,19 +231,13 @@
                         </v-item-group>
 
                         <v-col>
-                          <v-window
-                            v-model="window"
-                            class="elevation-1"
-                            vertical
-                          >
+                          <v-window v-model="window" class="elevation-1" vertical>
                             <v-window-item>
                               <v-card flat>
                                 <v-card-text>
                                   <v-row class="mb-4" align-items="center">
-                                    <strong class="text-h6"
-                                      >Addition back office
-                                      administrativo</strong
-                                    >
+                                    <strong class="text-h6">Addition back office
+                                      administrativo</strong>
                                   </v-row>
                                   <p class="text-left">
                                     Ofrecemos
@@ -340,15 +254,12 @@
                               <v-card flat>
                                 <v-card-text>
                                   <v-row class="mb-4" align-items="center">
-                                    <strong class="text-h6"
-                                      >Addition IT technology</strong
-                                    >
+                                    <strong class="text-h6">Addition IT technology</strong>
                                   </v-row>
                                   <p class="text-left">
                                     Contamos con un
                                     <strong>
-                                      soporte profesional especializado</strong
-                                    >
+                                      soporte profesional especializado</strong>
                                     en programación, implementación, diseño,
                                     asesoría y servicios de internet.
                                   </p>
@@ -359,9 +270,7 @@
                               <v-card flat>
                                 <v-card-text>
                                   <v-row class="mb-4" align-items="center">
-                                    <strong class="text-h6"
-                                      >Addition personal de Marketing</strong
-                                    >
+                                    <strong class="text-h6">Addition personal de Marketing</strong>
                                   </v-row>
                                   <p class="text-left">
                                     Brindamos
@@ -379,9 +288,7 @@
                               <v-card flat>
                                 <v-card-text>
                                   <v-row class="mb-4" align-items="center">
-                                    <strong class=""
-                                      >Servicios Especializados</strong
-                                    >
+                                    <strong class="">Servicios Especializados</strong>
                                   </v-row>
                                   <p class="text-left mb-n3 mt-n2">
                                     En Addition pensamos en ti y en las
@@ -404,13 +311,8 @@
                       </v-row>
                     </v-card-text>
                     <v-card-actions class="pt-0">
-                      <v-btn
-                        outlined
-                        color="#12b0f4"
-                        @click="reveal4 = false"
-                        class="ma-5"
-                        style="text-transform: none"
-                      >
+                      <v-btn outlined color="#12b0f4" @click="reveal4 = false" class="ma-5"
+                        style="text-transform: none">
                         Cerrar
                       </v-btn>
                     </v-card-actions>
@@ -426,26 +328,21 @@
     <v-container fluid class="pa-0">
       <v-row no-gutters>
         <v-col cols="6" class="solo-desk">
-          <v-img
-            height="100%"
-            src="../assets/servicios/servicios-section.png"
-          ></v-img>
+          <v-img height="100%" src="../assets/servicios/servicios-section.png"></v-img>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="">
           <v-card class="mx-12 my-12" elevation="0">
             <h2 class="text-left mb-n1 blue-color">
               Gestión de Recursos Humanos
             </h2>
-            <v-card-text class="text-justify texto-body"
-              >En <strong> Addition Human Resources</strong> sabemos que el
+            <v-card-text class="text-justify texto-body">En <strong> Addition Human Resources</strong> sabemos que el
               recurso más valioso de tu empresa es su gente.
               <br />
               <br />
               En Addition estamos comprometidos a ayudarte con la
               <strong>
                 motivación, retención y desarrollo de talento de tu equipo de
-                trabajo,</strong
-              >
+                trabajo,</strong>
               por lo que proporcionamos soluciones funcionales y prácticas con
               una comunicación estrecha y personalizada a nivel organizacional,
               individual y/o grupal para cumplir con los objetivos de tu
@@ -453,15 +350,8 @@
               <br />
             </v-card-text>
             <div class="text-left">
-              <v-btn
-                color="#12b0f4"
-                style="text-transform: none"
-                dark
-                class="pa-6"
-                rounded
-                to="contactanos"
-                >¡Contáctanos!</v-btn
-              >
+              <v-btn color="#12b0f4" style="text-transform: none" dark class="pa-6" rounded to="contactanos">
+                ¡Contáctanos!</v-btn>
             </div>
           </v-card>
         </v-col>
@@ -470,64 +360,41 @@
 
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pt-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40.000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
       <v-col cols="4" class="pt-10">
-        <span class="numero"><strong>+80</strong></span>
+        <span class="numero"><strong>+2000</strong></span>
         <br />
-        <span class="texto">empresas impactadas</span>
+        <span class="texto">empresas satisfechas</span>
       </v-col>
     </v-row>
 
     <v-container fluid class="pa-0">
       <v-row no-gutters style="background-color: #12b0f4">
-        <v-col
-          cols="auto"
-          md="6"
-          class="solo-desk contenedor"
-          style="color: #fff"
-        >
+        <v-col cols="auto" md="6" class="solo-desk contenedor" style="color: #fff">
           <div class="pl-16 ml-16" style="text-align: left !important">
-            <span class="texto-big"
-              >¿Por qué pensar en<br />
-              <strong> gestión de RH?</strong></span
-            >
+            <span class="texto-big">¿Por qué pensar en<br />
+              <strong> gestión de RH?</strong></span>
           </div>
         </v-col>
 
         <v-col cols="auto" md="6" sm="12">
           <div class="solo-mob pa-10" style="color: #fff">
-            <span class="text-h4"
-              >¿Por qué pensar en <br />
-              <strong>gestión de RH?</strong></span
-            >
+            <span class="text-h4">¿Por qué pensar en <br />
+              <strong>gestión de RH?</strong></span>
           </div>
           <div>
-            <v-carousel
-              cycle
-              :show-arrows="false"
-              hide-delimiter-background
-              style="background-color: #fff"
-              light
-            >
+            <v-carousel cycle :show-arrows="false" hide-delimiter-background style="background-color: #fff" light>
               <v-carousel-item>
-                <v-card
-                  max-width="750"
-                  min-height="350"
-                  class="mx-auto text-justify"
-                  elevation="0"
-                >
-                  <v-img
-                    max-height="300"
-                    src="../assets/home/bolsa-de-trabajo.jpg"
-                  ></v-img>
+                <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
+                  <v-img max-height="300" src="../assets/home/bolsa-de-trabajo.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       Una correcta gestión de
@@ -538,16 +405,8 @@
                 </v-card>
               </v-carousel-item>
               <v-carousel-item>
-                <v-card
-                  max-width="750"
-                  min-height="350"
-                  class="mx-auto text-justify"
-                  elevation="0"
-                >
-                  <v-img
-                    max-height="300"
-                    src="../assets/home/alianzas-casos-de-exito.jpg"
-                  ></v-img>
+                <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
+                  <v-img max-height="300" src="../assets/home/alianzas-casos-de-exito.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       El desarrollo del <strong> talento humano</strong> de una empresa ahorra
@@ -557,37 +416,23 @@
                 </v-card>
               </v-carousel-item>
               <v-carousel-item>
-                <v-card
-                  max-width="750"
-                  min-height="350"
-                  class="mx-auto text-justify"
-                  elevation="0"
-                >
-                  <v-img
-                    max-height="300"
-                    src="../assets/home/servicios-especializados.jpg"
-                  ></v-img>
+                <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
+                  <v-img max-height="300" src="../assets/home/servicios-especializados.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
-                      Mejora la productividad, el <strong> clima laboral</strong> y la comunicación interna de la empresa. 
+                      Mejora la productividad, el <strong> clima laboral</strong> y la comunicación interna de la
+                      empresa.
                     </v-card-text>
                   </div>
                 </v-card>
               </v-carousel-item>
               <v-carousel-item>
-                <v-card
-                  max-width="750"
-                  min-height="350"
-                  class="mx-auto text-justify"
-                  elevation="0"
-                >
-                  <v-img
-                    max-height="300"
-                    src="../assets/home/diversidad-inclusion.jpg"
-                  ></v-img>
+                <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
+                  <v-img max-height="300" src="../assets/home/diversidad-inclusion.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
-                      Fortalece la <strong> pertenencia, lealtad y compromiso</strong> con su empresa por parte del personal.
+                      Fortalece la <strong> pertenencia, lealtad y compromiso</strong> con su empresa por parte del
+                      personal.
                     </v-card-text>
                   </div>
                 </v-card>
@@ -629,6 +474,7 @@
     color: #374751 !important;
     text-align: justify;
   }
+
   .texto-card {
     .titulos {
       font-size: 1.5rem !important;
@@ -636,6 +482,7 @@
       line-height: 2.5rem;
       letter-spacing: 0.0073529412em !important;
     }
+
     .cuerpo {
       font-size: 1.3rem !important;
       font-weight: 300;
@@ -644,19 +491,23 @@
       margin-top: 1.3rem;
     }
   }
+
   .texto-body {
     font-size: medium;
     color: #374751 !important;
     text-align: justify;
   }
+
   .pink-color {
     color: #ea5076;
     font-size: 30px;
   }
+
   .purple-color {
     color: #9825a6;
     font-size: 30px;
   }
+
   .blue-color {
     color: rgb(0, 219, 255);
     font-size: 30px;
@@ -668,33 +519,35 @@
 
   .soluciones {
     background: rgb(0, 219, 255);
-    background: linear-gradient(
-      129deg,
-      rgba(0, 219, 255, 1) 22%,
-      rgba(89, 2, 201, 1) 84%
-    );
+    background: linear-gradient(129deg,
+        rgba(0, 219, 255, 1) 22%,
+        rgba(89, 2, 201, 1) 84%);
 
     .txt-white {
       color: #fff;
       font-size: 30px;
       padding-top: 20px;
     }
+
     .sol-card {
       border-radius: 2.5rem;
       border-width: 1px;
     }
   }
+
   .contadores {
     background-color: #e5e7eb;
     padding: 0px !important;
 
     .numero {
-      font-size: 60px;
+      font-size: xx-large;
     }
+
     .texto {
       text-transform: uppercase;
     }
   }
+
   .glass2 {
     background-color: rgba($color: #fff, $alpha: 0.7);
     backdrop-filter: blur(5px);
@@ -702,27 +555,30 @@
     border-width: 1px;
     padding: 5%;
   }
+
   .solo-mob {
     display: none;
   }
 
   .tarjeta-serv {
     height: 100%;
+
     img {
       min-height: 500px;
     }
   }
+
   .casos-ex {
     /* background-color: #69c6fa; */
-    background: linear-gradient(
-      90deg,
-      rgba(105, 198, 250, 1) 0%,
-      rgba(255, 255, 255, 1) 20%
-    );
+    background: linear-gradient(90deg,
+        rgba(105, 198, 250, 1) 0%,
+        rgba(255, 255, 255, 1) 20%);
+
     .texto-ex {
       font-size: medium;
       color: #000 !important;
     }
+
     .vertical-center {
       margin: 0;
       position: absolute;
@@ -736,9 +592,11 @@
     .solo-desk {
       display: none;
     }
+
     .solo-mob {
       display: inline;
     }
+
     .contenedor {
       padding: 20px !important;
     }
@@ -746,28 +604,36 @@
     .texto-land {
       font-size: medium;
     }
+
     .texto-body {
       font-size: small;
     }
+
     .texto-titulo {
       font-size: medium;
     }
+
     .formato-video {
       padding: 0px !important;
     }
+
     .contadores {
       padding: 0px !important;
+
       .numero {
         font-size: medium;
       }
+
       .texto {
         font-size: x-small;
       }
     }
+
     .casos-ex {
       .texto-tit {
         font-size: x-large !important;
       }
+
       .texto-ex {
         font-size: small;
       }

@@ -48,7 +48,7 @@
       <v-row no-gutters>
         <v-col cols="auto" md="6" sm="12" class="formato-video">
           <video width="100%" height="auto" controls autoplay muted>
-            <source src="../assets/videoAdd.mp4" type="video/mp4" />
+            <source src="https://d1z76heyx58zfh.cloudfront.net/" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </v-col>
@@ -156,7 +156,7 @@
               clientes.
               <br />
               <br />
-              Con nuestra formula hemos participado en asesoría, formación, y/o
+              Con nuestra fórmula hemos participado en asesoría, formación, y/o
               certificación de más de 2,879 empresas del sector público y
               privado.
               <br />
@@ -255,7 +255,7 @@
         <v-col md="6" sm="12" class="contenedor">
           <v-card elevation="0">
             <v-card-title style="color: #69c6fa">
-              <span class="text-h4 texto-tit">Casos de éxito por Alianzas</span>
+              <span class="text-h4 texto-tit">Casos de éxito por alianzas</span>
             </v-card-title>
             <v-card-text class="text-justify texto-ex">
               Para Addition, la unión hace la fuerza.
@@ -468,7 +468,7 @@
     padding: 0px !important;
 
     .numero {
-      font-size: 60px;
+      font-size: xx-large;
     }
     .texto {
       text-transform: uppercase;

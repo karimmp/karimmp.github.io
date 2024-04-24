@@ -148,7 +148,7 @@
       <v-row class="my-5">
         <v-col cols="auto" md="6" sm="12">
           <span
-            >Esta es la formula <br />
+            >Esta es la fórmula <br />
             <strong>Addition</strong></span
           >
           <div class="py-5">
@@ -256,19 +256,19 @@
     </v-container>
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pa-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40.000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
-      <v-col cols="4" class="pa-10">
-        <span class="numero"><strong>+80</strong></span>
+      <v-col cols="4" class="pt-10">
+        <span class="numero"><strong>+2000</strong></span>
         <br />
-        <span class="texto">empresas impactadas</span>
+        <span class="texto">empresas satisfechas</span>
       </v-col>
     </v-row>
 
@@ -321,6 +321,7 @@
                   class="glass2"
                   :style="{ color: hover ? '#69c6fa' : '#fff' }"
                   min-height="170"
+                  min-width="137"
                 >
                   <v-img
                     contain
@@ -344,6 +345,7 @@
                   class="glass2"
                   :style="{ color: hover ? '#69c6fa' : '#fff' }"
                   min-height="170"
+                  min-width="137"
                 >
                   <v-img
                     contain
@@ -556,7 +558,7 @@
     padding: 0px !important;
 
     .numero {
-      font-size: 60px;
+      font-size: xx-large;
     }
     .texto {
       text-transform: uppercase;

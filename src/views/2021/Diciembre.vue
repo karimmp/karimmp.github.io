@@ -141,7 +141,7 @@
           <br /><br />
           contacto@additionrh.com
           <br /><br />
-          www.additonrh.com
+          www.additionrh.com
         </p>
       </v-col>
       <v-col cols="auto" md="4" class="solo-desk pt-15 pl-15"> 

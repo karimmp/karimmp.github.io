@@ -100,20 +100,30 @@
 
           <v-col cols="12" md="4" sm="12">
             <v-card
+            
               light
               color="#e5e7eb"
               elevation="0"
               style="text-align: start"
             >
-              <v-card-subtitle>
-                <strong>Suscribete a nuestro newsletter</strong>
-              </v-card-subtitle>
-              <v-card-text class="pa-0 ma-0"> Email </v-card-text>
-              <input type="email" required="" value="" class="input-correo" />
-              <v-btn color="#ea5076" class="mx-3" dark>Suscríbete</v-btn>
-              <v-card-text>
-                Enterate de nuestras últimas novedades
-              </v-card-text>
+            <v-card-subtitle>
+              <strong>Síguenos en nuestras redes sociales</strong>
+            </v-card-subtitle>
+            <v-list light color="#e5e7eb">
+              <v-list-item class="lista-vertical">
+                <v-btn
+                  v-for="item in menu3"
+                  
+                  :key="item.key"
+                  :href="item.href"
+                  target="_blank"
+                  plain
+                  tile
+                  ><v-icon>{{item.icon}}</v-icon>
+                  <span class="ml-5">{{ item.title }}</span>
+                </v-btn>
+              </v-list-item>
+            </v-list>
             </v-card>
           </v-col>
         </v-row>
@@ -248,6 +258,12 @@ export default {
           title: "Contáctanos",
           link: "/Contactanos",
         },
+      ],
+      menu3: [
+        { key: "instagram", icon:"mdi-instagram", title: "Instagram", href: "https://www.instagram.com/additionrhmx/" },
+        { key: "facebook", icon:"mdi-facebook", title: "Facebook", href: "https://www.facebook.com/AdditionRH/" },
+        { key: "linkedin", icon:"mdi-linkedin", title: "LinkedIn", href: "https://www.linkedin.com/company/addition-human-resources/" },
+        { key: "twitter", icon: "mdi-twitter", title: "Twitter", href: "https://twitter.com/additionrh?s=11&t=JzkH_fyELvOt9u9t3PpQ1A" },
       ],
 
       admins: [
