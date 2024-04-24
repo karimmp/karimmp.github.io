@@ -37,7 +37,7 @@
                     class="texto-body cuerpo"
                     style="text-align: center !important"
                   >
-                    Somos distribuidores oficiales de todas sus herramientas
+                    Somos distribuidores oficiales de todas sus herramientas.
                   </div>
                   <v-row class="imagenes-logos px-5 pt-5">
                     <v-col cols="auto" md="4" sm="6">
@@ -143,7 +143,7 @@
                 <v-card-text>
                   <div
                     class="texto-body cuerpo"
-                    style="text-align: justify !important"
+                    style="text-align: center !important"
                   >
                     Alianza para fortalecer el apoyo con las organizaciones
                     interesadas en certificarse en la
@@ -154,7 +154,7 @@
                     <strong>
                       NOM-035-STPS-2018 de factores de riesgo
                       psicosocial.</strong
-                    >l
+                    >
                   </div>
                 </v-card-text>
                 <v-card-actions class="px-15 pt-10">
@@ -162,11 +162,11 @@
                     text
                     color="#9825a6"
                     width="100%"
-                    href="https://www.factual-services.com.mx/index.php/en/"
+                    href="https://www.factual-services.com.mx/"
                     target="_blank"
                     style="text-transform: none"
                   >
-                    <v-icon>mdi-web</v-icon> https://www.factual-services.com.mx
+                    <v-icon>mdi-web</v-icon> https://www.factual-services.com.mx/
                   </v-btn>
                 </v-card-actions>
               </v-card>

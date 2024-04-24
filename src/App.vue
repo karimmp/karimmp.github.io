@@ -3,17 +3,17 @@
     <v-card id="nav">
       <v-app-bar flex color="white" height="80rem" elevate-on-scroll app>
         <v-app-bar-nav-icon
-          class="hidden-md-and-up"
+          class="hidden-lg-and-up"
           @click="drawer = true"
           color="#EA5076"
         ></v-app-bar-nav-icon>
 
-        <v-app-bar-title
+        <v-app-bar-title class="pt-2"
           ><a href="/"> <img alt="Addition logo" src="./assets/logo.png" /></a
         ></v-app-bar-title>
         <v-spacer></v-spacer>
 
-        <div class="nav-links hidden-sm-and-down">
+        <div class="nav-links hidden-md-and-down">
           <v-btn v-for="item in menu" :key="item.key" :to="item.link" plain tile
             >{{ item.title }}
           </v-btn>
@@ -23,14 +23,27 @@
               <v-btn plain tile v-bind="attrs" v-on="on"> Soluciones </v-btn>
             </template>
 
-            <v-list class="lista-menu">
+            <v-list class="text-left">
               <v-list-item
                 v-for="(item, index) in menua"
                 :key="index"
                 link
                 :to="item.link"
               >
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                <v-list-item-title>
+                  {{ item.title }}
+                  <v-list style="">
+                    <v-list-item
+                      v-for="(subitem, subindex) in item.submenu"
+                      :key="subindex"
+                      link
+                      :to="subitem.link"
+                      class="text-caption"
+                    >
+                      {{ subitem.title }}
+                    </v-list-item>
+                  </v-list>
+                </v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>
@@ -142,6 +155,7 @@
   a {
     :hover {
       color: #ea5076;
+      
     }
   }
 }
@@ -194,20 +208,39 @@ export default {
         { key: "nosotros", icon: "", title: "Nosotros", link: "/Nosotros" },
       ],
       menua: [
-        { title: 'Diversidad e inclusion' , link:"/diversidad"},
-        { title: 'Gestión de recursos humanos',link:"/rh" },
-        { title: 'Coaching Laboral', link:"/coaching" },
+        {
+          title: "Diversidad e inclusión",
+          link: "/diversidad",
+          submenu: [
+            { title: "NMX-R-025-SCFI-2015", link: "/NMX025" },
+            { title: "NOM-035-STPS-2018", link: "/NOM035" },
+            { title: "NOM-037-STPS-2023", link: "/NOM037" },
+            { title: "Servicios adicionales", link: "/ServiciosAdicionales" },
+          ],
+        },
+        { title: "Gestión de Recursos Humanos", link: "/rh" },
+        { title: "Coaching Laboral", link: "/coaching" },
       ],
-      menub: [{ key: "alianzas", icon: "", title: "Alianzas Comerciales", link: "/alianzas" },
-        { key: "blog", icon: "", title: "Blog", link: "/blog" },],
-
-
+      menub: [
+        {
+          key: "alianzas",
+          icon: "",
+          title: "Alianzas Comerciales",
+          link: "/alianzas",
+        },
+        { key: "blog", icon: "", title: "Blog", link: "/blog" },
+      ],
 
       menu2: [
         { key: "inicio", title: "Inicio", link: "/" },
         { key: "nosotros", title: "Nosotros", link: "/Nosotros" },
         { key: "servicios", title: "Servicios", link: "/diversidad" },
-        { key: "alianzas", icon: "", title: "Alianzas Comerciales", link: "/alianzas" },
+        {
+          key: "alianzas",
+          icon: "",
+          title: "Alianzas Comerciales",
+          link: "/alianzas",
+        },
         { key: "blog", icon: "", title: "Blog", link: "/blog" },
         {
           key: "contactanos",

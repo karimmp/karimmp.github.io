@@ -17,9 +17,9 @@
               <br />
               <strong>
                 <ul>
-                  <li>Job Hunter</li>
-                  <li>Job first (Orientación vocacional)</li>
-                  <li>Outplacement</li>
+                  <li>Job Hunter.</li>
+                  <li>Job First (Orientación vocacional).</li>
+                  <li>Outplacement.</li>
                 </ul>
               </strong>
             </v-card-text>
@@ -49,13 +49,13 @@
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
-                  <p class="titulos text--primary">Job Hunter</p>
+                  <p class="titulos text--primary">Job Hunter.</p>
 
                   <div
                     class="texto-body cuerpo"
                     style="text-align: center !important"
                   >
-                    Acompañamiento integral con nuestros equipo expertos en la
+                    Acompañamiento integral con nuestros equipos expertos en la
                     búsqueda de empleo; haciendo frente a los procesos de
                     selección actuales.
                   </div>
@@ -135,15 +135,15 @@
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
                   <p class="titulos text--primary">
-                    Job first (Orientación vocacional)
+                    Job First (Orientación vocacional).
                   </p>
 
                   <div
                     class="texto-body cuerpo"
                     style="text-align: center !important"
                   >
-                    Creemos que la juventud es el legado más valioso por eso los
-                    apoyamos en la busqueda de su primer trabajo.
+                    Creemos que la juventud es el legado más valioso, por eso
+                    los apoyamos en la búsqueda de su primer trabajo.
                     <br />
                     <br />
                   </div>
@@ -203,7 +203,7 @@
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
-                  <p class="titulos text--primary">Outplacement</p>
+                  <p class="titulos text--primary">Outplacement.</p>
                   <div
                     class="texto-body cuerpo mt-n2 mb-n5"
                     style="text-align: center !important"
@@ -216,7 +216,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-row>
-                    <v-col  sm="12" md="6">
+                    <v-col sm="12" md="6">
                       <v-btn
                         outlined
                         color="#fe6472"
@@ -485,5 +485,3 @@ export default {
   }),
 };
 </script>
-
-

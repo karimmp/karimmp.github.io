@@ -8,12 +8,12 @@
               class="pt-8 texto-titulo"
               style="word-break: break-word"
             >
-              <h2>La diversidad e inclusión enriquece a tu organización</h2>
+              <h2>La Diversidad e Inclusión enriquece a tu organización</h2>
             </v-card-title>
 
             <v-card-subtitle class="pt-8">
               <h3 class="texto-land">
-                ¿Tu organización promueve ambientes de diversidad e inclusión?
+                ¿Tu organización promueve ambientes de Diversidad e Inclusión?
               </h3>
             </v-card-subtitle>
             <v-card-text class="pt-8 texto-land">
@@ -30,12 +30,16 @@
                 Discriminación.</b
               >
             </v-card-text>
-            <div class="pt-5 text-left">
-              <v-btn color="#ea5076" rounded class="pa-7" dark
-              @click="$vuetify.goTo('#soluciones')"
+            <v-card-actions>
+              <v-btn
+                color="#ea5076"
+                rounded
+                class="pa-7"
+                dark
+                @click="$vuetify.goTo('#soluciones')"
                 >Conoce más
               </v-btn>
-            </div>
+            </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
@@ -61,7 +65,7 @@
               En Addition estamos comprometidos a ayudarte con la
               <b>motivación, retención y desarrollo de tu equipo de trabajo</b>
               basado en una <b>cultura de respeto</b> y de
-              <b>diversidad e inclusión </b>para el crecimiento de tu empresa.
+              <b>Diversidad e Inclusión </b>para el crecimiento de tu empresa.
               <br />
               <br />
               Proporcionamos soluciones funcionales y prácticas con una
@@ -81,128 +85,51 @@
       </v-row>
     </v-container>
 
+    
+
     <v-container fluid class="soluciones">
       <section id="soluciones">
-        <h1 class="txt-white mt-5">Nuestas Soluciones</h1>
-        <v-row class="pa-15 contenedor">
-          <v-col cols="auto" md="4" sm="12">
+        <h1 class="txt-white mt-2">Nuestas Soluciones</h1>
+        <v-row class="pa-4">
+          <v-col
+            v-for="(card, index) in cards"
+            :key="index"
+            cols="auto"
+            md="4"
+            sm="12"
+          >
             <v-card elevation="10" color="white" height="100%">
-              <v-img src="../assets/home/diversidad-inclusion.jpg"></v-img>
-              <v-card-title class="px-5">Diversidad e inclusión</v-card-title>
-              <v-card-text class="texto-body px-5">
-                Implementamos programas de diversidad e inclusión para mejorar
-                la productividad de las organizaciones y cumplimiento de la
-                normatividad vigente.
+              <v-img :src="card.image"></v-img>
+              <v-card-title>{{ card.title }}</v-card-title>
+              <v-card-subtitle class="text-left" style="height: 100px">{{
+                card.subtitle
+              }}</v-card-subtitle>
+              <v-card-text class="text-left">
+                <v-list>
+                  <v-list-item
+                    v-for="(item, subIndex) in card.listItems"
+                    :key="subIndex"
+                    class="text-left pa-0"
+                  >
+                    <v-list-item-icon>
+                      <v-icon>mdi-circle-small</v-icon>
+                      <strong>{{ item }}</strong>
+                    </v-list-item-icon>
+                    <v-list-item-content></v-list-item-content>
+                  </v-list-item>
+                </v-list>
               </v-card-text>
-              <v-list
-                dense
-                style="text-align: justify; font-size: 15px; padding: 2%"
-              >
-                <v-list-item
-                  ><strong
-                    >Norma Mexicana NMX-R-025-SCFI-2015 en Igualdad Laboral y No
-                    Discriminación.</strong
-                  ></v-list-item
-                >
-                <v-list-item
-                  ><strong
-                    >Norma Oficial Mexicana NOM-035-STPS-2018 de Factores de
-                    Riesgo Psicosocial.</strong
-                  ></v-list-item
-                >
-                <v-list-item
-                  ><strong
-                    >Distintivo Empresa Socialmente Responsable.</strong
-                  ></v-list-item
-                >
-              </v-list>
-              <div class="pa-5 text-left">
+              <v-card-actions>
                 <v-btn
-                  to="/diversidad"
+                  :to="card.link"
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
                   class="pa-5"
                   dark
-                  >Conoce más
-                </v-btn>
-              </div>
-            </v-card>
-          </v-col>
-          <v-col cols="auto" md="4" sm="12">
-            <v-card elevation="10" color="white" height="100%">
-              <v-img src="../assets/home/gestion-recursos.jpg"></v-img>
-              <v-card-title class="px-5"
-                >Gestión de recursos humanos
-              </v-card-title>
-              <v-card-text class="texto-body px-5">
-                Brindamos soluciones de gestión total o parcial en los procesos
-                de Recursos Humanos
-              </v-card-text>
-              <v-list
-                dense
-                style="text-align: justify; font-size: 15px; padding: 2%"
-              >
-                <v-list-item
-                  ><strong
-                    >Atracción y Selección de Talento Humano</strong
-                  ></v-list-item
+                  >Conoce más</v-btn
                 >
-                <v-list-item
-                  ><strong
-                    >Evaluación de Talento Humano y Organizacional</strong
-                  ></v-list-item
-                >
-                <v-list-item
-                  ><strong>Servicios Especializados</strong></v-list-item
-                >
-                <v-list-item
-                  ><strong
-                    >Entrenamiento, Capacitación y Desarrollo</strong
-                  ></v-list-item
-                >
-              </v-list>
-              <div class="pa-5 text-left">
-                <v-btn
-                  to="/rh"
-                  style="text-transform: none"
-                  color="#ea5076"
-                  outlined
-                  class="pa-5"
-                  dark
-                  >Conoce más
-                </v-btn>
-              </div>
-            </v-card>
-          </v-col>
-          <v-col cols="auto" md="4" sm="12">
-            <v-card elevation="10" color="white" height="100%">
-              <v-img src="../assets/home/servicios-especializados.jpg"></v-img>
-              <v-card-title class="px-5">Coaching laboral</v-card-title>
-              <v-card-text class="texto-body px-5">
-                Acompañamos a las personas en la búsqueda de empleo para
-                crecimiento personal, familiar y profesional.
-              </v-card-text>
-              <v-list style="text-align: justify; font-size: 15px; padding: 2%">
-                <v-list-item><strong>Job Hunter</strong></v-list-item>
-                <v-list-item
-                  ><strong
-                    >Job first (Orientación vocacional)</strong
-                  ></v-list-item
-                >
-                <v-list-item><strong>Outplacement</strong></v-list-item>
-              </v-list>
-              <div class="pa-5 text-left" style="justify-content: center">
-                <v-btn
-                  to="/coaching"
-                  style="text-transform: none"
-                  color="#ea5076"
-                  outlined
-                  class="pa-5"
-                  dark
-                  >Conoce más
-                </v-btn>
-              </div>
+              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
@@ -262,10 +189,7 @@
           </v-card>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="pa-5">
-          <v-img
-            max-width="700px"
-            src="../assets/home/formula-addition.png"
-          ></v-img>
+          <v-img max-width="700px" src="../assets/1.webp"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -296,9 +220,9 @@
               style="word-break: break-word"
             >
               “El éxito de una empresa es simplemente el reflejo de la actitud,
-              grado de motivación y compromiso de las personas que la forman”
+              grado de motivación y compromiso de las personas que la forman.”
             </v-card-title>
-            <div class="text-right text-md-body-1 mx-5">Camilo Cruz</div>
+            <div class="text-right text-md-body-1 mx-5">Camilo Cruz.</div>
           </v-card>
         </v-col>
       </v-row>
@@ -309,7 +233,7 @@
           <v-card elevation="10">
             <v-img src="../assets/home/alianzas-casos-de-exito.jpg"></v-img>
             <v-card-title style="word-break: break-word">
-              Diversidad e inclusión
+              Diversidad e Inclusión
             </v-card-title>
             <v-card-text class="text-left">
               Con la asesoría de nuestro Coach, podrás elegir entre uno o varios
@@ -434,7 +358,11 @@
           md="4"
           sm="12"
           style="align-self: center"
-          ><strong><p class="text-h4">Somos una empresa de calidad comprobada</p></strong></v-col
+          ><strong
+            ><p class="text-h4">
+              Somos una empresa de calidad comprobada
+            </p></strong
+          ></v-col
         >
         <v-col cols="auto" md="4" sm="12" class="pa-10">
           <v-card width="100%" elevation="0">
@@ -456,7 +384,7 @@
             >
           </v-card>
         </v-col>
-        <v-col cols="auto" md="4" sm="12" class="pa-10"
+        <v-col cols="auto" md="4" sm="12"
           ><v-card elevation="0">
             <v-img
               style="
@@ -466,8 +394,7 @@
                 width: 50%;
               "
               contain
-              max-width="200"
-              src="../assets/home/certificado-rh.png"
+              src="../assets/reconocida2024.webp"
             ></v-img>
             <v-card-text class="text-justify"
               >Ocupamos el lugar número 15 a nivel Nacional dentro de las 50
@@ -619,7 +546,7 @@ export default {
           img: "garanzaLogo.png",
           persona: "Guillermo Ortega",
           puesto: "CEO",
-          text: "“Nuestros principales clientes de la industria automotriz solicitan a sus proveedores sumarnos a una cadena devalor promoviendo conceptos de diversidad & inclusión, por tal, motivo buscamos el acompañamiento de Addition para certificarnos en la Norma de Igualdad laboral y no Discriminación, teniendo como beneficio la certificación de nuestro cliente como proveedor y una mejora en nuestro ambiente laboral interno”. ",
+          text: "“Nuestros principales clientes de la industria automotriz solicitan a sus proveedores sumarnos a una cadena devalor promoviendo conceptos de Diversidad & Inclusión, por tal, motivo buscamos el acompañamiento de Addition para certificarnos en la Norma de Igualdad Laboral y No Discriminación, teniendo como beneficio la certificación de nuestro cliente como proveedor y una mejora en nuestro ambiente laboral interno”. ",
         },
         {
           key: "adt",
@@ -655,9 +582,51 @@ export default {
           img: "kpmgLogo.png",
           persona: "Ruth Sanders",
           puesto: "Inclusión, Diversidad y Equidad",
-          text: "“Somos una Firma comprometida con la inclusión y la diversidad, por esto, decidimos apoyarnos de Addition para obtener la certificación en la Norma de Igualdad Laboral y no Discriminación, quienes nos asesoraron en materia de interpretación e integración de evidencias. Agradecemos su apoyo para cumplir con dicho objetivo”. ",
+          text: "“Somos una Firma comprometida con la inclusión y la diversidad, por esto, decidimos apoyarnos de Addition para obtener la certificación en la Norma de Igualdad Laboral y No Discriminación, quienes nos asesoraron en materia de interpretación e integración de evidencias. Agradecemos su apoyo para cumplir con dicho objetivo”. ",
         },
       ],
+      cards: [
+        {
+          title: "Diversidad e Inclusión",
+          subtitle:
+            "Implementamos programas de Diversidad e Inclusión para mejorar la productividad de las organizaciones y cumplimiento de la normatividad vigente.",
+          image: require("@/assets/home/diversidad-inclusion.jpg"),
+          listItems: [
+            "Norma Mexicana NMX-R-025-SCFI-2015 en Igualdad Laboral y No Discriminación.",
+            "Norma Oficial Mexicana NOM-035-STPS-2018 de Factores de Riesgo Psicosocial.",
+            "NORMA Oficial Mexicana NOM-037-STPS-2023, Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
+            "Distintivo Empresa Socialmente Responsable.",
+            "Administración de \"Sistema ético de denuncia\".",
+          ],
+          link: "/diversidad",
+        },
+        {
+          title: "Gestión de Recursos Humanos",
+          subtitle:
+            "Brindamos soluciones de gestión total o parcial en los procesos de Recursos Humanos.",
+          image: require("@/assets/home/gestion-recursos.jpg"),
+          listItems: [
+            "Atracción y Selección de Talento Humano.",
+            "Evaluación de Talento Humano y Organizacional.",
+            "Servicios Especializados.",
+            "Entrenamiento, Capacitación y Desarrollo.",
+          ],
+          link: "/Rh",
+        },
+        {
+          title: "Coaching laboral",
+          subtitle:
+            "Acompañamos a las personas en la búsqueda de empleo para crecimiento personal, familiar y profesional.",
+          image: require("@/assets/home/servicios-especializados.jpg"),
+          listItems: [
+            "Job Hunter",
+            "Job First (Orientación vocacional)",
+            "Outplacement",
+          ],
+          link: "/coaching",
+        },
+      ],
+
       drawer: false,
       group: null,
     };

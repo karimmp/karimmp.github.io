@@ -2,7 +2,7 @@
   <v-container fluid class="diver-pag">
     <v-img alt="fondo" src="../assets/servicios/portada-servicios.png"
       ><v-row no-gutters>
-        <v-col md="6" sm="12" class="contenedor">
+        <v-col lg="6" md="9" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
             <v-card-title
               class="pt-8 texto-titulo"
@@ -13,7 +13,7 @@
             <v-card-text class="pt-8 texto-land">
               Nuestro compromiso es crear un buen ambiente laboral dentro de las
               empresas, por lo que implementamos programas de
-              <strong> diversidad & inclusión </strong> para mejorar la
+              <strong> Diversidad & Inclusión </strong> para mejorar la
               productividad de las organizaciones y el cumplimiento de la
               normatividad vigente.
               <br />
@@ -29,7 +29,7 @@
               <span
                 ><strong
                   >Norma Mexicana NMX-R-025-SCFI-2015 en Igualdad Laboral y no
-                  Discriminación</strong
+                  Discriminación.</strong
                 ></span
               >
             </v-card-text>
@@ -50,201 +50,92 @@
     </v-img>
 
     <v-container fluid class="soluciones">
-      <about id="servicios" />
+      <div id="servicios"></div>
       <section ref="serviciosd">
-        <h1 class="txt-white mt-5">Servicios en diversidad e inclusión</h1>
-        <v-row class="pa-15 contenedor">
-          <v-col cols="auto" md="4" sm="12">
-            <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="../assets/home/diversidad-inclusion.jpg"></v-img>
+        <h1 class="txt-white mt-5">Servicios en Diversidad e Inclusión</h1>
+        <v-row class="py-16 px-5 justify-space-around" height="100%">
+          <v-col
+            class="d-flex"
+            v-for="(card, index) in cards"
+            :key="index"
+            cols="auto"
+            lg="4"
+            md="6"
+            sm="12"
+          >
+            <v-card elevation="10" color="white" height="100%">
+              <v-img
+                gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)"
+                class="white--text align-end"
+                height="60%"
+                :src="card.image"
+              >
+                <v-card-title>{{ card.nota }}</v-card-title></v-img
+              >
+              <v-card elevation="0">
+                <v-btn class="ma-3" :to="card.link" text
+                  ><v-card-title class="text-wrap">{{
+                    card.title
+                  }}</v-card-title></v-btn
+                >
 
-              <v-card elevation="0" class="texto-card">
-                <v-card-text>
-                  <p class="titulos text--primary">
-                    Norma Mexicana NMX-R-025-SCFI-2015
-                  </p>
-                  <p>Igualdad Laboral y No Discriminación</p>
-                  <div
-                    class="texto-body cuerpo"
-                    style="text-align: center !important"
-                  >
-                    Certifícate con nosotros
-                  </div>
-                </v-card-text>
-                <v-card-actions>
+                <v-card-subtitle class="d-flex flex-wrap text-justify">
+                  {{ card.subtitle }}
+                </v-card-subtitle>
+                <v-card-actions class="d-flex justify-space-between px-7 py-7">
                   <v-btn
                     outlined
                     color="#9825a6"
-                    @click="reveal = true"
+                    @click="revealCard(index)"
                     style="text-transform: none"
-                    class="ma-9"
+                    class=""
                   >
                     Conoce más
                   </v-btn>
+                  <v-btn
+                    outlined
+                    color="#9825a6"
+                    to="contactanos"
+                    style="text-transform: none"
+                    class=""
+                  >
+                    Contáctanos
+                  </v-btn>
                 </v-card-actions>
-
                 <v-expand-transition>
                   <v-card
-                    v-if="reveal"
+                    v-if="card.reveal"
                     class="transition-fast-in-fast-out v-card--reveal"
-                    style="height: 100%"
                     elevation="0"
                   >
-                    <v-card-text class="pb-0">
-                      <p class="text-h6 text--primary">
-                        Igualdad Laboral y No Discriminación
-                      </p>
-                      <p class="texto-body">
-                        Reconoce a tu empresa como un centro de trabajo que
-                        cuenta con prácticas en materia de
-                        <strong> igualdad laboral y no discriminación,</strong>
-                        para favorecer el desarrollo integral de las y los
-                        trabajadores.
-                        <br />
-                        <br />
-                        ¡Esta certificación te ayuda a obtener puntos
-                        adicionales para poder ganar licitaciones publicas!
-                      </p>
+                    <v-card-subtitle class="text-justify font-weight-black">
+                      {{ card.text }}
+                    </v-card-subtitle>
+                    <v-card-text
+                      class="pb-10 text-justify"
+                      v-html="card.description"
+                    >
                     </v-card-text>
-                    <v-card-actions class="pt-0">
+                    <v-card-actions
+                      class="d-flex justify-space-between px-7 mb-2"
+                    >
                       <v-btn
                         outlined
                         color="#9825a6"
-                        @click="reveal = false"
+                        @click="hideCard(index)"
                         class="ml-5"
                         style="text-transform: none"
                       >
                         Cerrar
                       </v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-expand-transition>
-              </v-card>
-            </v-card>
-          </v-col>
-
-          <v-col cols="auto" md="4" sm="12">
-            <v-card elevation="10" color="white" class="tarjeta-serv" >
-              <v-img src="../assets/home/servicios-especializados.jpg"></v-img>
-              <v-card elevation="0" class="texto-card">
-                <v-card-text>
-                  <p class="titulos text--primary">
-                    Norma Oficial Mexicana NOM-035-STPS-2018
-                  </p>
-                  <p>Factores de riesgo psicosocial</p>
-                  <div
-                    class="texto-body cuerpo"
-                    style="text-align: center !important"
-                  >
-                    Logra su implentación de forma correcta
-                  </div>
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#9825a6"
-                    @click="reveal2 = true"
-                    style="text-transform: none"
-                    class="ma-5"
-                  >
-                    Conoce más
-                  </v-btn>
-                </v-card-actions>
-
-                <v-expand-transition>
-                  <v-card
-                    v-if="reveal2"
-                    class="transition-fast-in-fast-out v-card--reveal"
-                    style="height: 100%"
-                    elevation="0"
-                  >
-                    <v-card-text class="pb-0">
-                      <p class="text-h6 text--primary">
-                        Factores de riesgo psicosocial
-                      </p>
-                      <p class="texto-body">
-                        ¡Nos preocupamos por las personas que forman tu empresa!
-                        <br />
-                        <br />
-                        Identificar, analizar y prever
-                        <strong> factores de riesgo psicosocial </strong> en tu
-                        empresa y promueve un entorno organizacional favorable
-                        para tus trabajadores.
-                      </p>
-                    </v-card-text>
-                    <v-card-actions class="pt-0">
                       <v-btn
                         outlined
                         color="#9825a6"
-                        @click="reveal2 = false"
-                        class="ma-5"
+                        to="contactanos"
                         style="text-transform: none"
+                        class=""
                       >
-                        Cerrar
-                      </v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-expand-transition>
-              </v-card>
-            </v-card>
-          </v-col>
-
-          <v-col cols="auto" md="4" sm="12">
-            <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="../assets/home/gestion-recursos.jpg"></v-img>
-
-              <v-card elevation="0" class="texto-card">
-                <v-card-text>
-                  <p class="titulos text--primary">
-                    Distintivo de Empresa Socialmente Responsable
-                  </p>
-                  <div
-                    class="texto-body cuerpo"
-                    style="text-align: center !important"
-                  >
-                    Obtén el distintivo de Empresa Socialmente Responsable.
-                  </div>
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn
-                    outlined
-                    color="#9825a6"
-                    @click="reveal3 = true"
-                    style="text-transform: none"
-                    class="ma-10"
-                  >
-                    Conoce más
-                  </v-btn>
-                </v-card-actions>
-
-                <v-expand-transition>
-                  <v-card
-                    v-if="reveal3"
-                    class="transition-fast-in-fast-out v-card--reveal"
-                    style="height: 100%"
-                    elevation="0"
-                  >
-                    <v-card-text class="pb-0">
-                      <p class="text-h6 text--primary">
-                        Empresa Socialmente Responsable
-                      </p>
-                      <p class="texto-body">
-                        Adopta los principios de una empresa socialmente
-                        responsable como parte de la cultura de tu empresa y
-                        como estrategia de negocio generando más competitividad
-                        empresarial y un mejor funcionamiento interno de tus
-                        trabajadores
-                      </p>
-                    </v-card-text>
-                    <v-card-actions class="pt-0">
-                      <v-btn
-                        outlined
-                        color="#9825a6"
-                        @click="reveal3 = false"
-                        class="ma-5"
-                        style="text-transform: none"
-                      >
-                        Cerrar
+                        Contáctanos
                       </v-btn>
                     </v-card-actions>
                   </v-card>
@@ -267,7 +158,7 @@
         <v-col cols="auto" md="6" sm="12" class="">
           <v-card class="mx-12 my-12" elevation="0">
             <h2 class="text-left mb-n3 purple-color">
-              ¿Tu organización asume los temas sobre diversidad e inclusión?
+              ¿Tu organización asume los temas sobre Diversidad e Inclusión?
             </h2>
             <v-card-text class="text-justify texto-body"
               >Con nuestra fórmula hemos participado en la asesoría, formación,
@@ -276,7 +167,7 @@
               <br />
               <br />
               Iniciamos con un <strong>diagnóstico gratuito,</strong> de
-              igualdad laboral y no discriminación y/
+              Igualdad Laboral y No Discriminación y/
               <strong>
                 factores de riesgo psicosocial de tu organización,</strong
               >
@@ -290,7 +181,7 @@
               <strong> discriminación y violencia laboral.</strong>
               <br />
               <br />
-              ¡Evalúate y certifícate!
+              ¡Evalúate y certifícate!.
               <br />
             </v-card-text>
             <div class="text-left">
@@ -338,7 +229,7 @@
           <div class="pl-16 ml-16" style="text-align: left !important">
             <span class="texto-big"
               >¿Por qué pensar en<br />
-              <strong> diversidad e inclusión?</strong></span
+              <strong> Diversidad e Inclusión?</strong></span
             >
           </div>
         </v-col>
@@ -347,7 +238,7 @@
           <div class="solo-mob pa-10" style="color: #fff">
             <span class="text-h4"
               >¿Por qué pensar en <br />
-              <strong>diversidad e inclusión?</strong></span
+              <strong>Diversidad e Inclusión?</strong></span
             >
           </div>
           <div>
@@ -623,12 +514,83 @@
 }
 </style>
 
-<script>
+<!-- <script>
 export default {
   data: () => ({
     reveal: false,
     reveal2: false,
     reveal3: false,
   }),
+};-->
+<script>
+export default {
+  data() {
+    return {
+      cards: [
+        {
+          title: "NMX-R-025-SCFI-2015",
+          subtitle: "Norma Mexicana, Igualdad Laboral y No Discriminación.",
+          image: require("../assets/home/diversidad-inclusion.jpg"),
+          reveal: false,
+          link: "/NMX025",
+          description:
+            "Reconoce a tu empresa como un centro de trabajo que cuenta con prácticas en materia de <strong>Igualdad Laboral y No Discriminación,</strong> para favorecer el desarrollo integral de las y los trabajadores. <br><br>¡Esta certificación te ayuda a obtener puntos adicionales para poder ganar licitaciones públicas!.",
+        },
+        {
+          title: "NOM-035-STPS-2018",
+          subtitle: "Norma Oficial Mexicana, Factores de riesgo psicosocial.",
+          text: "Logra su implementación de forma correcta.",
+          image: require("../assets/home/servicios-especializados.jpg"),
+          reveal: false,
+          link: "NOM035",
+          description:
+            "Identificar, analizar y prever factores de riesgo psicosocial en tu empresa y promueve un entorno organizacional favorable para tus trabajadores.",
+        },
+        {
+          title: "NOM-037-STPS-2023",
+          subtitle:
+            "Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
+          text: "Logra su implementación de manera adecuada cuando su personal  realiza más del 40 % de su jornada laboral en teletrabajo (home office).",
+          image: require("../assets/servicios/nom037.webp"),
+          reveal: false,
+          nota: "Nuevo Servicio",
+          link: "/NOM037",
+          description:
+            "Cumplir con la Norma 037 es fundamental para prevenir accidentes y enfermedades, y para promover un entorno laboral seguro y saludable, en los lugares de trabajo donde las personas operen bajo la modalidad de Teletrabajo.",
+        },
+        {
+          title: "Distintivo de ESR",
+          subtitle: "Obtén el distintivo de Empresa Socialmente Responsable.",
+          image: require("../assets/home/gestion-recursos.jpg"),
+          reveal: false,
+          link: "#",
+          description:
+            "Adopta los principios de una empresa socialmente responsable como parte de la cultura de tu empresa y como estrategia de negocio generando más competitividad empresarial y un mejor funcionamiento interno de tus trabajadores.",
+        },
+        {
+          title: "Servicios adicionales",
+          subtitle: 'Administración de "Sistema ético de denuncia".',
+          text: 'Administración de "Sistema ético de denuncia" y Elaboración de protocolos de prevención, atención y seguimiento de prácticas de discriminación y violencia laboral.',
+          image: require("../assets/servicios/adicionales.webp"),
+          reveal: false,
+          nota: "Nuevo Servicio",
+          link: "/ServiciosAdicionales",
+          description:
+            "Vigilancia de áreas de riesgo dentro de las organizaciones. <br><br>Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. <br><br>Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inseguras.",
+        },
+      ],
+    };
+  },
+  methods: {
+    revealCard(index) {
+      this.cards[index].reveal = true;
+    },
+    hideCard(index) {
+      this.cards[index].reveal = false;
+    },
+    scrollToContact() {
+      this.$vuetify.goTo("#Contactanos");
+    },
+  },
 };
 </script>

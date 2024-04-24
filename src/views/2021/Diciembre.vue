@@ -10,7 +10,7 @@
     <v-row no-gutters class="pa-3">
       <v-col cols="auto" md="8" sm="12" class="text-left px-15">
         <p class="text-h5 text-left pa-7" style="color: #ea5076">
-          Implementación de programas de diversidad e inclusión.
+          Implementación de programas de Diversidad e Inclusión.
         </p>
         <p>
           Diferentes instrumentos nacionales e internacionales han enfocado su

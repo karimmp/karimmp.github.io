@@ -51,6 +51,26 @@ const routes = [
     name: 'Addition | Alianzas Comerciales',
     component: () => import( '../views/Alianzas.vue')
   },
+  {
+    path: '/NMX025',
+    name: 'Addition | NMX025',
+    component: () => import( '../views/NMX025.vue')
+  },
+  {
+    path: '/NOM035',
+    name: 'Addition | NOM035',
+    component: () => import( '../views/NOM035.vue')
+  },
+  {
+    path: '/NOM037',
+    name: 'Addition | NOM037',
+    component: () => import( '../views/NOM037.vue')
+  },
+  {
+    path: '/ServiciosAdicionales',
+    name: 'Addition | ServiciosAdicionales',
+    component: () => import( '../views/ServiciosAdicionales.vue')
+  },
 
 ]
 

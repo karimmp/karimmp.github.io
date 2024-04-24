@@ -47,7 +47,7 @@
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
                   <p class="titulos text--primary">
-                    Atracción y selección de talento humano
+                    Atracción y selección de talento humano.
                   </p>
 
                   <div
@@ -111,7 +111,7 @@
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
                   <p class="titulos text--primary">
-                    Evaluación de talento humano y organizacional
+                    Evaluación de talento humano y organizacional.
                   </p>
 
                   <div
@@ -178,7 +178,7 @@
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
                   <p class="titulos text--primary">
-                    Entrenamiento, capacitación y desarrollo
+                    Entrenamiento, capacitación y desarrollo.
                   </p>
                   <p>Virtual y Presencial</p>
                   <div
@@ -243,7 +243,7 @@
                 <v-img src="../assets/gestion/especializados.png"></v-img>
                 <v-card-text>
                   <p class="titulos text--primary pb-5">
-                    Servicios especializados
+                    Servicios especializados.
                   </p>
 
                   <div
@@ -531,7 +531,7 @@
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       Una correcta gestión de
-                      <strong> recursos humanos</strong> ayuda a las empresas a
+                      <strong> Recursos Humanos</strong> ayuda a las empresas a
                       lograr objetivos financieros y de crecimiento profesional.
                     </v-card-text>
                   </div>

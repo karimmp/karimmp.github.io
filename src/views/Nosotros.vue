@@ -20,10 +20,10 @@
           empresas.</strong
         >
         <br />
-        <br />
+        <br />        
         Contamos con programas de gestión interna para
-        <strong> ingreso, permanencia y desarrollo del personal;</strong> basado
-        en un <strong> cultura de respeto </strong> que contribuye a tener una
+        <strong> ingreso, permanencia y
+        desarrollo del personal;</strong> basado en una<strong> cultura de respeto </strong> que contribuye a tener una
         sociedad más incluyente con
         <strong>igualdad de oportunidades, sin discriminación </strong> o
         cualquier dimensión que prive los derechos de la persona.
@@ -57,7 +57,7 @@
               <br />
               Cuenta con capacitación en el desarrollo de competencias de
               Ombudsperson Organizacional, Coach e instructora de diversos
-              temas; recursos humanos, sistemas de gestión, derechos humanos,
+              temas; Recursos Humanos, sistemas de gestión, derechos humanos,
               hostigamiento y acoso, igualdad laboral, violencia laboral y no
               discriminación.
               <br />
@@ -65,7 +65,7 @@
               cumplimiento de los objetivos estratégicos de las empresas, a
               través, del establecimiento de planes y estrategias de motivación,
               retención y desarrollo de Capital Humano, enfocados a atender la
-              diversidad e inclusión de las personas.<br />
+              Diversidad e Inclusión de las personas.<br />
               <br />
               Ha apoyado de manera parcial o integral a más de 2000 empresas en
               sus procesos de gestión de Recursos Humanos, cuenta con
@@ -74,7 +74,7 @@
               Género, Discriminación, <br />
               <br />
               Diversidad & Inclusión; incluyendo la Norma Mexicana
-              NMX-R-025-SCFI-2015 en Igualdad Laboral y no Discriminación, y
+              NMX-R-025-SCFI-2015 en Igualdad Laboral y No Discriminación, y
               Norma Oficial Mexicana NOM-035-STPS- Factores de riesgo
               psicosocial Identificación, análisis, prevención y distintivos de
               la Secretaria de Trabajo y Previsión Social.<br />
@@ -114,8 +114,8 @@
                 <strong> Recursos Humanos</strong>, utilizando como herramienta
                 de trabajo la calidad y una comunicación estrecha y
                 personalizada; además de brindar satisfacción total para cada
-                uno de los involucrados a nivel individual, grupal y/o
-                organizacional.
+                uno de los involucrados a nivel individual, organizacional y/o
+                grupal.
               </v-card-text>
             </div>
           </v-card>
@@ -165,13 +165,14 @@
                   class="mx-auto text-justify glass2"
                 >
                   <v-card-title class="pb-0"
-                    >Diversidad e inclusión
+                    >Diversidad e Inclusión
                   </v-card-title>
                   <div class="texto-ex mt-0">
                     <v-card-subtitle>
-                      Implementamos programas de <strong>diversidad e inclusión</strong> para
-                      mejorar la productividad de las organizaciones en
-                      cumplimiento de la normatividad vigente.
+                      Implementamos programas de
+                      <strong>Diversidad e Inclusión</strong> para mejorar la
+                      productividad de las organizaciones en cumplimiento de la
+                      normatividad vigente.
                     </v-card-subtitle>
                     <v-card-text>
                       <strong>
@@ -181,8 +182,8 @@
                             Laboral y No Discriminación.
                           </li>
                           <li>
-                            Norma Oficial Mexicana NOM-035-STPS-2018 de <strong>Factores
-                            de Riesgo Psicosocial</strong>
+                            Norma Oficial Mexicana NOM-035-STPS-2018 de
+                            <strong>Factores de Riesgo Psicosocial</strong>
                           </li>
                           <li>Distintivo Empresa Socialmente Responsable.</li>
                         </ul>
@@ -198,7 +199,7 @@
                   class="mx-auto text-justify glass2"
                 >
                   <v-card-title class="pb-0" style="word-break: break-word"
-                    >Gestión de recursos humanos</v-card-title
+                    >Gestión de Recursos Humanos</v-card-title
                   >
                   <div class="texto-ex mt-0">
                     <v-card-subtitle>
@@ -234,7 +235,7 @@
                       <strong>
                         <ul>
                           <li>Job Hunter</li>
-                          <li>Job first (Orientación vocacional)</li>
+                          <li>Job First (Orientación vocacional)</li>
                           <li>Outplacement</li>
                         </ul>
                       </strong>
