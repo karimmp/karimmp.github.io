@@ -1,6 +1,8 @@
 <template>
   <v-container fluid class="diver-pag">
-    <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/portada-servicios.png"
+    <v-img
+      alt="fondo"
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/portada-servicios.png"
       ><v-row no-gutters>
         <v-col lg="6" md="9" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -177,8 +179,10 @@
               gestión.
               <br />
               <br />
-              Apoyamos a tu empresa a implementar mecanismos de denuncia de
-              <strong> discriminación y violencia laboral.</strong>
+              Apoyamos a tu empresa a implementar mecanismos, protocolos de
+              linea de Atención a Quejas/ Denuncia de acoso laboral,
+              hostigamiento, discriminación, abusos de autoridad, fraudes y/o
+              condiciones de trabajo inseguras.
               <br />
               <br />
               ¡Evalúate y certifícate!.
@@ -530,7 +534,8 @@ export default {
         {
           title: "NMX-R-025-SCFI-2015",
           subtitle: "Norma Mexicana, Igualdad Laboral y No Discriminación.",
-          image: "https://d1z76heyx58zfh.cloudfront.net/assets/home/diversidad-inclusion.jpg",
+          image:
+            "https://d1z76heyx58zfh.cloudfront.net/assets/home/diversidad-inclusion.jpg",
           reveal: false,
           link: "/NMX025",
           description:
@@ -540,7 +545,8 @@ export default {
           title: "NOM-035-STPS-2018",
           subtitle: "Norma Oficial Mexicana, Factores de riesgo psicosocial.",
           text: "Logra su implementación de forma correcta.",
-          image: "https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg",
+          image:
+            "https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg",
           reveal: false,
           link: "NOM035",
           description:
@@ -551,7 +557,8 @@ export default {
           subtitle:
             "Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
           text: "Logra su implementación de manera adecuada cuando su personal  realiza más del 40 % de su jornada laboral en teletrabajo (home office).",
-          image: "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/nom037.webp",
+          image:
+            "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/nom037.webp",
           reveal: false,
           nota: "Nuevo Servicio",
           link: "/NOM037",
@@ -561,7 +568,8 @@ export default {
         {
           title: "Distintivo de ESR",
           subtitle: "Obtén el distintivo de Empresa Socialmente Responsable.",
-          image: "https://d1z76heyx58zfh.cloudfront.net/assets/home/gestion-recursos.jpg",
+          image:
+            "https://d1z76heyx58zfh.cloudfront.net/assets/home/gestion-recursos.jpg",
           reveal: false,
           link: "#",
           description:
@@ -571,12 +579,13 @@ export default {
           title: "Servicios adicionales",
           subtitle: 'Administración de "Sistema ético de denuncia".',
           text: 'Administración de "Sistema ético de denuncia" y Elaboración de protocolos de prevención, atención y seguimiento de prácticas de discriminación y violencia laboral.',
-          image: "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/adicionales.webp",
+          image:
+            "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/adicionales.webp",
           reveal: false,
           nota: "Nuevo Servicio",
           link: "/ServiciosAdicionales",
           description:
-            "Vigilancia de áreas de riesgo dentro de las organizaciones. <br><br>Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. <br><br>Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inseguras.",
+            "Vigilancia de áreas de riesgo dentro de las organizaciones. <br><br>Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización.<br><br> Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inseguras.",
         },
       ],
     };

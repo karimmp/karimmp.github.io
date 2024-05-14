@@ -1,6 +1,8 @@
 <template>
   <v-container fluid class="main-pag">
-    <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/portada/imagen-portada.png"
+    <v-img
+      alt="fondo"
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/portada/imagen-portada.png"
       ><v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -48,14 +50,17 @@
       <v-row no-gutters>
         <v-col cols="auto" md="6" sm="12" class="formato-video">
           <video width="100%" height="auto" controls autoplay muted>
-            <source src="https://d1z76heyx58zfh.cloudfront.net/" type="video/mp4" />
+            <source
+              src="https://d1z76heyx58zfh.cloudfront.net/"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="pa-5">
           <v-card elevation="0">
             <v-card-title class="pink-color" style="word-break: break-word">
-              <p>¡Bienvenido/a <strong>Addition RH!</strong></p>
+              <p>¡Bienvenida/o <strong>Addition Human Resources!</strong></p>
             </v-card-title>
             <v-card-text class="texto-body">
               Sabemos que las personas que conforman tu empresa son cruciales
@@ -74,18 +79,16 @@
               organización.
               <br />
               <br />
-              Addition ocupa el lugar 13 a nivel nacional dentro de las 50
+              Addition ocupa el lugar 11 a nivel nacional dentro de las 50
               mejores empresas de consultoría en <b> Recursos Humanos</b>, de
-              acuerdo con el ranking de la Revista Consultoría y el lugar No.40
-              de las mejores empresas de
-              <b>consultoría Administrativa y de Gestión.</b>
+              acuerdo con el ranking de la Revista Consultoría y el lugar No.35
+              de las mejores empresas de consultoría Administrativa y de
+              Gestión.
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
     </v-container>
-
-    
 
     <v-container fluid class="soluciones">
       <section id="soluciones">
@@ -173,7 +176,8 @@
               internacionales en temas de <b>Equidad de Género.</b>
               <br />
               <br />
-              ¡Transforma tu empresa!
+              ¡Es momento de transformar tu empresa y destacar el potencial de
+              tu equipo!
             </v-card-text>
             <div class="pt-5 text-left">
               <v-btn
@@ -189,7 +193,10 @@
           </v-card>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="pa-5">
-          <v-img max-width="700px" src="https://d1z76heyx58zfh.cloudfront.net/assets/1.webp"></v-img>
+          <v-img
+            max-width="700px"
+            src="https://d1z76heyx58zfh.cloudfront.net/assets/1.webp"
+          ></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -211,7 +218,9 @@
         <span class="texto">empresas satisfechas</span>
       </v-col>
     </v-row>
-    <v-parallax src="https://d1z76heyx58zfh.cloudfront.net/assets/portada/laboral.jpg">
+    <v-parallax
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/portada/laboral.jpg"
+    >
       <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass2" elevation="1">
@@ -231,7 +240,9 @@
       <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor texto">
           <v-card elevation="10">
-            <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/home/alianzas-casos-de-exito.jpg"></v-img>
+            <v-img
+              src="https://d1z76heyx58zfh.cloudfront.net/assets/home/alianzas-casos-de-exito.jpg"
+            ></v-img>
             <v-card-title style="word-break: break-word">
               Diversidad e Inclusión
             </v-card-title>
@@ -254,7 +265,7 @@
         </v-col>
         <v-col md="6" sm="12" class="contenedor">
           <v-card elevation="0">
-            <v-card-title style="color: #69c6fa">
+            <v-card-title style="color: #69c6fa; word-break: normal">
               <span class="text-h4 texto-tit">Casos de éxito por alianzas</span>
             </v-card-title>
             <v-card-text class="text-justify texto-ex">
@@ -395,11 +406,10 @@
               "
               contain
               src="https://d1z76heyx58zfh.cloudfront.net/assets/reconocida2024.webp"
-              
             ></v-img>
             <v-card-text class="text-justify"
-              >Ocupamos el lugar número 15 a nivel Nacional dentro de las 50
-              mejores empresas en Recursos Humanos, y el 39 de las mejores
+              >Ocupamos el lugar número 11 a nivel Nacional dentro de las 50
+              mejores empresas en Recursos Humanos, y el 35 de las mejores
               empresas de consultoría administrativa de gestión.</v-card-text
             >
           </v-card>
@@ -597,7 +607,8 @@ export default {
             "Norma Oficial Mexicana NOM-035-STPS-2018 de Factores de Riesgo Psicosocial.",
             "NORMA Oficial Mexicana NOM-037-STPS-2023, Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
             "Distintivo Empresa Socialmente Responsable.",
-            "Administración de \"Sistema ético de denuncia\".",
+            'Administración de "Sistema ético de denuncia".',
+            "Vigilancia de áreas de riesgo dentro de las organizaciones.  Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad,  Fraudes y/o Condiciones de trabajo inseguras.",
           ],
           link: "/diversidad",
         },
