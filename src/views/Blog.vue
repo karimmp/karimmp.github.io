@@ -2,7 +2,7 @@
   <v-container fluid class="px-0 blog-page">
     <v-img
       max-height="300"
-      src="../assets/especializados/especializado-equipo2.png"
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/especializados/especializado-equipo2.png"
     ></v-img>
     <p class="text-h3 texto-land">Nuestro Blog</p>
     <v-container fluid class="sec-blog">
@@ -11,7 +11,7 @@
         <v-img
           contain
           
-          src="../assets/home/alianzas-casos-de-exito.jpg"
+          src="https://d1z76heyx58zfh.cloudfront.net/assets/home/alianzas-casos-de-exito.jpg"
         ></v-img>
         <v-card-title style="word-break: break-word"
           >Addition y Proanalytics unen esfuerzos por la Diversidad e

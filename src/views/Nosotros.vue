@@ -3,7 +3,7 @@
     <v-img
       max-height="200"
       alt="fondo-nosotros"
-      src="../assets/nosotros/portada-nosotros.png"
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/portada-nosotros.png"
     ></v-img>
     <v-card class="mx-auto my-12 landing" max-width="800" elevation="0">
       <v-card-title class="text-big">¿Quiénes Somos?</v-card-title>
@@ -39,7 +39,7 @@
         <v-col cols="auto" md="4" sm="12">
           <v-img
             height="613"
-            src="../assets/nosotros/lihuba-nosotros.png"
+            src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/lihuba-nosotros.png"
           ></v-img>
         </v-col>
         <v-col cols="auto" md="8" sm="12" class="soluciones">
@@ -103,7 +103,7 @@
           >
             <v-parallax
               height="200"
-              src="../assets/nosotros/portada-nosotros2.png"
+              src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/portada-nosotros2.png"
             >
             </v-parallax>
             <div class="glass2">
@@ -129,7 +129,7 @@
           >
             <v-parallax
               height="200"
-              src="../assets/nosotros/footer-nosotros.png"
+              src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/footer-nosotros.png"
             >
             </v-parallax>
             <div class="glass2">
@@ -248,7 +248,7 @@
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="solo-desk">
           <v-img
-            src="../assets/nosotros/footer-nosotros.png"
+            src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/footer-nosotros.png"
             aspect-ratio="1.4"
           ></v-img>
         </v-col>
@@ -302,7 +302,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/equidad.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/equidad.png"
                   ></v-img>
 
                   <v-card-text
@@ -326,7 +326,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/compromiso.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/compromiso.png"
                   ></v-img>
 
                   <v-card-text
@@ -350,7 +350,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/trabajo.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/trabajo.png"
                   ></v-img>
 
                   <v-card-text
@@ -373,7 +373,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/orientacion.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/orientacion.png"
                   ></v-img>
 
                   <v-card-text
@@ -398,7 +398,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/congruencia.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/congruencia.png"
                   ></v-img>
 
                   <v-card-text
@@ -421,7 +421,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/flexibilidad.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/flexibilidad.png"
                   ></v-img>
 
                   <v-card-text
@@ -444,7 +444,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/trato.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/trato.png"
                   ></v-img>
 
                   <v-card-text
@@ -467,7 +467,7 @@
                   <v-img
                     contain
                     max-height="100"
-                    src="../assets/nosotros/valores/profesionalismo.png"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/valores/profesionalismo.png"
                   ></v-img>
 
                   <v-card-text
@@ -498,7 +498,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-parallax src="../assets/nosotros/footer-nosotros.png"></v-parallax>
+    <v-parallax src="https://d1z76heyx58zfh.cloudfront.net/assets/nosotros/footer-nosotros.png"></v-parallax>
   </v-container>
 </template>
 

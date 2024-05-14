@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="coach-pag">
-    <v-img gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)" alt="fondo" src="../assets/home/servicios-especializados.jpg"
+    <v-img gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)" alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg"
       ><v-row class="contenedor">
         <v-col cols="auto" md="6" sm="12" class="mx-5">
           <v-card class="glass" elevation="1">

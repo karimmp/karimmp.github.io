@@ -19,7 +19,7 @@
             </v-card-text>
             <v-img
               height="200px"
-              src="../assets/NMX025.png"
+              src="https://d1z76heyx58zfh.cloudfront.net/assets/NMX025.png"
               class="rounded"
               contain
             ></v-img>

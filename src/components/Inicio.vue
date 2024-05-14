@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="main-pag">
-    <v-img alt="fondo" src="../assets/portada/imagen-portada.png"
+    <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/portada/imagen-portada.png"
       ><v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -189,7 +189,7 @@
           </v-card>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="pa-5">
-          <v-img max-width="700px" src="../assets/1.webp"></v-img>
+          <v-img max-width="700px" src="https://d1z76heyx58zfh.cloudfront.net/assets/1.webp"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -211,7 +211,7 @@
         <span class="texto">empresas satisfechas</span>
       </v-col>
     </v-row>
-    <v-parallax src="../assets/portada/laboral.jpg">
+    <v-parallax src="https://d1z76heyx58zfh.cloudfront.net/assets/portada/laboral.jpg">
       <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass2" elevation="1">
@@ -231,7 +231,7 @@
       <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor texto">
           <v-card elevation="10">
-            <v-img src="../assets/home/alianzas-casos-de-exito.jpg"></v-img>
+            <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/home/alianzas-casos-de-exito.jpg"></v-img>
             <v-card-title style="word-break: break-word">
               Diversidad e Inclusión
             </v-card-title>
@@ -375,7 +375,7 @@
               "
               contain
               max-width="200"
-              src="../assets/home/certificado-igualdad.png"
+              src="https://d1z76heyx58zfh.cloudfront.net/assets/home/certificado-igualdad.png"
             ></v-img>
             <v-card-text class="text-justify"
               >Somos la primer empresa de consultoría en Recursos Humanos en

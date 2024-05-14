@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="diver-pag">
-    <v-img alt="fondo" src="../assets/servicios/portada-servicios.png"
+    <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/portada-servicios.png"
       ><v-row no-gutters>
         <v-col lg="6" md="9" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -152,7 +152,7 @@
         <v-col cols="6" class="solo-desk">
           <v-img
             height="100%"
-            src="../assets/servicios/servicios-section.png"
+            src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/servicios-section.png"
           ></v-img>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="">
@@ -258,7 +258,7 @@
                 >
                   <v-img
                     max-height="300"
-                    src="../assets/home/bolsa-de-trabajo.jpg"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/home/bolsa-de-trabajo.jpg"
                   ></v-img>
                   <v-card-title class="pb-0"
                     >Hasta un 35% más de retorno sobre el capital
@@ -282,7 +282,7 @@
                 >
                   <v-img
                     max-height="300"
-                    src="../assets/home/alianzas-casos-de-exito.jpg"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/home/alianzas-casos-de-exito.jpg"
                   ></v-img>
                   <v-card-title class="pb-0"
                     >Lealtad y compromiso
@@ -304,7 +304,7 @@
                 >
                   <v-img
                     max-height="300"
-                    src="../assets/home/servicios-especializados.jpg"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg"
                   ></v-img>
                   <v-card-title class="pb-0"
                     >Diversidad e igualdad
@@ -327,7 +327,7 @@
                 >
                   <v-img
                     max-height="300"
-                    src="../assets/home/diversidad-inclusion.jpg"
+                    src="https://d1z76heyx58zfh.cloudfront.net/assets/home/diversidad-inclusion.jpg"
                   ></v-img>
                   <v-card-title class="pb-0">Mejores decisiones </v-card-title>
                   <div class="texto-ex mt-0">
@@ -530,7 +530,7 @@ export default {
         {
           title: "NMX-R-025-SCFI-2015",
           subtitle: "Norma Mexicana, Igualdad Laboral y No Discriminación.",
-          image: require("../assets/home/diversidad-inclusion.jpg"),
+          image: "https://d1z76heyx58zfh.cloudfront.net/assets/home/diversidad-inclusion.jpg",
           reveal: false,
           link: "/NMX025",
           description:
@@ -540,7 +540,7 @@ export default {
           title: "NOM-035-STPS-2018",
           subtitle: "Norma Oficial Mexicana, Factores de riesgo psicosocial.",
           text: "Logra su implementación de forma correcta.",
-          image: require("../assets/home/servicios-especializados.jpg"),
+          image: "https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg",
           reveal: false,
           link: "NOM035",
           description:
@@ -551,7 +551,7 @@ export default {
           subtitle:
             "Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
           text: "Logra su implementación de manera adecuada cuando su personal  realiza más del 40 % de su jornada laboral en teletrabajo (home office).",
-          image: require("../assets/servicios/nom037.webp"),
+          image: "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/nom037.webp",
           reveal: false,
           nota: "Nuevo Servicio",
           link: "/NOM037",
@@ -561,7 +561,7 @@ export default {
         {
           title: "Distintivo de ESR",
           subtitle: "Obtén el distintivo de Empresa Socialmente Responsable.",
-          image: require("../assets/home/gestion-recursos.jpg"),
+          image: "https://d1z76heyx58zfh.cloudfront.net/assets/home/gestion-recursos.jpg",
           reveal: false,
           link: "#",
           description:
@@ -571,7 +571,7 @@ export default {
           title: "Servicios adicionales",
           subtitle: 'Administración de "Sistema ético de denuncia".',
           text: 'Administración de "Sistema ético de denuncia" y Elaboración de protocolos de prevención, atención y seguimiento de prácticas de discriminación y violencia laboral.',
-          image: require("../assets/servicios/adicionales.webp"),
+          image: "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/adicionales.webp",
           reveal: false,
           nota: "Nuevo Servicio",
           link: "/ServiciosAdicionales",

@@ -4,7 +4,7 @@
     <v-img
       max-height="200"
       alt="fondo-nosotros"
-      src="../assets/alianzas/portada-alianzas.png"
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/portada-alianzas.png"
     ></v-img>
 
     <v-container fluid class="soluciones">
@@ -22,7 +22,7 @@
                 class="img-logo pt-10"
                 contain
                 max-width="200"
-                src="../assets/alianzas/EFHlogo.png"
+                src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/EFHlogo.png"
               ></v-img>
 
               <p style="text-align: center" class="titulos">
@@ -45,7 +45,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image001.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image001.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -53,7 +53,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image002.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image002.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -61,7 +61,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image003.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image003.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -69,7 +69,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image004.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image004.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -77,7 +77,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image005.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image005.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -85,7 +85,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image006.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image006.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -93,7 +93,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image007.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image007.jpg"
                       ></v-img>
                     </v-col>
                     <v-col cols="auto" md="4" sm="6">
@@ -101,7 +101,7 @@
                         contain
                         max-width="100"
                         class="pa-5"
-                        src="../assets/alianzas/image008.jpg"
+                        src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/image008.jpg"
                       ></v-img>
                     </v-col>
                   </v-row>
@@ -132,7 +132,7 @@
                 class="img-logo pt-10"
                 contain
                 max-width="200"
-                src="../assets/alianzas/FSLogo.png"
+                src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/FSLogo.png"
               ></v-img>
 
               <p style="text-align: center" class="titulos">
@@ -183,7 +183,7 @@
                 class="img-logo pt-5"
                 contain
                 min-width="250"
-                src="../assets/alianzas/Logo Proanalytics-01.png"
+                src="https://d1z76heyx58zfh.cloudfront.net/assets/alianzas/Logo Proanalytics-01.png"
               ></v-img>
 
               <p style="text-align: center" class="titulos">

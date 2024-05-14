@@ -2,7 +2,7 @@
   <v-container fluid class="pa-0">
     <v-img
       class="mt-n15"
-      src="../../assets/entrada/portada-entrada-1.png"
+      src="https://d1z76heyx58zfh.cloudfront.net/assets/entrada/portada-entrada-1.png"
     ></v-img>
     <div class="fondo-rosa">
       <v-breadcrumbs dark :items="items"></v-breadcrumbs>
@@ -27,7 +27,7 @@
           Humanos, basados en competencias, habilidades y experiencia.
         </p>
 
-        <v-img class="my-15" src="../../assets/entrada/amigo.png"></v-img>
+        <v-img class="my-15" src="https://d1z76heyx58zfh.cloudfront.net/assets/entrada/amigo.png"></v-img>
 
         <p>
           Para lograr tener un ambiente laboral diverso, debe existir la
@@ -148,7 +148,7 @@
         <v-card max-width="400" class="pa-7">
             <v-row>
                 <v-col cols="6">
-                    <v-img aspect-ratio="16/9" height="150" src="../../assets/entrada/portada-entrada-1.png" ></v-img>
+                    <v-img aspect-ratio="16/9" height="150" src="https://d1z76heyx58zfh.cloudfront.net/assets/entrada/portada-entrada-1.png" ></v-img>
                 </v-col>
                 <v-col class="text-left texto-sm" style="align-self:center">
                     <strong cla>Addition y Proanalytics unen esfuerzos por la Diversidad e Inclusión</strong>

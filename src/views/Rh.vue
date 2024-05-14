@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="rh-pag">
-    <v-img alt="fondo" src="../assets/gestion/junta.png">
+    <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/junta.png">
       <v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -39,7 +39,7 @@
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="3" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="../assets/gestion/juntas.png"></v-img>
+              <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/juntas.png"></v-img>
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
@@ -85,7 +85,7 @@
 
           <v-col cols="auto" md="3" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="../assets/gestion/proyecto.png"></v-img>
+              <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/proyecto.png"></v-img>
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
                   <p class="titulos text--primary">
@@ -133,7 +133,7 @@
 
           <v-col cols="auto" md="3" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="../assets/gestion/entrenamiento2.png"></v-img>
+              <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/entrenamiento2.png"></v-img>
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
@@ -182,7 +182,7 @@
           <v-col cols="auto" md="3" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
               <v-card elevation="0" class="texto-card">
-                <v-img src="../assets/gestion/especializados.png"></v-img>
+                <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/especializados.png"></v-img>
                 <v-card-text>
                   <p class="titulos text--primary pb-5">
                     Servicios especializados.
@@ -328,7 +328,7 @@
     <v-container fluid class="pa-0">
       <v-row no-gutters>
         <v-col cols="6" class="solo-desk">
-          <v-img height="100%" src="../assets/servicios/servicios-section.png"></v-img>
+          <v-img height="100%" src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/servicios-section.png"></v-img>
         </v-col>
         <v-col cols="auto" md="6" sm="12" class="">
           <v-card class="mx-12 my-12" elevation="0">
@@ -394,7 +394,7 @@
             <v-carousel cycle :show-arrows="false" hide-delimiter-background style="background-color: #fff" light>
               <v-carousel-item>
                 <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
-                  <v-img max-height="300" src="../assets/home/bolsa-de-trabajo.jpg"></v-img>
+                  <v-img max-height="300" src="https://d1z76heyx58zfh.cloudfront.net/assets/home/bolsa-de-trabajo.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       Una correcta gestión de
@@ -406,7 +406,7 @@
               </v-carousel-item>
               <v-carousel-item>
                 <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
-                  <v-img max-height="300" src="../assets/home/alianzas-casos-de-exito.jpg"></v-img>
+                  <v-img max-height="300" src="https://d1z76heyx58zfh.cloudfront.net/assets/home/alianzas-casos-de-exito.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       El desarrollo del <strong> talento humano</strong> de una empresa ahorra
@@ -417,7 +417,7 @@
               </v-carousel-item>
               <v-carousel-item>
                 <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
-                  <v-img max-height="300" src="../assets/home/servicios-especializados.jpg"></v-img>
+                  <v-img max-height="300" src="https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       Mejora la productividad, el <strong> clima laboral</strong> y la comunicación interna de la
@@ -428,7 +428,7 @@
               </v-carousel-item>
               <v-carousel-item>
                 <v-card max-width="750" min-height="350" class="mx-auto text-justify" elevation="0">
-                  <v-img max-height="300" src="../assets/home/diversidad-inclusion.jpg"></v-img>
+                  <v-img max-height="300" src="https://d1z76heyx58zfh.cloudfront.net/assets/home/diversidad-inclusion.jpg"></v-img>
                   <div class="texto-ex ma-5">
                     <v-card-text class="text-h5">
                       Fortalece la <strong> pertenencia, lealtad y compromiso</strong> con su empresa por parte del
