@@ -394,7 +394,8 @@
                 width: 50%;
               "
               contain
-              src="../assets/reconocida2024.webp"
+              src="https://d1z76heyx58zfh.cloudfront.net/assets/reconocida2024.webp"
+              
             ></v-img>
             <v-card-text class="text-justify"
               >Ocupamos el lugar número 15 a nivel Nacional dentro de las 50
