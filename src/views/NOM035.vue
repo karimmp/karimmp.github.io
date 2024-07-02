@@ -1,24 +1,19 @@
 <template>
   <v-container fluid class="coach-pag">
-    <v-img gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)" alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg"
-      ><v-row class="contenedor">
-        <v-col cols="auto" md="6" sm="12" class="mx-5">
-          <v-card class="glass" elevation="1">
+    <div class="fondo-contenedor">
+    <v-row class="contenedor">
+        <v-col cols="auto" md="6" sm="12" class="glass mx-5">
+          <v-card class="transparent" elevation="0">
             <v-card-title
-              class="pt-8 texto-titulo"
+              class="text-title text-left"
               style="word-break: break-word"
-            >
-              <h2>
-                Norma Oficial Mexicana NOM-035-STPS-2018, Factores de riesgo
-                psicosocial en el trabajo-Identificación, análisis y prevención.
-              </h2>
+            > Norma Oficial Mexicana NOM-035-STPS-2018 
             </v-card-title>
-            <v-card-subtitle></v-card-subtitle>
-            <v-card-text class="pt-8 texto-titulo">
-              <h2>
-                Normativa obligatoria la NOM 035 rige en todo el territorio
+            <v-card-subtitle class="text-sub-title texto-rosa text-left py-2" >Factores de riesgo
+              psicosocial en el trabajo. Identificación, análisis y prevención.</v-card-subtitle>
+            <v-card-text class="pa-8  text-left" style="font-size: 18px; font-weight: 500;">
+                Normativa obligatoria, <strong>la NOM 035</strong>  rige en todo el territorio
                 nacional y aplica en todos los centros de trabajo.
-              </h2>
             </v-card-text>
           </v-card>
         </v-col>
@@ -79,21 +74,21 @@
           </v-container>
         </v-col>
       </v-row>
-    </v-img>
+    </div>
 
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pt-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40,000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
       <v-col cols="4" class="pt-10">
-        <span class="numero"><strong>+80</strong></span>
+        <span class="numero"><strong>+2,000</strong></span>
         <br />
         <span class="texto">empresas impactadas</span>
       </v-col>
@@ -122,7 +117,7 @@
     border-radius: 1.5rem;
     border-width: 1px;
     min-height: 450px;
-    padding: 5%;
+    padding: 1%;
   }
 
   .texto-land {
@@ -196,6 +191,14 @@
       text-transform: uppercase;
     }
   }
+
+  .fondo-contenedor {
+    background-image: url("~@/assets/home/servicios-especializados.jpg"); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
   .glass2 {
     background-color: rgba($color: #fff, $alpha: 0.7);
     backdrop-filter: blur(5px);

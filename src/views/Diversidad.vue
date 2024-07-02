@@ -66,25 +66,24 @@
             sm="12"
           >
             <v-card elevation="10" color="white" height="100%">
-              <v-img
-                gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)"
-                class="white--text align-end"
-                height="60%"
-                :src="card.image"
-              >
-                <v-card-title>{{ card.nota }}</v-card-title></v-img
-              >
-              <v-card elevation="0">
-                <v-btn class="ma-3" :to="card.link" text
-                  ><v-card-title class="text-wrap">{{
-                    card.title
-                  }}</v-card-title></v-btn
+              <div class="service-card__image-container">
+                <v-img
+                  :src="card.image"
+                  height="200"
+                  class="service-card__image"
                 >
+                  <v-img width="80px" class="icono" :src="card.icono"></v-img>
+                </v-img>
+              </div>
 
-                <v-card-subtitle class="d-flex flex-wrap text-justify">
+              <v-card elevation="0">
+                <v-card-title class="service-card__title text-left">{{
+                  card.title
+                }}</v-card-title>
+                <v-card-subtitle class="service-card__subtitle text-left">
                   {{ card.subtitle }}
                 </v-card-subtitle>
-                <v-card-actions class="d-flex justify-space-between px-7 py-7">
+                <v-card-actions class="d-flex justify-space-between pa-7">
                   <v-btn
                     outlined
                     color="#9825a6"
@@ -97,7 +96,7 @@
                   <v-btn
                     outlined
                     color="#9825a6"
-                    to="contactanos"
+                    :to=card.link
                     style="text-transform: none"
                     class=""
                   >
@@ -118,9 +117,7 @@
                       v-html="card.description"
                     >
                     </v-card-text>
-                    <v-card-actions
-                      class="d-flex justify-space-between px-7 mb-2"
-                    >
+                    <v-card-actions class="d-flex justify-space-between pa-7">
                       <v-btn
                         outlined
                         color="#9825a6"
@@ -133,7 +130,7 @@
                       <v-btn
                         outlined
                         color="#9825a6"
-                        to="contactanos"
+                        :to=card.link
                         style="text-transform: none"
                         class=""
                       >
@@ -379,6 +376,73 @@
     color: #374751 !important;
     text-align: justify;
   }
+
+  .service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card__image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .service-card__image {
+    height: 100%;
+    object-fit: cover;
+
+    .icono {
+      margin-top: 20%;
+      margin-left: 80%;
+    }
+  }
+
+  .service-card__title {
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 16px 16px 8px;
+    word-break: break-word;
+    height: 90px;
+    align-content: flex-start;
+  }
+
+  .service-card__subtitle {
+    font-size: 1.3rem;
+    padding: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.6);
+    height: 100px;
+  }
+  .service-card__content {
+    flex-grow: 1;
+    padding: 0 16px;
+  }
+
+  .service-card__list {
+    margin-top: 16px;
+  }
+
+  .service-card__list-item {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 4px 0;
+  }
+
+  .service-card__actions {
+    padding: 16px;
+    justify-content: center;
+  }
+
+  .service-card__button {
+    text-transform: none;
+  }
+
   .texto-card {
     .titulos {
       font-size: 2rem !important;
@@ -514,18 +578,19 @@
         font-size: small;
       }
     }
+
+    .service-card__image {
+
+    .icono {
+      width: 60px;
+      margin-left: 73%;
+      margin-top: 35% ;
+    }
+  }
   }
 }
 </style>
 
-<!-- <script>
-export default {
-  data: () => ({
-    reveal: false,
-    reveal2: false,
-    reveal3: false,
-  }),
-};-->
 <script>
 export default {
   data() {
@@ -544,7 +609,7 @@ export default {
         {
           title: "NOM-035-STPS-2018",
           subtitle: "Norma Oficial Mexicana, Factores de riesgo psicosocial.",
-          text: "Logra su implementación de forma correcta.",
+          text: "Logra su implementación de forma correcta",
           image:
             "https://d1z76heyx58zfh.cloudfront.net/assets/home/servicios-especializados.jpg",
           reveal: false,
@@ -557,21 +622,21 @@ export default {
           subtitle:
             "Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
           text: "Logra su implementación de manera adecuada cuando su personal  realiza más del 40 % de su jornada laboral en teletrabajo (home office).",
-          image:
-            "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/nom037.webp",
+          image: require("@/assets/teletrabajo.png"),
           reveal: false,
           nota: "Nuevo Servicio",
+          icono: require("@/assets/nuevo.png"),
           link: "/NOM037",
           description:
             "Cumplir con la Norma 037 es fundamental para prevenir accidentes y enfermedades, y para promover un entorno laboral seguro y saludable, en los lugares de trabajo donde las personas operen bajo la modalidad de Teletrabajo.",
         },
         {
-          title: "Distintivo de ESR",
+          title: "Distintivo de Empresa Socialmente Responsable ",
           subtitle: "Obtén el distintivo de Empresa Socialmente Responsable.",
           image:
             "https://d1z76heyx58zfh.cloudfront.net/assets/home/gestion-recursos.jpg",
           reveal: false,
-          link: "#",
+          link: "contactanos",
           description:
             "Adopta los principios de una empresa socialmente responsable como parte de la cultura de tu empresa y como estrategia de negocio generando más competitividad empresarial y un mejor funcionamiento interno de tus trabajadores.",
         },
@@ -579,10 +644,10 @@ export default {
           title: "Servicios adicionales",
           subtitle: 'Administración de "Sistema ético de denuncia".',
           text: 'Administración de "Sistema ético de denuncia" y Elaboración de protocolos de prevención, atención y seguimiento de prácticas de discriminación y violencia laboral.',
-          image:
-            "https://d1z76heyx58zfh.cloudfront.net/assets/servicios/adicionales.webp",
+          image: require("@/assets/servicios.jpg"),
           reveal: false,
           nota: "Nuevo Servicio",
+          icono: require("@/assets/nuevo.png"),
           link: "/ServiciosAdicionales",
           description:
             "Vigilancia de áreas de riesgo dentro de las organizaciones. <br><br>Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización.<br><br> Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inseguras.",

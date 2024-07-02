@@ -1,43 +1,42 @@
 <template>
   <v-container fluid class="coach-pag">
-    <v-img gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)" alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/nom037.webp"
-      ><v-row class="contenedor">
-        <v-col cols="auto" md="6" sm="12" class="mx-5">
-          <v-card class="glass" elevation="1">
+    <div class="fondo-contenedor3">
+    <v-row class="contenedor">
+        <v-col cols="auto" md="6" sm="12" class="mx-5 glass">
+          <v-card class="transparent" elevation="0">
             <v-card-title
               class="pt-8 texto-titulo"
               style="word-break: break-word"
             >
               <h2>Servicios Adicionales.</h2>
             </v-card-title>
-            <v-card-subtitle class="text-left "
+            <v-card-subtitle class="text-left"
               >Protocolo y Sistema de denucia a quejas</v-card-subtitle
             >
-            <v-card-text class="text-body-1">
+
               <v-card-text class="font-weight-black">Administración de "Sistema ético de denuncia" y Elaboración de
               protocolos de prevención, atención y seguimiento de prácticas de
               discriminación y violencia laboral.</v-card-text>
-              <v-list class="text-left transparent pa-0">
+              <v-list class="text-left transparent service-card__list">
                 <span class="font-weight-black">Mejora y mantén:</span>
-                <v-list-item v-for="(item, index) in listItems" :key="index">
+                <v-list-item v-for="(item, index) in listItems" :key="index" class="">
                   <v-list-item-icon>
-                    <v-icon>mdi-circle-small</v-icon>
+                    <v-icon color="primary">mdi-circle-medium</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-content class="">{{
+                  <v-list-item-content class="service-card__list-item">{{
                     item
                   }}</v-list-item-content>
                 </v-list-item>
               </v-list>
-            </v-card-text>
 
             <v-card-text class="text-body-1">
-              <v-list class="text-left transparent pa-0">
+              <v-list class="text-left transparent pa-0 service-card__list">
                 <span class="font-weight-black">Evita y peviene:</span>
                 <v-list-item v-for="(item, index) in listItems2" :key="index">
                   <v-list-item-icon>
-                    <v-icon>mdi-circle-small</v-icon>
+                    <v-icon color="primary">mdi-circle-medium</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-content class="">{{
+                  <v-list-item-content class="service-card__list-item">{{
                     item
                   }}</v-list-item-content>
                 </v-list-item>
@@ -102,21 +101,21 @@
           </v-container>
         </v-col>
       </v-row>
-    </v-img>
-
+    
+  </div>
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pt-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40,000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
       <v-col cols="4" class="pt-10">
-        <span class="numero"><strong>+80</strong></span>
+        <span class="numero"><strong>+2,000</strong></span>
         <br />
         <span class="texto">empresas impactadas</span>
       </v-col>
@@ -145,7 +144,27 @@
     border-radius: 1.5rem;
     border-width: 1px;
     min-height: 450px;
-    padding: 5%;
+    padding: 1%;
+  }
+
+  .fondo-contenedor3 {
+    background-image: url("~@/assets/teletrabajo.png"); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .service-card__list {
+    margin-top: 0px;
+  }
+
+  .service-card__list-item {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 1px 0;
   }
 
   .texto-land {

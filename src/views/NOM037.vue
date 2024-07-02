@@ -1,31 +1,31 @@
 <template>
   <v-container fluid class="coach-pag">
-    <v-img gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)" alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/nom037.webp"
-      ><v-row class="contenedor">
-        <v-col cols="auto" md="6" sm="12" class="mx-5">
-          <v-card class="glass" elevation="1">
+    <div class="fondo-contenedor2">
+      <v-row class="contenedor">
+        <v-col cols="auto" md="6" sm="12" class="glass mx-5">
+          <v-card class="transparent" elevation="0">
             <v-card-title
-              class="pt-8 texto-titulo"
+              class="text-title text-left"
               style="word-break: break-word"
             >
-              <h2>
-                NORMA Oficial Mexicana NOM-037-STPS-2023,
-                Teletrabajo-Condiciones de seguridad y salud en el trabajo.
-              </h2>
+              NORMA Oficial Mexicana NOM-037-STPS-2023
             </v-card-title>
-            <v-card-subtitle></v-card-subtitle>
+            <v-card-subtitle class="text-sub-title texto-rosa text-left py-2"
+              >Condiciones de seguridad y salud en el trabajo.
+            </v-card-subtitle>
             <v-card-text class="pt-8 texto-titulo">
-                <v-list class="text-left transparent pa-0">
-                    <v-list-item 
-                      v-for="(item, index) in listItems"
-                      :key="index"
-                    >
-                      <v-list-item-icon>
-                        <v-icon>mdi-circle-small</v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content class="text-lg-h5">{{ item }}</v-list-item-content>
-                    </v-list-item>
-                  </v-list>
+              <v-list class="text-left transparent">
+                <v-list-item v-for="(item, index) in listItems" :key="index">
+                  <v-list-item-icon>
+                    <v-icon color="primary">mdi-circle-medium</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content
+                    class=""
+                    style="font-size: 18px; font-weight: 400"
+                    >{{ item }}</v-list-item-content
+                  >
+                </v-list-item>
+              </v-list>
             </v-card-text>
           </v-card>
         </v-col>
@@ -86,21 +86,21 @@
           </v-container>
         </v-col>
       </v-row>
-    </v-img>
+    </div>
 
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pt-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40,000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
       <v-col cols="4" class="pt-10">
-        <span class="numero"><strong>+80</strong></span>
+        <span class="numero"><strong>+2000</strong></span>
         <br />
         <span class="texto">empresas impactadas</span>
       </v-col>
@@ -128,8 +128,12 @@
     backdrop-filter: blur(5px);
     border-radius: 1.5rem;
     border-width: 1px;
-    min-height: 450px;
-    padding: 5%;
+    padding: 1%;
+  }
+  .custom-img {
+    height: auto; /* Ejemplo de altura fija */
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 0% !important;
   }
 
   .texto-land {
@@ -203,12 +207,20 @@
       text-transform: uppercase;
     }
   }
+
+  .fondo-contenedor2 {
+    background-image: url("~@/assets/teletrabajo.png"); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   .glass2 {
     background-color: rgba($color: #fff, $alpha: 0.7);
     backdrop-filter: blur(5px);
     border-radius: 1.5rem;
     border-width: 1px;
-    padding: 5%;
+    padding: 1%;
   }
   .solo-mob {
     display: none;

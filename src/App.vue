@@ -100,30 +100,28 @@
 
           <v-col cols="12" md="4" sm="12">
             <v-card
-            
               light
               color="#e5e7eb"
               elevation="0"
               style="text-align: start"
             >
-            <v-card-subtitle>
-              <strong>Síguenos en nuestras redes sociales</strong>
-            </v-card-subtitle>
-            <v-list light color="#e5e7eb">
-              <v-list-item class="lista-vertical">
-                <v-btn
-                  v-for="item in menu3"
-                  
-                  :key="item.key"
-                  :href="item.href"
-                  target="_blank"
-                  plain
-                  tile
-                  ><v-icon>{{item.icon}}</v-icon>
-                  <span class="ml-5">{{ item.title }}</span>
-                </v-btn>
-              </v-list-item>
-            </v-list>
+              <v-card-subtitle>
+                <strong>Síguenos en nuestras redes sociales</strong>
+              </v-card-subtitle>
+              <v-list light color="#e5e7eb">
+                <v-list-item class="lista-vertical">
+                  <v-btn
+                    v-for="item in menu3"
+                    :key="item.key"
+                    :href="item.href"
+                    target="_blank"
+                    plain
+                    tile
+                    ><v-icon>{{ item.icon }}</v-icon>
+                    <span class="ml-5">{{ item.title }}</span>
+                  </v-btn>
+                </v-list-item>
+              </v-list>
             </v-card>
           </v-col>
         </v-row>
@@ -165,10 +163,27 @@
   a {
     :hover {
       color: #ea5076;
-      
     }
   }
 }
+
+.texto-rosa {
+  color: #ea5076;
+}
+.text-title {
+  padding: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.text-sub-title {
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .pie-pagina {
   padding: 0;
 
@@ -225,7 +240,10 @@ export default {
             { title: "NMX-R-025-SCFI-2015", link: "/NMX025" },
             { title: "NOM-035-STPS-2018", link: "/NOM035" },
             { title: "NOM-037-STPS-2023", link: "/NOM037" },
-            { title: "Servicios adicionales", link: "/ServiciosAdicionales" },
+            {
+              title: "Administración de Sistema Ético de Denuncia",
+              link: "/ServiciosAdicionales",
+            },
           ],
         },
         { title: "Gestión de Recursos Humanos", link: "/rh" },
@@ -244,7 +262,15 @@ export default {
       menu2: [
         { key: "inicio", title: "Inicio", link: "/" },
         { key: "nosotros", title: "Nosotros", link: "/Nosotros" },
-        { key: "servicios", title: "Servicios", link: "/diversidad" },
+        { key: "servicios", title: "Soluciones", link: "/diversidad" },
+        { title: "NMX-R-025-SCFI-2015", link: "/NMX025" },
+        { title: "NOM-035-STPS-2018", link: "/NOM035" },
+        { title: "NOM-037-STPS-2023", link: "/NOM037" },
+        {
+          title: "Administración de Sistema Ético de Denuncia",
+          link: "/ServiciosAdicionales",
+        },
+
         {
           key: "alianzas",
           icon: "",
@@ -260,10 +286,30 @@ export default {
         },
       ],
       menu3: [
-        { key: "instagram", icon:"mdi-instagram", title: "Instagram", href: "https://www.instagram.com/additionrhmx/" },
-        { key: "facebook", icon:"mdi-facebook", title: "Facebook", href: "https://www.facebook.com/AdditionRH/" },
-        { key: "linkedin", icon:"mdi-linkedin", title: "LinkedIn", href: "https://www.linkedin.com/company/addition-human-resources/" },
-        { key: "twitter", icon: "mdi-twitter", title: "Twitter", href: "https://twitter.com/additionrh?s=11&t=JzkH_fyELvOt9u9t3PpQ1A" },
+        {
+          key: "instagram",
+          icon: "mdi-instagram",
+          title: "Instagram",
+          href: "https://www.instagram.com/additionrhmx/",
+        },
+        {
+          key: "facebook",
+          icon: "mdi-facebook",
+          title: "Facebook",
+          href: "https://www.facebook.com/AdditionRH/",
+        },
+        {
+          key: "linkedin",
+          icon: "mdi-linkedin",
+          title: "LinkedIn",
+          href: "https://www.linkedin.com/company/addition-human-resources/",
+        },
+        {
+          key: "twitter",
+          icon: "mdi-twitter",
+          title: "Twitter",
+          href: "https://twitter.com/additionrh?s=11&t=JzkH_fyELvOt9u9t3PpQ1A",
+        },
       ],
 
       admins: [

@@ -60,7 +60,7 @@
         <v-col cols="auto" md="6" sm="12" class="pa-5">
           <v-card elevation="0">
             <v-card-title class="pink-color" style="word-break: break-word">
-              <p>¡Bienvenida/o <strong>Addition Human Resources!</strong></p>
+              <p>¡Bienvenida/o a <strong>Addition Human Resources!</strong></p>
             </v-card-title>
             <v-card-text class="texto-body">
               Sabemos que las personas que conforman tu empresa son cruciales
@@ -80,7 +80,7 @@
               <br />
               <br />
               Addition ocupa el lugar 11 a nivel nacional dentro de las 50
-              mejores empresas de consultoría en <b> Recursos Humanos</b>, de
+              mejores empresas de consultoría en<b> Recursos Humanos</b>, de
               acuerdo con el ranking de la Revista Consultoría y el lugar No.35
               de las mejores empresas de consultoría Administrativa y de
               Gestión.
@@ -92,7 +92,7 @@
 
     <v-container fluid class="soluciones">
       <section id="soluciones">
-        <h1 class="txt-white mt-2">Nuestas Soluciones</h1>
+        <h1 class="txt-white mt-2">Nuestras Soluciones</h1>
         <v-row class="pa-4">
           <v-col
             v-for="(card, index) in cards"
@@ -101,24 +101,41 @@
             md="4"
             sm="12"
           >
-            <v-card elevation="10" color="white" height="100%">
-              <v-img :src="card.image"></v-img>
-              <v-card-title>{{ card.title }}</v-card-title>
-              <v-card-subtitle class="text-left" style="height: 100px">{{
-                card.subtitle
-              }}</v-card-subtitle>
-              <v-card-text class="text-left">
-                <v-list>
+            <v-card
+              class="service-card"
+              elevation="10"
+              color="white"
+              height="100%"
+            >
+              <div class="service-card__image-container">
+                <v-img
+                  :src="card.image"
+                  height="200"
+                  class="service-card__image"
+                ></v-img>
+              </div>
+              <v-card-title class="service-card__title text-left">{{
+                card.title
+              }}</v-card-title>
+              <v-card-subtitle class="service-card__subtitle text-left">
+                {{ card.subtitle }}
+              </v-card-subtitle>
+              <v-card-text class="service-card__content text-left">
+                <v-list class="service-card__list">
                   <v-list-item
                     v-for="(item, subIndex) in card.listItems"
                     :key="subIndex"
-                    class="text-left pa-0"
+                    class="service-card__list-item pa-0"
+                    dense
                   >
-                    <v-list-item-icon>
-                      <v-icon>mdi-circle-small</v-icon>
-                      <strong>{{ item }}</strong>
+                    <v-list-item-icon class="mr-2">
+                      <v-icon color="primary" small>mdi-circle-medium</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-content></v-list-item-content>
+                    <v-list-item-content>
+                      <v-list-item-title class="subtitle-2 text-wrap">{{
+                        item
+                      }}</v-list-item-title>
+                    </v-list-item-content>
                   </v-list-item>
                 </v-list>
               </v-card-text>
@@ -128,7 +145,7 @@
                   style="text-transform: none"
                   color="#ea5076"
                   outlined
-                  class="pa-5"
+                  class="pa-5, ma-5"
                   dark
                   >Conoce más</v-btn
                 >
@@ -474,6 +491,65 @@
       border-width: 1px;
     }
   }
+
+  .service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card__image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .service-card__image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .service-card__title {
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 16px 16px 8px;
+    word-break: break-word;
+}
+
+  .service-card__subtitle {
+    font-size: 0.9rem;
+    padding: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    height: 100px;
+  }
+  .service-card__content {
+    flex-grow: 1;
+    padding: 0 16px;
+  }
+
+  .service-card__list {
+    margin-top: 16px;
+  }
+
+  .service-card__list-item {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 4px 0;
+  }
+
+  .service-card__actions {
+    padding: 16px;
+    justify-content: center;
+  }
+
+  .service-card__button {
+    text-transform: none;
+  }
+
   .contadores {
     background-color: #e5e7eb;
     padding: 0px !important;
@@ -538,6 +614,9 @@
       .texto-ex {
         font-size: small;
       }
+    }
+    .service-card__subtitle {
+      height: auto;
     }
   }
 }
@@ -604,11 +683,11 @@ export default {
           image: require("@/assets/home/diversidad-inclusion.jpg"),
           listItems: [
             "Norma Mexicana NMX-R-025-SCFI-2015 en Igualdad Laboral y No Discriminación.",
-            "Norma Oficial Mexicana NOM-035-STPS-2018 de Factores de Riesgo Psicosocial.",
-            "NORMA Oficial Mexicana NOM-037-STPS-2023, Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
+            "Norma Oficial Mexicana. NOM-035-STPS-2018 de Factores de Riesgo Psicosocial.",
+            "Norma Oficial Mexicana NOM-037-STPS-2023, Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
             "Distintivo Empresa Socialmente Responsable.",
             'Administración de "Sistema ético de denuncia".',
-            "Vigilancia de áreas de riesgo dentro de las organizaciones.  Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad,  Fraudes y/o Condiciones de trabajo inseguras.",
+            /* "Vigilancia de áreas de riesgo dentro de las organizaciones.  Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad,  Fraudes y/o Condiciones de trabajo inseguras.", */
           ],
           link: "/diversidad",
         },

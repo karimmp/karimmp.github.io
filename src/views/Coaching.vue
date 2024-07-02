@@ -321,7 +321,7 @@
     border-radius: 1.5rem;
     border-width: 1px;
     min-height: 450px;
-    padding: 5%;
+    padding: 1%;
   }
 
   .texto-land {

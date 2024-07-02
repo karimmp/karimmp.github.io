@@ -43,18 +43,20 @@
       <section id="soluciones">
         <v-row class="contenedor">
           <v-col cols="auto" md="6" sm="12" class="glass2 mx-5">
-              <v-card elevation="0"  class="texto-card transparent ">
-                <v-card-title  class="titulos text-title">Beneficios NMX-025</v-card-title>
+              <v-card elevation="0"  class="transparent  ">
+                <p class="text-title texto-rosa">
+                  Beneficios NMX-025
+              </p>
                 <v-card-text >
-                  <v-list class="text-left transparent pa-0">
+                  <v-list class="text-left transparent benefit-list py-7">
                     <v-list-item 
                       v-for="(item, index) in listItems"
                       :key="index"
                     >
                       <v-list-item-icon>
-                        <v-icon>mdi-circle-small</v-icon>
+                        <v-icon color="primary" small>mdi-circle-medium</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-content class="text-lg-h5">{{ item }}</v-list-item-content>
+                      <v-list-item-content class="" style="font-size: 18px; font-weight:400 ;">{{ item }}</v-list-item-content>
                     </v-list-item>
                   </v-list>
                 </v-card-text>
@@ -122,17 +124,17 @@
 
     <v-row no-gutters class="contadores">
       <v-col cols="4" class="pt-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+12</strong></span>
+        <span class="numero"><strong>+20</strong></span>
         <br />
         <span class="texto">años de experiencia</span>
       </v-col>
       <v-col cols="4" class="px-5 py-10" style="border-right: 2px #fff solid">
-        <span class="numero"><strong>+100</strong></span>
+        <span class="numero"><strong>+40,000</strong></span>
         <br />
         <span class="texto">personas por año impactadas</span>
       </v-col>
       <v-col cols="4" class="pt-10">
-        <span class="numero"><strong>+80</strong></span>
+        <span class="numero"><strong>+2,000</strong></span>
         <br />
         <span class="texto">empresas impactadas</span>
       </v-col>
@@ -169,9 +171,17 @@
     color: #374751 !important;
     text-align: justify;
   }
+
+  .text-title {
+  padding: 2rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
   .texto-card {
     .titulos {
-      font-size: 1.5rem !important;
+      font-size: 1.875rem !important;
       font-weight: 500;
       line-height: 2.5rem;
       letter-spacing: 0.0073529412em !important;
@@ -270,6 +280,8 @@
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
     }
+
+
   }
 
   @media only screen and (max-width: 600px) {
