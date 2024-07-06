@@ -63,11 +63,11 @@
         </div>
       </v-app-bar>
 
-      <v-navigation-drawer v-model="drawer" fixed temporary>
+      <v-navigation-drawer class="text-left pl-4" v-model="drawer" fixed temporary>
         <v-list nav dense>
           <v-list-item-group v-model="group" active-class=" text--accent-4">
             <v-list-item v-for="(item, i) in menu2" :key="i" :to="item.link">
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
+              <v-list-item-title class="menu-drawer my-3">{{ item.title }}</v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>
@@ -165,6 +165,12 @@
       color: #ea5076;
     }
   }
+}
+
+.menu-drawer{
+  word-wrap: break-word; /* Compatibilidad con navegadores más antiguos */
+  overflow-wrap: break-word; /* Propiedad recomendada */
+  white-space: normal; /* Permitir que el texto se ajuste */
 }
 
 .texto-rosa {

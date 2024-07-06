@@ -2,7 +2,7 @@
   <v-container fluid class="coach-pag">
     <div class="fondo-contenedor2">
       <v-row class="contenedor">
-        <v-col cols="auto" md="6" sm="12" class="glass mx-5">
+        <v-col cols="auto" md="6" sm="12" class="glass">
           <v-card class="transparent" elevation="0">
             <v-card-title
               class="text-title text-left"
@@ -121,6 +121,7 @@
   .contenedor {
     padding: 60px !important;
     align-self: center;
+    gap: 20px;
   }
 
   .glass {

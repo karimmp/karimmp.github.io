@@ -2,7 +2,7 @@
   <v-container fluid class="coach-pag">
     <div class="fondo-contenedor3">
     <v-row class="contenedor">
-        <v-col cols="auto" md="6" sm="12" class="mx-5 glass">
+        <v-col cols="auto" md="6" sm="12" class="glass">
           <v-card class="transparent" elevation="0">
             <v-card-title
               class="pt-8 texto-titulo"
@@ -14,7 +14,7 @@
               >Protocolo y Sistema de denucia a quejas</v-card-subtitle
             >
 
-              <v-card-text class="font-weight-black">Administración de "Sistema ético de denuncia" y Elaboración de
+              <v-card-text class="font-weight-black texto-card">Administración de "Sistema ético de denuncia" y Elaboración de
               protocolos de prevención, atención y seguimiento de prácticas de
               discriminación y violencia laboral.</v-card-text>
               <v-list class="text-left transparent service-card__list">
@@ -136,6 +136,7 @@
   .contenedor {
     padding: 60px !important;
     align-self: center;
+    gap: 20px;
   }
 
   .glass {
@@ -155,7 +156,8 @@
   }
 
   .service-card__list {
-    margin-top: 0px;
+    margin: 0 0 1rem 0.5rem;
+    
   }
 
   .service-card__list-item {
@@ -284,6 +286,7 @@
     }
     .contenedor {
       padding: 20px !important;
+      margin: 2rem 0.3rem;
     }
 
     .texto-land {
@@ -314,6 +317,14 @@
       .texto-ex {
         font-size: small;
       }
+    }
+    .text-title{
+      padding: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    .texto-card{
+      text-align: left;
     }
   }
 }

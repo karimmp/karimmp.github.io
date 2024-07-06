@@ -96,7 +96,7 @@
                   <v-btn
                     outlined
                     color="#9825a6"
-                    :to=card.link
+                    :to="card.link"
                     style="text-transform: none"
                     class=""
                   >
@@ -107,6 +107,7 @@
                   <v-card
                     v-if="card.reveal"
                     class="transition-fast-in-fast-out v-card--reveal"
+                    max-height="50vh"
                     elevation="0"
                   >
                     <v-card-subtitle class="text-justify font-weight-black">
@@ -130,7 +131,7 @@
                       <v-btn
                         outlined
                         color="#9825a6"
-                        :to=card.link
+                        :to="card.link"
                         style="text-transform: none"
                         class=""
                       >
@@ -493,6 +494,17 @@
       border-width: 1px;
     }
   }
+
+  .v-card--reveal {
+  max-height: 80vh; /* Altura máxima de la tarjeta */
+  overflow-y: auto; /* Añadir barra de desplazamiento vertical */
+}
+
+.v-card-text {
+  max-height: 70vh; /* Ajustar la altura máxima del contenido de texto */
+  overflow-y: auto; /* Añadir barra de desplazamiento vertical al texto */
+}
+
   .contadores {
     background-color: #e5e7eb;
     padding: 0px !important;
@@ -580,13 +592,12 @@
     }
 
     .service-card__image {
-
-    .icono {
-      width: 60px;
-      margin-left: 73%;
-      margin-top: 35% ;
+      .icono {
+        width: 60px;
+        margin-left: 73%;
+        margin-top: 35%;
+      }
     }
-  }
   }
 }
 </style>
@@ -643,14 +654,27 @@ export default {
         {
           title: "Servicios adicionales",
           subtitle: 'Administración de "Sistema ético de denuncia".',
-          text: 'Administración de "Sistema ético de denuncia" y Elaboración de protocolos de prevención, atención y seguimiento de prácticas de discriminación y violencia laboral.',
+          text: "Administramos sus medios de denuncia para mejorar el ambiente laboral y reputación de la marca; asegurando objetividad, imparcialidad y confidencialidad en todo el proceso.",
           image: require("@/assets/servicios.jpg"),
           reveal: false,
           nota: "Nuevo Servicio",
           icono: require("@/assets/nuevo.png"),
           link: "/ServiciosAdicionales",
-          description:
-            "Vigilancia de áreas de riesgo dentro de las organizaciones. <br><br>Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización.<br><br> Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inseguras.",
+          description: `
+    Vigilancia de áreas de riesgo dentro de las organizaciones. 
+    Detección de conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de tu entidad. <br><br>
+    
+    Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inadecuadas. <br><br>
+    
+    Creamos resultados en: <br>
+    • Elaboración de protocolos para prevenir, atender y dar seguimiento a prácticas de discriminación, violencia laboral y faltas éticas. <br>
+    • Administración de líneas de denuncia <br>
+    • Apoyo externo de Ombudsman <br><br>
+    
+    Todos nuestros servicios llevan seguimiento y recursos personalizados de acuerdo a las necesidades específicas de tu organización. 
+    Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. <br>
+    Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación.
+  `,
         },
       ],
     };

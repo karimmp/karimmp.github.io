@@ -42,7 +42,7 @@
     <v-container fluid class="soluciones">
       <section id="soluciones">
         <v-row class="contenedor">
-          <v-col cols="auto" md="6" sm="12" class="glass2 mx-5">
+          <v-col cols="auto" md="6" sm="12" class="glass2">
               <v-card elevation="0"  class="transparent  ">
                 <p class="text-title texto-rosa">
                   Beneficios NMX-025
@@ -145,6 +145,7 @@
 <style lang="scss">
 .coach-pag {
   padding: 0;
+  margin: 0 !important;
   font-family: Commissioner !important;
 
   .texto-big {
@@ -155,6 +156,7 @@
   .contenedor {
     padding: 60px !important;
     align-self: center;
+    gap: 20px;
   }
 
   .glass {
@@ -323,6 +325,10 @@
       .texto-ex {
         font-size: small;
       }
+    }
+    .text-title{
+      padding: 2rem 0 0.5rem 0;
+      margin: 0%;
     }
   }
 }
