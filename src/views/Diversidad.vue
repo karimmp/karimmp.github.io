@@ -652,7 +652,7 @@ export default {
             "Adopta los principios de una empresa socialmente responsable como parte de la cultura de tu empresa y como estrategia de negocio generando más competitividad empresarial y un mejor funcionamiento interno de tus trabajadores.",
         },
         {
-          title: "Servicios adicionales",
+          title: "Administación de Sistema Ético de Denuncia",
           subtitle: 'Administración de "Sistema ético de denuncia".',
           text: "Administramos sus medios de denuncia para mejorar el ambiente laboral y reputación de la marca; asegurando objetividad, imparcialidad y confidencialidad en todo el proceso.",
           image: require("@/assets/servicios.jpg"),
@@ -671,10 +671,7 @@ export default {
     • Administración de líneas de denuncia <br>
     • Apoyo externo de Ombudsman <br><br>
     
-    Todos nuestros servicios llevan seguimiento y recursos personalizados de acuerdo a las necesidades específicas de tu organización. 
-    Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización. <br>
-    Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación.
-  `,
+    Todos nuestros servicios llevan seguimiento y recursos personalizados de acuerdo a las necesidades específicas de tu organización. Detectando conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de su organización.`,
         },
       ],
     };

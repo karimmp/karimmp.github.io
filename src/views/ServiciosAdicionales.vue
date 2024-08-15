@@ -8,7 +8,7 @@
               class="pt-8 texto-titulo"
               style="word-break: break-word"
             >
-              <h2>Servicios Adicionales.</h2>
+              <h2>Administación de Sistema Ético de Denuncia.</h2>
             </v-card-title>
             <v-card-subtitle class="text-left"
               >Protocolo y Sistema de denucia a quejas</v-card-subtitle
@@ -18,7 +18,7 @@
               protocolos de prevención, atención y seguimiento de prácticas de
               discriminación y violencia laboral.</v-card-text>
               <v-list class="text-left transparent service-card__list">
-                <span class="font-weight-black">Mejora y mantén:</span>
+                <!-- <span class="font-weight-black">Mejora y mantén:</span> -->
                 <v-list-item v-for="(item, index) in listItems" :key="index" class="">
                   <v-list-item-icon>
                     <v-icon color="primary">mdi-circle-medium</v-icon>
@@ -29,7 +29,7 @@
                 </v-list-item>
               </v-list>
 
-            <v-card-text class="text-body-1">
+            <!-- <v-card-text class="text-body-1">
               <v-list class="text-left transparent pa-0 service-card__list">
                 <span class="font-weight-black">Evita y peviene:</span>
                 <v-list-item v-for="(item, index) in listItems2" :key="index">
@@ -41,7 +41,7 @@
                   }}</v-list-item-content>
                 </v-list-item>
               </v-list>
-            </v-card-text>
+            </v-card-text> -->
           </v-card>
         </v-col>
 
@@ -346,7 +346,15 @@ export default {
       (v) => !!v || "E-mail is required",
       (v) => /.+@.+/.test(v) || "Introduce un e-mail válido",
     ],
-    listItems: [
+    
+ 
+
+listItems: [
+      "Vigilancia de áreas de riesgo dentro de las organizaciones. ",
+      "Detección de conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de tu entidad.",
+      "Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inadecuadas.",
+    ],
+    /* listItems: [
       "Identificación de problemas.",
       "Detección de conductas no éticas.",
       "Reputacion de marca.",
@@ -357,7 +365,7 @@ export default {
       "Hostigamiento.",
       "Discriminación, Abusos de autoridad.",
       "Fraudes y/o Condiciones de trabajo inseguras."
-    ],
+    ], */
   }),
 };
 </script>

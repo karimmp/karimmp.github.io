@@ -3,7 +3,7 @@
     <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/especializados/portada-especializados.png"
       ><v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
-          <v-card class="glass" elevation="1">
+          <v-card class="glass pa-8" elevation="1">
             <v-card-title
               class="pt-8 texto-titulo"
               style="word-break: break-word"
