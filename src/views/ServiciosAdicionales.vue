@@ -14,9 +14,9 @@
               >Protocolo y Sistema de denucia a quejas</v-card-subtitle
             >
 
-              <v-card-text class="font-weight-black texto-card">Administración de "Sistema ético de denuncia" y Elaboración de
+             <!--  <v-card-text class="font-weight-black texto-card">Administración de "Sistema ético de denuncia" y Elaboración de
               protocolos de prevención, atención y seguimiento de prácticas de
-              discriminación y violencia laboral.</v-card-text>
+              discriminación y violencia laboral.</v-card-text> -->
               <v-list class="text-left transparent service-card__list">
                 <!-- <span class="font-weight-black">Mejora y mantén:</span> -->
                 <v-list-item v-for="(item, index) in listItems" :key="index" class="">

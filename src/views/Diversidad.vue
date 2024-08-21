@@ -411,11 +411,11 @@
   }
 
   .service-card__subtitle {
-    font-size: 1.3rem;
+    font-size: 1.0rem;
     padding: 16px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
-    height: 100px;
+    height: 110px;
   }
   .service-card__content {
     flex-grow: 1;
@@ -496,14 +496,14 @@
   }
 
   .v-card--reveal {
-  max-height: 80vh; /* Altura máxima de la tarjeta */
-  overflow-y: auto; /* Añadir barra de desplazamiento vertical */
-}
+    max-height: 80vh; /* Altura máxima de la tarjeta */
+    overflow-y: auto; /* Añadir barra de desplazamiento vertical */
+  }
 
-.v-card-text {
-  max-height: 70vh; /* Ajustar la altura máxima del contenido de texto */
-  overflow-y: auto; /* Añadir barra de desplazamiento vertical al texto */
-}
+  .v-card-text {
+    max-height: 70vh; /* Ajustar la altura máxima del contenido de texto */
+    overflow-y: auto; /* Añadir barra de desplazamiento vertical al texto */
+  }
 
   .contadores {
     background-color: #e5e7eb;
@@ -653,20 +653,15 @@ export default {
         },
         {
           title: "Administación de Sistema Ético de Denuncia",
-          subtitle: 'Administración de "Sistema ético de denuncia".',
-          text: "Administramos sus medios de denuncia para mejorar el ambiente laboral y reputación de la marca; asegurando objetividad, imparcialidad y confidencialidad en todo el proceso.",
+          subtitle:
+            "Administramos sus medios de denuncia para mejorar el ambiente laboral y reputación de la marca; asegurando objetividad, imparcialidad y confidencialidad en todo el proceso.",
+          text: "Creamos resultados en:",
           image: require("@/assets/servicios.jpg"),
           reveal: false,
           nota: "Nuevo Servicio",
           icono: require("@/assets/nuevo.png"),
           link: "/ServiciosAdicionales",
           description: `
-    Vigilancia de áreas de riesgo dentro de las organizaciones. 
-    Detección de conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de tu entidad. <br><br>
-    
-    Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inadecuadas. <br><br>
-    
-    Creamos resultados en: <br>
     • Elaboración de protocolos para prevenir, atender y dar seguimiento a prácticas de discriminación, violencia laboral y faltas éticas. <br>
     • Administración de líneas de denuncia <br>
     • Apoyo externo de Ombudsman <br><br>

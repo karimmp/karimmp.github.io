@@ -81,7 +81,7 @@
               <br />
               Addition ocupa el lugar 11 a nivel nacional dentro de las 50
               mejores empresas de consultoría en<b> Recursos Humanos</b>, de
-              acuerdo con el ranking de la Revista Consultoría y el lugar No.35
+              acuerdo con el ranking de la Revista Consultoría y el lugar No.34
               de las mejores empresas de consultoría Administrativa y de
               Gestión.
             </v-card-text>
