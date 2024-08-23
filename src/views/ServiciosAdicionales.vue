@@ -10,10 +10,10 @@
             >
               <h2>Administación de Sistema Ético de Denuncia.</h2>
             </v-card-title>
-            <v-card-subtitle class="text-left"
+           <!--  <v-card-subtitle class="text-left"
               >Protocolo y Sistema de denucia a quejas</v-card-subtitle
             >
-
+ -->
              <!--  <v-card-text class="font-weight-black texto-card">Administración de "Sistema ético de denuncia" y Elaboración de
               protocolos de prevención, atención y seguimiento de prácticas de
               discriminación y violencia laboral.</v-card-text> -->

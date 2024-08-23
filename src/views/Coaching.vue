@@ -311,7 +311,7 @@
   }
 
   .contenedor {
-    padding: 60px !important;
+    padding:  40px !important;
     align-self: center;
   }
 
