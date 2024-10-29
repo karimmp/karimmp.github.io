@@ -2,7 +2,7 @@
   <v-container fluid class="diver-pag">
     <v-img
       alt="fondo"
-      src="https://d1z76heyx58zfh.cloudfront.net/assets/servicios/portada-servicios.png"
+      src="../assets/servicios/portada-servicios.png"
       ><v-row no-gutters>
         <v-col lg="6" md="9" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -652,7 +652,7 @@ export default {
             "Adopta los principios de una empresa socialmente responsable como parte de la cultura de tu empresa y como estrategia de negocio generando más competitividad empresarial y un mejor funcionamiento interno de tus trabajadores.",
         },
         {
-          title: "Administación de Sistema Ético de Denuncia",
+          title: "Administración de Sistema Ético de Denuncia",
           subtitle:
             "Administramos sus medios de denuncia para mejorar el ambiente laboral y reputación de la marca; asegurando objetividad, imparcialidad y confidencialidad en todo el proceso.",
           text: "Creamos resultados en:",

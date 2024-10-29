@@ -7,7 +7,7 @@
     <v-layout>
       <v-flex xs12 sm8 offset-sm2>
         <v-container grid-list-sm fluid>
-          <v-form ref="form" v-model="valid" lazy-validation>
+          <v-form ref="form" v-model="valid" @submit.prevent="submit">
             <v-row md="6">
               <v-col>
                 <v-text-field
@@ -51,6 +51,7 @@
               El correo se ha enviado con éxito
             </v-alert>
             <v-btn
+              type="submit"
               class="white--text"
               color="#ea5076"
               :disabled="!valid"
@@ -84,45 +85,31 @@
 </style>
 
 <script>
-let emailjs = require("emailjs-com");
+import emailjs from 'emailjs-com';
 
 export default {
-  name: "contactenos",
+  name: "Contactenos",
 
-  data: () => ({
-    valid: true,
-    from_name: "",
-    from_nameRules: [
-      (v) => !!v || "Este campo es obligatorio",
-      (v) =>
-        (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
-    ],
-    from_email: "",
-    from_emailRules: [
-      (v) => !!v || "Este campo es obligatorio",
-      (v) => /.+@.+/.test(v) || "E-mail es un campo obligatorio",
-    ],
-    subject: "",
-    subjectRules: [
-      (v) => !!v || "Este campo es obligatorio",
-      (v) => (v && v.length > 3) || "Asunto es un campo obligatorio",
-    ],
-    message: "",
-    messageRules: [(v) => !!v || "Este campo es obligatorio"],
-    alert: false,
-    loader: null,
-    loading: false,
-  }),
-
-  watch: {
-    loader() {
-      const l = this.loader;
-      this[l] = !this[l];
-      this.alert = true;
-      setTimeout(() => (this[l] = false), 3000);
-
-      this.loader = null;
-    },
+  data() {
+    return {
+      valid: true,
+      from_name: "",
+      from_nameRules: [
+        v => !!v || "Este campo es obligatorio",
+        v => (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
+      ],
+      from_email: "",
+      from_emailRules: [
+        v => !!v || "Este campo es obligatorio",
+        v => /.+@.+/.test(v) || "E-mail debe ser válido",
+      ],
+      message: "",
+      messageRules: [v => !!v || "Este campo es obligatorio"],
+      alert: false,
+      alertType: 'success',
+      alertMessage: '',
+      loading: false,
+    };
   },
 
   created() {
@@ -130,37 +117,98 @@ export default {
   },
 
   methods: {
-    submit() {
-      let data = {
-        from_name: this.from_name,
-        from_email: this.from_email,
-        message: this.message,
-        subject: "",
-      };
-
-      if (this.$refs.form.validate()) {
-        emailjs.send("service_e1qd3r9", "template_t3rdqq9", data).then(
-          function (Response) {
-            if (Response.text === "OK") {
-              //alert("El correo se ha enviado con éxito");
-            }
-            console.log(
-              "SUCCESS. status=%d, text=%s",
-              Response.status,
-              Response.text
-            );
-          },
-          function (err) {
-            alert("Ocurrio un problema al enviar  el correo");
-            console.log("FAILDED. error=", err);
-          },
-          this.$refs.form.reset()
-        );
+    async submit() {
+      if (this.$refs.form.validate() && !this.loading) {
+        this.loading = true;
+        try {
+          const response = await emailjs.send("service_e1qd3r9", "template_t3rdqq9", {
+            from_name: this.from_name,
+            from_email: this.from_email,
+            message: this.message,
+          });
+          
+          if (response.status === 200) {
+            this.alertType = 'success';
+            this.alertMessage = 'El correo se ha enviado con éxito';
+            this.$refs.form.reset();
+          } else {
+            throw new Error('Respuesta no exitosa');
+          }
+        } catch (error) {
+          console.error('Error al enviar el correo:', error);
+          this.alertType = 'error';
+          this.alertMessage = 'Ocurrió un problema al enviar el correo';
+        } finally {
+          this.loading = false;
+          this.alert = true;
+        }
       }
-    },
-    clear() {
-      this.$refs.form.reset();
     },
   },
 };
 </script>
+
+
+
+<!-- <script>
+import emailjs from 'emailjs-com';
+export default {
+  name: "Contactenos",
+
+  data() {
+    return {
+      valid: true,
+      from_name: "",
+      from_nameRules: [
+        v => !!v || "Este campo es obligatorio",
+        v => (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
+      ],
+      from_email: "",
+      from_emailRules: [
+        v => !!v || "Este campo es obligatorio",
+        v => /.+@.+/.test(v) || "E-mail debe ser válido",
+      ],
+      message: "",
+      messageRules: [v => !!v || "Este campo es obligatorio"],
+      alert: false,
+      alertType: 'success',
+      alertMessage: '',
+      loading: false,
+    };
+  },
+
+  created() {
+    emailjs.init("cqG37n5OJJU7ta-J5");
+  },
+  methods: {
+    async submit() {
+      if (this.$refs.form.validate()) {
+        this.loading = true;
+        try {
+          const response = await emailjs.send("service_e1qd3r9", "template_t3rdqq9", {
+            from_name: this.from_name,
+            from_email: this.from_email,
+            message: this.message,
+          });
+          
+          if (response.status === 200) {
+            this.alertType = 'success';
+            this.alertMessage = 'El correo se ha enviado con éxito';
+            this.$refs.form.reset();
+          } else {
+            throw new Error('Respuesta no exitosa');
+          }
+        } catch (error) {
+          console.error('Error al enviar el correo:', error);
+          this.alertType = 'error';
+          this.alertMessage = 'Ocurrió un problema al enviar el correo';
+        } finally {
+          this.loading = false;
+          this.alert = true;
+        }
+      }
+    },
+  },
+};
+</script>
+ -->

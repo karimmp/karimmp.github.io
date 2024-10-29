@@ -621,11 +621,15 @@
       padding: 0px !important;
 
       .numero {
-        font-size: medium;
+      font-size: xx-large;
+      white-space: nowrap;
       }
-
       .texto {
-        font-size: x-small;
+        text-transform: uppercase;
+        word-break: keep-all; /* Evita que las palabras se corten */
+        overflow-wrap: normal; /* Mantiene las palabras juntas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto */
       }
     }
 

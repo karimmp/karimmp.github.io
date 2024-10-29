@@ -117,9 +117,11 @@
                     target="_blank"
                     plain
                     tile
-                    ><v-icon>{{ item.icon }}</v-icon>
+                    ><v-icon>{{ item.icon }}</v-icon>                  
                     <span class="ml-5">{{ item.title }}</span>
+                    <font-awesome-icon :icon="['fab', 'x-twitter']" />
                   </v-btn>
+                  <i class="fa-brands fa-x-twitter"></i>
                 </v-list-item>
               </v-list>
             </v-card>
@@ -310,10 +312,16 @@ export default {
           title: "LinkedIn",
           href: "https://www.linkedin.com/company/addition-human-resources/",
         },
-        {
+        /* {
           key: "twitter",
           icon: "mdi-twitter",
           title: "Twitter",
+          href: "https://twitter.com/additionrh?s=11&t=JzkH_fyELvOt9u9t3PpQ1A",
+        }, */
+        {
+          key: "X",
+          icon: "mdi-linkedin",
+          title: "X",
           href: "https://twitter.com/additionrh?s=11&t=JzkH_fyELvOt9u9t3PpQ1A",
         },
       ],

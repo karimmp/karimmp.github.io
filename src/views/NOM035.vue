@@ -1,19 +1,25 @@
 <template>
   <v-container fluid class="coach-pag">
     <div class="fondo-contenedor">
-    <v-row class="contenedor">
+      <v-row class="contenedor">
         <v-col cols="auto" md="6" sm="12" class="glass">
           <v-card class="transparent" elevation="0">
             <v-card-title
               class="text-title text-left"
               style="word-break: break-word"
-            > Norma Oficial Mexicana NOM-035-STPS-2018 
+            >
+              Norma Oficial Mexicana NOM-035-STPS-2018
             </v-card-title>
-            <v-card-subtitle class="text-sub-title texto-rosa text-left py-2" >Factores de riesgo
-              psicosocial en el trabajo. Identificación, análisis y prevención.</v-card-subtitle>
-            <v-card-text class="pa-8  text-left" style="font-size: 18px; font-weight: 500;">
-                Normativa obligatoria, <strong>la NOM 035</strong>  rige en todo el territorio
-                nacional y aplica en todos los centros de trabajo.
+            <v-card-subtitle class="text-sub-title texto-rosa text-left py-2"
+              >Factores de riesgo psicosocial en el trabajo. Identificación,
+              análisis y prevención.</v-card-subtitle
+            >
+            <v-card-text
+              class="pa-8 text-left"
+              style="font-size: 18px; font-weight: 500"
+            >
+              Normativa obligatoria, <strong>la NOM 035</strong> rige en todo el
+              territorio nacional y aplica en todos los centros de trabajo.
             </v-card-text>
           </v-card>
         </v-col>
@@ -28,41 +34,60 @@
               más pronto posible.
             </p>
 
-            <v-form v-model="valid">
-              <v-container>
-                <v-row class="">
-                  <v-col cols="12" md="6">
-                    <v-text-field
-                      outlined
-                      v-model="firstname"
-                      :rules="nameRules"
-                      label="Nombre"
-                      required
-                    ></v-text-field>
-                  </v-col>
+            <v-form ref="form" v-model="valid" @submit.prevent="submit">
+              <v-row md="6">
+                <v-col>
+                  <v-text-field
+                    v-model="from_name"
+                    :rules="from_nameRules"
+                    outlined
+                    color="#ea5076"
+                    label="Nombre"
+                    required
+                  ></v-text-field>
+                </v-col>
+                <v-col>
+                  <v-text-field
+                    v-model="from_email"
+                    :rules="from_emailRules"
+                    outlined
+                    color="#ea5076"
+                    label="E-mail"
+                    required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
 
-                  <v-col cols="12" md="6">
-                    <v-text-field
-                      outlined
-                      v-model="email"
-                      :rules="emailRules"
-                      label="E-mail"
-                      required
-                    ></v-text-field>
-                  </v-col>
-
-                  <v-col cols="12" md="12">
-                    <v-textarea
-                      outlined
-                      label="Mensaje"
-                      v-model="lastname"
-                      :counter="150"
-                      :rules="msgRules"
-                      maxlength="150"
-                    ></v-textarea>
-                  </v-col>
-                </v-row>
-              </v-container>
+              <v-textarea
+                v-model="message"
+                :rules="messageRules"
+                outlined
+                color="#ea5076"
+                label="Mensaje"
+                value=""
+                required
+              ></v-textarea>
+              <v-alert
+                :value="alert"
+                v-model="alert"
+                type="success"
+                dismissible
+                color="#ea5076"
+                transition="scale-transition"
+              >
+                El correo se ha enviado con éxito
+              </v-alert>
+              <v-btn
+                type="submit"
+                class="white--text"
+                color="#ea5076"
+                :disabled="!valid"
+                :loading="loading"
+                @click="submit"
+                @click.native="loader = 'loading'"
+              >
+                enviar
+              </v-btn>
             </v-form>
             <div class="pa-5">
               <v-btn color="#ea5076" style="text-transform: none" dark
@@ -199,7 +224,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  
+
   .glass2 {
     background-color: rgba($color: #fff, $alpha: 0.7);
     backdrop-filter: blur(5px);
@@ -277,7 +302,7 @@
         font-size: small;
       }
     }
-    .text-title{
+    .text-title {
       padding: 2rem;
     }
   }
@@ -285,28 +310,71 @@
 </style>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
-  data: () => ({
-    valid: false,
-    firstname: "",
-    nameRules: [(v) => !!v || "El nombre es requerido"],
-    lastname: "",
-    msgRules: [
-      (v) => !!v || "El campo mensaje es requerido",
-      (v) => v.length <= 150 || "El mensaje debe ser máximo 150 caracteres",
-    ],
-    email: "",
-    emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+/.test(v) || "Introduce un e-mail válido",
-    ],
-    listItems: [
-      "Obtén puntos adicionales en licitaciones públicas para la adquisición de bienes, arrendamientos o servicios.",
-      "Impulsa la imagen y reputación empresarial.",
-      "Fortalecer la permanencia, lealtad y compromiso del personal hacia el centro de trabajo.",
-      "Aumento de la productividad y rendimiento.",
-      "Obtener mayor impacto en la cadena de valor del centro de trabajo.",
-    ],
-  }),
+  name: "Contactenos",
+
+  data() {
+    return {
+      valid: true,
+      from_name: "",
+      from_nameRules: [
+        (v) => !!v || "Este campo es obligatorio",
+        (v) =>
+          (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
+      ],
+      from_email: "",
+      from_emailRules: [
+        (v) => !!v || "Este campo es obligatorio",
+        (v) => /.+@.+/.test(v) || "E-mail debe ser válido",
+      ],
+      message: "",
+      messageRules: [(v) => !!v || "Este campo es obligatorio"],
+
+      alert: false,
+      alertType: "success",
+      alertMessage: "",
+      loading: false,
+    };
+  },
+
+  created() {
+    emailjs.init("cqG37n5OJJU7ta-J5");
+  },
+
+  methods: {
+    async submit() {
+      if (this.$refs.form.validate() && !this.loading) {
+        this.loading = true;
+        try {
+          const response = await emailjs.send(
+            "service_e1qd3r9",
+            "template_t3rdqq9",
+            {
+              from_name: this.from_name,
+              from_email: this.from_email,
+              message: this.message,
+            }
+          );
+
+          if (response.status === 200) {
+            this.alertType = "success";
+            this.alertMessage = "El correo se ha enviado con éxito";
+            this.$refs.form.reset();
+          } else {
+            throw new Error("Respuesta no exitosa");
+          }
+        } catch (error) {
+          console.error("Error al enviar el correo:", error);
+          this.alertType = "error";
+          this.alertMessage = "Ocurrió un problema al enviar el correo";
+        } finally {
+          this.loading = false;
+          this.alert = true;
+        }
+      }
+    },
+  },
 };
 </script>

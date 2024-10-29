@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="coach-pag">
-    <v-img alt="fondo" src="https://d1z76heyx58zfh.cloudfront.net/assets/especializados/portada-especializados.png"
+    <v-img alt="fondo" src="../assets/especializados/portada-especializados.png"
       ><v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass pa-8" elevation="1">
@@ -45,7 +45,7 @@
         <v-row class="pa-15 contenedor">
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/juntas.png"></v-img>
+              <v-img src="../assets/gestion/juntas.png"></v-img>
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
@@ -131,7 +131,7 @@
 
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/proyecto.png"></v-img>
+              <v-img src="../assets/gestion/proyecto.png"></v-img>
               <v-card elevation="0" class="texto-card">
                 <v-card-text>
                   <p class="titulos text--primary">
@@ -199,7 +199,7 @@
 
           <v-col cols="auto" md="4" sm="12">
             <v-card elevation="10" color="white" class="tarjeta-serv">
-              <v-img src="https://d1z76heyx58zfh.cloudfront.net/assets/gestion/entrenamiento2.png"></v-img>
+              <v-img src="../assets/gestion/entrenamiento2.png"></v-img>
 
               <v-card elevation="0" class="texto-card">
                 <v-card-text>

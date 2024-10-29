@@ -51,7 +51,7 @@
         <v-col cols="auto" md="6" sm="12" class="formato-video">
           <video width="100%" height="auto" controls autoplay muted>
             <source
-              src="https://d1z76heyx58zfh.cloudfront.net/"
+              src="../assets/video/V3-ADD 2024 OK.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -422,11 +422,11 @@
                 width: 50%;
               "
               contain
-              src="https://d1z76heyx58zfh.cloudfront.net/assets/reconocida2024.webp"
+              src="../assets/reconocida2025.png"
             ></v-img>
             <v-card-text class="text-justify"
-              >Ocupamos el lugar número 11 a nivel Nacional dentro de las 50
-              mejores empresas en Recursos Humanos, y el 35 de las mejores
+              >Ocupamos el lugar número 9 a nivel Nacional dentro de las 50
+              mejores empresas en Recursos Humanos, y el 34 de las mejores
               empresas de consultoría administrativa de gestión.</v-card-text
             >
           </v-card>
@@ -556,9 +556,14 @@
 
     .numero {
       font-size: xx-large;
+      white-space: nowrap;
     }
     .texto {
       text-transform: uppercase;
+      word-break: keep-all; /* Evita que las palabras se corten */
+      overflow-wrap: normal; /* Mantiene las palabras juntas */
+      width: 100%; /* Asegura que ocupe todo el ancho disponible */
+      text-align: center; /* Centra el texto */
     }
   }
   .glass2 {
@@ -683,7 +688,7 @@ export default {
           image: require("@/assets/home/diversidad-inclusion.jpg"),
           listItems: [
             "Norma Mexicana NMX-R-025-SCFI-2015 en Igualdad Laboral y No Discriminación.",
-            "Norma Oficial Mexicana. NOM-035-STPS-2018 de Factores de Riesgo Psicosocial.",
+            "Norma Oficial Mexicana. NOM-035-STPS-2018 de Factores de Riesgo Psicosocial en el trabajo-Identificación, análisis y prevención",
             "Norma Oficial Mexicana NOM-037-STPS-2023, Teletrabajo-Condiciones de seguridad y salud en el trabajo.",
             "Distintivo Empresa Socialmente Responsable.",
             'Administración de "Sistema ético de denuncia".',

@@ -8,7 +8,7 @@
               class="pt-8 texto-titulo"
               style="word-break: break-word"
             >
-              <h2>Administación de Sistema Ético de Denuncia.</h2>
+              <h2>Administración de Sistema Ético de Denuncia.</h2>
             </v-card-title>
            <!--  <v-card-subtitle class="text-left"
               >Protocolo y Sistema de denucia a quejas</v-card-subtitle
@@ -20,7 +20,7 @@
               <v-list class="text-left transparent service-card__list">
                 <!-- <span class="font-weight-black">Mejora y mantén:</span> -->
                 <v-list-item v-for="(item, index) in listItems" :key="index" class="">
-                  <v-list-item-icon>
+                  <v-list-item-icon class="icon_list">
                     <v-icon color="primary">mdi-circle-medium</v-icon>
                   </v-list-item-icon>
                   <v-list-item-content class="service-card__list-item">{{
@@ -55,42 +55,61 @@
               más pronto posible.
             </p>
 
-            <v-form v-model="valid">
-              <v-container>
-                <v-row class="">
-                  <v-col cols="12" md="6">
+            <v-form ref="form" v-model="valid" @submit.prevent="submit">
+                <v-row md="6">
+                  <v-col>
                     <v-text-field
+                      v-model="from_name"
+                      :rules="from_nameRules"
                       outlined
-                      v-model="firstname"
-                      :rules="nameRules"
+                      color="#ea5076"
                       label="Nombre"
                       required
                     ></v-text-field>
                   </v-col>
-
-                  <v-col cols="12" md="6">
+                  <v-col>
                     <v-text-field
+                      v-model="from_email"
+                      :rules="from_emailRules"
                       outlined
-                      v-model="email"
-                      :rules="emailRules"
+                      color="#ea5076"
                       label="E-mail"
                       required
                     ></v-text-field>
                   </v-col>
-
-                  <v-col cols="12" md="12">
-                    <v-textarea
-                      outlined
-                      label="Mensaje"
-                      v-model="lastname"
-                      :counter="150"
-                      :rules="msgRules"
-                      maxlength="150"
-                    ></v-textarea>
-                  </v-col>
                 </v-row>
-              </v-container>
-            </v-form>
+
+                <v-textarea
+                  v-model="message"
+                  :rules="messageRules"
+                  outlined
+                  color="#ea5076"
+                  label="Mensaje"
+                  value=""
+                  required
+                ></v-textarea>
+                <v-alert
+                  :value="alert"
+                  v-model="alert"
+                  type="success"
+                  dismissible
+                  color="#ea5076"
+                  transition="scale-transition"
+                >
+                  El correo se ha enviado con éxito
+                </v-alert>
+                <v-btn
+                  type="submit"
+                  class="white--text"
+                  color="#ea5076"
+                  :disabled="!valid"
+                  :loading="loading"
+                  @click="submit"
+                  @click.native="loader = 'loading'"
+                >
+                  enviar
+                </v-btn>
+              </v-form>
             <div class="pa-5">
               <v-btn color="#ea5076" style="text-transform: none" dark
                 >Enviar</v-btn
@@ -166,7 +185,7 @@
     overflow-wrap: break-word;
     line-height: 1.2;
     max-width: 100%;
-    padding: 1px 0;
+    padding: 3%;
   }
 
   .texto-land {
@@ -288,7 +307,10 @@
       padding: 20px !important;
       margin: 2rem 0.3rem;
     }
+    .icon_list{
 
+      margin-right: 0px !important;
+    }
     .texto-land {
       font-size: medium;
     }
@@ -304,10 +326,15 @@
     .contadores {
       padding: 0px !important;
       .numero {
-        font-size: medium;
+      font-size: xx-large;
+      white-space: nowrap;
       }
       .texto {
-        font-size: x-small;
+        text-transform: uppercase;
+        word-break: keep-all; /* Evita que las palabras se corten */
+        overflow-wrap: normal; /* Mantiene las palabras juntas */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto */
       }
     }
     .casos-ex {
@@ -331,41 +358,76 @@
 </style>
 
 <script>
-export default {
-  data: () => ({
-    valid: false,
-    firstname: "",
-    nameRules: [(v) => !!v || "El nombre es requerido"],
-    lastname: "",
-    msgRules: [
-      (v) => !!v || "El campo mensaje es requerido",
-      (v) => v.length <= 150 || "El mensaje debe ser máximo 150 caracteres",
-    ],
-    email: "",
-    emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+/.test(v) || "Introduce un e-mail válido",
-    ],
-    
- 
+import emailjs from "emailjs-com";
 
-listItems: [
+export default {
+  name: "Contactenos",
+
+  data() {
+    return {
+      valid: true,
+      from_name: "",
+      from_nameRules: [
+        (v) => !!v || "Este campo es obligatorio",
+        (v) =>
+          (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
+      ],
+      from_email: "",
+      from_emailRules: [
+        (v) => !!v || "Este campo es obligatorio",
+        (v) => /.+@.+/.test(v) || "E-mail debe ser válido",
+      ],
+      message: "",
+      messageRules: [(v) => !!v || "Este campo es obligatorio"],
+
+      listItems: [
       "Vigilancia de áreas de riesgo dentro de las organizaciones. ",
-      "Detección de conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de tu entidad.",
-      "Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inadecuadas.",
+      "Detección de conductas no éticas que pueden afectar seriamente el desarrollo y la reputación de tu entidad. ",
+      "Entre los riesgos más comunes se encuentran: Acoso Laboral, Hostigamiento, Discriminación, Abusos de autoridad, Fraudes y/o Condiciones de trabajo inadecuadas. ",
     ],
-    /* listItems: [
-      "Identificación de problemas.",
-      "Detección de conductas no éticas.",
-      "Reputacion de marca.",
-      "Mejora continuade la empresa."
-    ],
-    listItems2: [
-      "Acoso Laboral.",
-      "Hostigamiento.",
-      "Discriminación, Abusos de autoridad.",
-      "Fraudes y/o Condiciones de trabajo inseguras."
-    ], */
-  }),
+      alert: false,
+      alertType: "success",
+      alertMessage: "",
+      loading: false,
+    };
+  },
+
+  created() {
+    emailjs.init("cqG37n5OJJU7ta-J5");
+  },
+
+  methods: {
+    async submit() {
+      if (this.$refs.form.validate() && !this.loading) {
+        this.loading = true;
+        try {
+          const response = await emailjs.send(
+            "service_e1qd3r9",
+            "template_t3rdqq9",
+            {
+              from_name: this.from_name,
+              from_email: this.from_email,
+              message: this.message,
+            }
+          );
+
+          if (response.status === 200) {
+            this.alertType = "success";
+            this.alertMessage = "El correo se ha enviado con éxito";
+            this.$refs.form.reset();
+          } else {
+            throw new Error("Respuesta no exitosa");
+          }
+        } catch (error) {
+          console.error("Error al enviar el correo:", error);
+          this.alertType = "error";
+          this.alertMessage = "Ocurrió un problema al enviar el correo";
+        } finally {
+          this.loading = false;
+          this.alert = true;
+        }
+      }
+    },
+  },
 };
 </script>

@@ -53,13 +53,13 @@
               especializada en el área laboral y desarrollo organizacional, con
               certificaciones para asesorar y auditar programas de género para
               erradicar la discriminación y contribuir a la igualdad de
-              oportunidades.
+              oportunidades.<br />
               <br />
               Cuenta con capacitación en el desarrollo de competencias de
               Ombudsperson Organizacional, Coach e instructora de diversos
               temas; Recursos Humanos, sistemas de gestión, derechos humanos,
               hostigamiento y acoso, igualdad laboral, violencia laboral y no
-              discriminación.
+              discriminación.<br />
               <br />
               Fundó Addition Human Resources con el propósito de optimizar el
               cumplimiento de los objetivos estratégicos de las empresas, a
@@ -77,7 +77,7 @@
               NMX-R-025-SCFI-2015 en Igualdad Laboral y No Discriminación, y
               Norma Oficial Mexicana NOM-035-STPS- Factores de riesgo
               psicosocial Identificación, análisis, prevención y distintivos de
-              la Secretaria de Trabajo y Previsión Social.<br />
+              la Secretaria de Trabajo y Previsión Social.<br /><br />
             </v-card-text>
             <div class="text-left">
               <v-btn
@@ -183,9 +183,11 @@
                           </li>
                           <li>
                             Norma Oficial Mexicana NOM-035-STPS-2018 de
-                            <strong>Factores de Riesgo Psicosocial</strong>
+                            <strong>Factores de Riesgo Psicosocial en el trabajo-Identificación, análisis y prevención</strong>
                           </li>
                           <li>Distintivo Empresa Socialmente Responsable.</li>
+                          <li>NORMA Oficial Mexicana NOM-037-STPS-2023</li>
+                          <li>Administración de Sistema Ético de Denuncia.</li>
                         </ul>
                       </strong>
                     </v-card-text>
@@ -559,9 +561,14 @@
 
     .numero {
       font-size: xx-large;
+      white-space: nowrap;
     }
     .texto {
       text-transform: uppercase;
+      word-break: keep-all; /* Evita que las palabras se corten */
+      overflow-wrap: normal; /* Mantiene las palabras juntas */
+      width: 100%; /* Asegura que ocupe todo el ancho disponible */
+      text-align: center; /* Centra el texto */
     }
   }
   .glass2 {

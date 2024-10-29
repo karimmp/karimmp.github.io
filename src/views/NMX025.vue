@@ -1,6 +1,9 @@
 <template>
   <v-container fluid class="coach-pag">
-    <v-img gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)" alt="fondo" src="../assets/home/diversidad-inclusion.jpg"
+    <v-img
+      gradient="to top, rgba(0,0,0,.60), rgba(0,0,0,0)"
+      alt="fondo"
+      src="../assets/home/diversidad-inclusion.jpg"
       ><v-row no-gutters>
         <v-col md="6" sm="12" class="contenedor">
           <v-card class="glass" elevation="1">
@@ -23,7 +26,7 @@
               class="rounded"
               contain
             ></v-img>
-            <div class="pt-5 text-left">
+            <div class="ma-5 text-left">
               <v-btn
                 color="#12b0f4"
                 rounded
@@ -43,24 +46,23 @@
       <section id="soluciones">
         <v-row class="contenedor">
           <v-col cols="auto" md="6" sm="12" class="glass2">
-              <v-card elevation="0"  class="transparent  ">
-                <p class="text-title texto-rosa">
-                  Beneficios NMX-025
-              </p>
-                <v-card-text >
-                  <v-list class="text-left transparent benefit-list py-7">
-                    <v-list-item 
-                      v-for="(item, index) in listItems"
-                      :key="index"
+            <v-card elevation="0" class="transparent">
+              <p class="text-title texto-rosa">Beneficios NMX-025</p>
+              <v-card-text>
+                <v-list class="text-left transparent benefit-list py-7">
+                  <v-list-item v-for="(item, index) in listItems" :key="index">
+                    <v-list-item-icon>
+                      <v-icon color="primary" small>mdi-circle-medium</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-content
+                      class=""
+                      style="font-size: 18px; font-weight: 400"
+                      >{{ item }}</v-list-item-content
                     >
-                      <v-list-item-icon>
-                        <v-icon color="primary" small>mdi-circle-medium</v-icon>
-                      </v-list-item-icon>
-                      <v-list-item-content class="" style="font-size: 18px; font-weight:400 ;">{{ item }}</v-list-item-content>
-                    </v-list-item>
-                  </v-list>
-                </v-card-text>
-              </v-card>
+                  </v-list-item>
+                </v-list>
+              </v-card-text>
+            </v-card>
           </v-col>
 
           <v-col class="glass px-5">
@@ -73,47 +75,61 @@
                 lo más pronto posible.
               </p>
 
-              <v-form v-model="valid">
-                <v-container>
-                  <v-row class="">
-                    <v-col cols="12" md="6">
-                      <v-text-field
-                        outlined
-                        v-model="firstname"
-                        :rules="nameRules"
-                        label="Nombre"
-                        required
-                      ></v-text-field>
-                    </v-col>
+              <v-form ref="form" v-model="valid" @submit.prevent="submit">
+                <v-row md="6">
+                  <v-col>
+                    <v-text-field
+                      v-model="from_name"
+                      :rules="from_nameRules"
+                      outlined
+                      color="#ea5076"
+                      label="Nombre"
+                      required
+                    ></v-text-field>
+                  </v-col>
+                  <v-col>
+                    <v-text-field
+                      v-model="from_email"
+                      :rules="from_emailRules"
+                      outlined
+                      color="#ea5076"
+                      label="E-mail"
+                      required
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
 
-                    <v-col cols="12" md="6">
-                      <v-text-field
-                        outlined
-                        v-model="email"
-                        :rules="emailRules"
-                        label="E-mail"
-                        required
-                      ></v-text-field>
-                    </v-col>
-
-                    <v-col cols="12" md="12">
-                      <v-textarea
-                        outlined
-                        label="Mensaje"
-                        v-model="lastname"
-                        :counter="150"
-                        :rules="msgRules"
-                        maxlength="150"
-                      ></v-textarea>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-form>
-              <div class="pa-5">
-                <v-btn color="#ea5076" style="text-transform: none" dark
-                  >Enviar</v-btn
+                <v-textarea
+                  v-model="message"
+                  :rules="messageRules"
+                  outlined
+                  color="#ea5076"
+                  label="Mensaje"
+                  value=""
+                  required
+                ></v-textarea>
+                <v-alert
+                  :value="alert"
+                  v-model="alert"
+                  type="success"
+                  dismissible
+                  color="#ea5076"
+                  transition="scale-transition"
                 >
-              </div>
+                  El correo se ha enviado con éxito
+                </v-alert>
+                <v-btn
+                  type="submit"
+                  class="white--text"
+                  color="#ea5076"
+                  :disabled="!valid"
+                  :loading="loading"
+                  @click="submit"
+                  @click.native="loader = 'loading'"
+                >
+                  enviar
+                </v-btn>
+              </v-form>
 
               <p class="texto-rosa">contacto@additionrh.com</p>
             </v-container>
@@ -175,12 +191,12 @@
   }
 
   .text-title {
-  padding: 2rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+    padding: 2rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
   .texto-card {
     .titulos {
       font-size: 1.875rem !important;
@@ -282,8 +298,6 @@
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
     }
-
-
   }
 
   @media only screen and (max-width: 600px) {
@@ -326,7 +340,7 @@
         font-size: small;
       }
     }
-    .text-title{
+    .text-title {
       padding: 2rem 0 0.5rem 0;
       margin: 0%;
     }
@@ -335,28 +349,78 @@
 </style>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
-  data: () => ({
-    valid: false,
-    firstname: "",
-    nameRules: [(v) => !!v || "El nombre es requerido"],
-    lastname: "",
-    msgRules: [
-      (v) => !!v || "El campo mensaje es requerido",
-      (v) => v.length <= 150 || "El mensaje debe ser máximo 150 caracteres",
-    ],
-    email: "",
-    emailRules: [
-      (v) => !!v || "E-mail is required",
-      (v) => /.+@.+/.test(v) || "Introduce un e-mail válido",
-    ],
-    listItems: [
+  name: "Contactenos",
+
+  data() {
+    return {
+      valid: true,
+      from_name: "",
+      from_nameRules: [
+        (v) => !!v || "Este campo es obligatorio",
+        (v) =>
+          (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
+      ],
+      from_email: "",
+      from_emailRules: [
+        (v) => !!v || "Este campo es obligatorio",
+        (v) => /.+@.+/.test(v) || "E-mail debe ser válido",
+      ],
+      message: "",
+      messageRules: [(v) => !!v || "Este campo es obligatorio"],
+
+      listItems: [
         "Obtén puntos adicionales en licitaciones públicas para la adquisición de bienes, arrendamientos o servicios.",
         "Impulsa la imagen y reputación empresarial.",
         "Fortalecer la permanencia, lealtad y compromiso del personal hacia el centro de trabajo.",
         "Aumento de la productividad y rendimiento.",
-        "Obtener mayor impacto en la cadena de valor del centro de trabajo."
-      ]
-  }),
+        "Obtener mayor impacto en la cadena de valor del centro de trabajo.",
+      ],
+      alert: false,
+      alertType: "success",
+      alertMessage: "",
+      loading: false,
+    };
+  },
+
+  created() {
+    emailjs.init("cqG37n5OJJU7ta-J5");
+  },
+
+  methods: {
+    async submit() {
+      if (this.$refs.form.validate() && !this.loading) {
+        this.loading = true;
+        try {
+          const response = await emailjs.send(
+            "service_e1qd3r9",
+            "template_t3rdqq9",
+            {
+              from_name: this.from_name,
+              from_email: this.from_email,
+              message: this.message,
+            }
+          );
+
+          if (response.status === 200) {
+            this.alertType = "success";
+            this.alertMessage = "El correo se ha enviado con éxito";
+            this.$refs.form.reset();
+          } else {
+            throw new Error("Respuesta no exitosa");
+          }
+        } catch (error) {
+          console.error("Error al enviar el correo:", error);
+          this.alertType = "error";
+          this.alertMessage = "Ocurrió un problema al enviar el correo";
+        } finally {
+          this.loading = false;
+          this.alert = true;
+        }
+      }
+    },
+  },
 };
 </script>
