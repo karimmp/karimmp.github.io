@@ -63,11 +63,18 @@
         </div>
       </v-app-bar>
 
-      <v-navigation-drawer class="text-left pl-4" v-model="drawer" fixed temporary>
+      <v-navigation-drawer
+        class="text-left pl-4"
+        v-model="drawer"
+        fixed
+        temporary
+      >
         <v-list nav dense>
           <v-list-item-group v-model="group" active-class=" text--accent-4">
             <v-list-item v-for="(item, i) in menu2" :key="i" :to="item.link">
-              <v-list-item-title class="menu-drawer my-3">{{ item.title }}</v-list-item-title>
+              <v-list-item-title class="menu-drawer my-3">{{
+                item.title
+              }}</v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>
@@ -117,13 +124,26 @@
                     target="_blank"
                     plain
                     tile
-                    ><v-icon>{{ item.icon }}</v-icon>                  
+                  >
+                    <!-- Usa v-if para alternar entre MDI y Font Awesome -->
+                    <v-icon class= "x-icon"  v-if="!item.isFontAwesome">{{ item.icon }}</v-icon>
+                    <i v-else :class="item.icon"></i>
                     <span class="ml-5">{{ item.title }}</span>
-                    <font-awesome-icon :icon="['fab', 'x-twitter']" />
                   </v-btn>
-                  <i class="fa-brands fa-x-twitter"></i>
                 </v-list-item>
               </v-list>
+              <v-card-subtitle class="mt-4">
+                <strong>Teléfono de contacto</strong>
+              </v-card-subtitle>
+              <v-card-text class="phone-container">
+                <span class="phone-number">
+                  <span data-ph="55"></span>
+                  <span data-ph="29"></span>
+                  <span data-ph="44"></span>
+                  <span data-ph="76"></span>
+                  <span data-ph="31"></span>
+                </span>
+              </v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -169,7 +189,12 @@
   }
 }
 
-.menu-drawer{
+.x-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-drawer {
   word-wrap: break-word; /* Compatibilidad con navegadores más antiguos */
   overflow-wrap: break-word; /* Propiedad recomendada */
   white-space: normal; /* Permitir que el texto se ajuste */
@@ -230,9 +255,21 @@
     width: 100%;
   }
 }
+
+.phone-container {
+  .phone-number {
+    span[data-ph]::after {
+      content: attr(data-ph);
+    }
+    span[data-ph] {
+      margin-right: 0.1rem;
+    }
+  }
+}
 </style>
 
 <script>
+import "@fortawesome/fontawesome-free/css/all.css";
 export default {
   data() {
     return {
@@ -320,10 +357,11 @@ export default {
         }, */
         {
           key: "X",
-          icon: "mdi-linkedin",
+          icon: "fab fa-x-twitter fa-lg",
           title: "X",
           href: "https://twitter.com/additionrh?s=11&t=JzkH_fyELvOt9u9t3PpQ1A",
-        },
+          isFontAwesome: true,
+        }
       ],
 
       admins: [

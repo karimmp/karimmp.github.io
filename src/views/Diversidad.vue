@@ -262,7 +262,7 @@
                     max-height="300"
                     src="https://d1z76heyx58zfh.cloudfront.net/assets/home/bolsa-de-trabajo.jpg"
                   ></v-img>
-                  <v-card-title class="pb-0"
+                  <v-card-title class="pb-0 text-break"
                     >Hasta un 35% más de retorno sobre el capital
                   </v-card-title>
                   <div class="texto-ex mt-0">
@@ -357,7 +357,6 @@
     font-size: 2.25rem;
     line-height: 3.5rem;
   }
-
   .contenedor {
     padding: 60px !important;
     align-self: center;
@@ -511,9 +510,14 @@
 
     .numero {
       font-size: xx-large;
+      white-space: nowrap;
     }
     .texto {
       text-transform: uppercase;
+      word-break: keep-all; /* Evita que las palabras se corten */
+      overflow-wrap: normal; /* Mantiene las palabras juntas */
+      width: 100%; /* Asegura que ocupe todo el ancho disponible */
+      text-align: center; /* Centra el texto */
     }
   }
   .glass2 {
@@ -549,6 +553,7 @@
       transform: translateY(-50%);
     }
   }
+  
 
   @media only screen and (max-width: 600px) {
     .solo-desk {

@@ -65,6 +65,16 @@
         </v-container>
 
         <p class="texto-rosa">contacto@additionrh.com</p>
+        <p class="phone-display">
+          <span class="texto-rosa">Teléfono: </span>
+          <span class="phone-number texto-rosa">
+            <span data-ph="55"></span>
+            <span data-ph="29"></span>
+            <span data-ph="44"></span>
+            <span data-ph="76"></span>
+            <span data-ph="31"></span>
+          </span>
+        </p>
       </v-flex>
     </v-layout>
   </div>
@@ -80,6 +90,17 @@
   line-height: 2.25rem;
   font-weight: 700;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.phone-display {
+  .phone-number {
+    span[data-ph]::after {
+      content: attr(data-ph);
+    }
+    span[data-ph] {
+      margin-right: 0.1rem;
+    }
+  }
 }
 
 </style>
@@ -121,7 +142,7 @@ export default {
       if (this.$refs.form.validate() && !this.loading) {
         this.loading = true;
         try {
-          const response = await emailjs.send("service_e1qd3r9", "template_t3rdqq9", {
+          const response = await emailjs.send("service_umzbfen", "template_t3rdqq9", {
             from_name: this.from_name,
             from_email: this.from_email,
             message: this.message,
@@ -147,68 +168,3 @@ export default {
   },
 };
 </script>
-
-
-
-<!-- <script>
-import emailjs from 'emailjs-com';
-export default {
-  name: "Contactenos",
-
-  data() {
-    return {
-      valid: true,
-      from_name: "",
-      from_nameRules: [
-        v => !!v || "Este campo es obligatorio",
-        v => (v && v.length > 3) || "El nombre debe ser mayor a tres caracteres",
-      ],
-      from_email: "",
-      from_emailRules: [
-        v => !!v || "Este campo es obligatorio",
-        v => /.+@.+/.test(v) || "E-mail debe ser válido",
-      ],
-      message: "",
-      messageRules: [v => !!v || "Este campo es obligatorio"],
-      alert: false,
-      alertType: 'success',
-      alertMessage: '',
-      loading: false,
-    };
-  },
-
-  created() {
-    emailjs.init("cqG37n5OJJU7ta-J5");
-  },
-  methods: {
-    async submit() {
-      if (this.$refs.form.validate()) {
-        this.loading = true;
-        try {
-          const response = await emailjs.send("service_e1qd3r9", "template_t3rdqq9", {
-            from_name: this.from_name,
-            from_email: this.from_email,
-            message: this.message,
-          });
-          
-          if (response.status === 200) {
-            this.alertType = 'success';
-            this.alertMessage = 'El correo se ha enviado con éxito';
-            this.$refs.form.reset();
-          } else {
-            throw new Error('Respuesta no exitosa');
-          }
-        } catch (error) {
-          console.error('Error al enviar el correo:', error);
-          this.alertType = 'error';
-          this.alertMessage = 'Ocurrió un problema al enviar el correo';
-        } finally {
-          this.loading = false;
-          this.alert = true;
-        }
-      }
-    },
-  },
-};
-</script>
- -->

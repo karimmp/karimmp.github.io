@@ -18,7 +18,7 @@
                 ¿Tu organización promueve ambientes de Diversidad e Inclusión?
               </h3>
             </v-card-subtitle>
-            <v-card-text class="pt-8 texto-land">
+            <v-card-text class="pt-1 texto-land">
               Más de 20 años de experiencia haciendo trascender a empresas
               nacionales y transnacionales, a través de la implementación de
               sistemas que promueven la
